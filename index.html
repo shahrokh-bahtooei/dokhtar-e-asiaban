@@ -79,6 +79,13 @@ a{color:inherit}
 .hero .bt a{display:inline-block;text-decoration:none;padding:.45rem 1.1rem;border-radius:999px;border:1.5px solid #4A5675;color:#F4F5F0;font-size:1rem;line-height:1.6;background:rgba(15,19,29,.55)}
 .hero .bt a.main{background:#D9A21B;border-color:#D9A21B;color:#1F2638;font-weight:700}
 .hero .bt a:hover{border-color:#D9A21B}
+/* a way to the repo at the top: a float on the left, on the same line grid, so the verbs flow around it */
+.hero .star{float:left;box-sizing:border-box;height:round(up, calc(2.5rem + 3px + var(--pb)), var(--L));padding-bottom:var(--pb);
+  margin-right:.75rem;display:flex;align-items:flex-end;word-spacing:normal}
+.hero .star a{display:inline-flex;align-items:center;gap:.45rem;text-decoration:none;padding:.45rem 1rem;border-radius:999px;border:1.5px solid #D9A21B;
+  color:#F4F5F0;font-size:1rem;line-height:1.6;background:rgba(15,19,29,.55)}
+.hero .star a span{color:#D9A21B;font-size:1.15em;line-height:1}
+.hero .star a:hover{background:#D9A21B;color:#1F2638}.hero .star a:hover span{color:#1F2638}
 
 /* ---------- sections ---------- */
 section{padding-block:3.5rem 1rem}
@@ -153,13 +160,14 @@ tr[hidden]{display:none}
 footer{margin-top:4rem;padding-block:2.5rem 3rem;border-top:1px solid var(--rule);color:var(--stone);font-size:.95rem;line-height:1.9}
 footer p{margin:.3rem 0}
 @media (max-width:560px){body{font-size:1.06rem}.chapter .num{font-size:2.4rem}}
-@media print{.hero{background:none;color:#000}.words,.hero .bt,.tools,.vcard{display:none}.hero .sub{color:#000}a.v{color:inherit}}
+@media print{.hero{background:none;color:#000}.words,.hero .bt,.hero .star,.tools,.vcard{display:none}.hero .sub{color:#000}a.v{color:inherit}}
 </style>
 </head>
 <body>
 
 <header class="hero">
   <div class="hero-in">
+    <span class="star"><a href="https://github.com/shahrokh-bahtooei/dokhtar-e-asiaban" title="سرچشمهٔ این صفحه در گیت‌هاب"><span aria-hidden="true">★</span>ستاره در گیت‌هاب</a></span>
     <span class="sp" aria-hidden="true"></span>
     <h1>دخترِ آسیابان</h1>
     <p class="sub">قصه‌ای با فعل‌های سادهٔ فارسی</p>
