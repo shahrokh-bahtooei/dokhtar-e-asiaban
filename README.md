@@ -6,6 +6,8 @@
 
 **[قصه را در صفحهٔ وب بخوانید](https://shahrokh-bahtooei.github.io/dokhtar-e-asiaban/)**
 
+[![ستاره‌های گیت‌هاب](https://img.shields.io/github/stars/shahrokh-bahtooei/dokhtar-e-asiaban?style=social)](https://github.com/shahrokh-bahtooei/dokhtar-e-asiaban/stargazers) [![شاخه‌ها](https://img.shields.io/github/forks/shahrokh-bahtooei/dokhtar-e-asiaban?style=social)](https://github.com/shahrokh-bahtooei/dokhtar-e-asiaban/forks)
+
 ## در این ریپو
 
 | پرونده | چیست |
