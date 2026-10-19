@@ -51,17 +51,20 @@ a{color:inherit}
   color:var(--field-ink);font-size:.95rem;line-height:1.95;word-spacing:.5em;text-align:justify}
 .hero-in::after{content:"";display:block;clear:both}
 .words{user-select:none}
-.words .w{transition:color 1.2s ease}
+.words-a{text-align-last:justify}
+.hero-in{text-align-last:justify}.title-block,.words-c{text-align-last:auto}
+.words-c{clear:both}   /* starts at the buttons' lower edge */   /* its own block, so the title and then the buttons float in order */
+.words .w{transition:color 1.2s ease;white-space:nowrap}   /* «تکاندن و تکانیدن» stays one piece */
 .words .w.lit{color:#D9A21B}
-.title-block{float:right;width:100%;margin:0;padding:.4rem 0 1rem;text-align:right;word-spacing:normal;color:#F4F5F0;shape-margin:.9em;shape-image-threshold:.4}
+.title-block{float:right;width:100%;margin:0;padding:.4rem 0 0;text-align:right;word-spacing:normal;color:#F4F5F0;shape-margin:.9em;shape-image-threshold:.4}
 .title-block.glyphs{shape-margin:.7em}
 .hero h1{margin:0;font-weight:900;font-size:clamp(3.1rem,11vw,7rem);line-height:1.5;letter-spacing:0}
 .hero .sub{margin:.35em 0 0;font-weight:700;font-size:clamp(1.2rem,3.4vw,1.75rem);color:#D9A21B;line-height:1.5}
 .hero .by{margin:1.5rem 0 0;max-width:34rem;color:#B9BECB;font-size:1rem;line-height:1.9}
 @media (max-width:900px){.hero-in{font-size:.8rem;line-height:1.85;word-spacing:.35em}}
 @media (max-width:480px){.hero-in{font-size:.72rem}}
-.title-block.roomy{padding-bottom:calc(1rem - 9px)}.title-block.roomy nav{padding-bottom:9px}
-.hero nav{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.6rem}
+/* the buttons are their own plain box: every browser keeps the same room around a box */
+.hero nav.links{float:right;clear:right;max-width:100%;margin:1.6rem 0 13px .75rem;display:flex;flex-wrap:wrap;gap:.6rem;word-spacing:normal;text-align:right}
 .hero nav a{display:inline-block;text-decoration:none;padding:.45rem 1.1rem;border-radius:999px;border:1.5px solid #4A5675;color:#F4F5F0;font-size:1rem;line-height:1.6;background:rgba(15,19,29,.55)}
 .hero nav a.main{background:#D9A21B;border-color:#D9A21B;color:#1F2638;font-weight:700}
 .hero nav a:hover{border-color:#D9A21B}
@@ -146,19 +149,20 @@ footer p{margin:.3rem 0}
 
 <header class="hero">
   <div class="hero-in">
-    <span class="words" aria-hidden="true"><span class="w">آراستن</span> <span class="w">آرامیدن</span> <span class="w">آزردن</span> <span class="w">آزمودن</span> <span class="w">آسودن</span> <span class="w">آشامیدن</span> <span class="w">آشفتن</span> <span class="w">آغازیدن</span> <span class="w">آغشتن</span> <span class="w">آفریدن</span> <span class="w">آگندن</span> <span class="w">آلودن</span> <span class="w">آمدن</span> <span class="w">آمرزیدن</span> <span class="w">آموختن</span> <span class="w">آمیختن</span> <span class="w">آوردن</span> <span class="w">آویختن</span> <span class="w">آهیختن</span> <span class="w">ارزیدن</span> <span class="w">افتادن</span> <span class="w">افراشتن</span> <span class="w">افروختن</span> <span class="w">افزودن</span> </span>
+    <div class="words words-a" aria-hidden="true"><span class="w">آراستن</span> <span class="w">آرامیدن</span> <span class="w">آزردن</span> <span class="w">آزمودن</span> <span class="w">آسودن</span> <span class="w">آشامیدن</span> <span class="w">آشفتن</span> <span class="w">آغازیدن</span> <span class="w">آغشتن</span> <span class="w">آفریدن</span> <span class="w">آگندن</span> <span class="w">آلودن</span> <span class="w">آمدن</span> <span class="w">آمرزیدن</span> <span class="w">آموختن</span> <span class="w">آمیختن</span> <span class="w">آوردن</span> <span class="w">آویختن</span> <span class="w">آهیختن</span> <span class="w">ارزیدن</span> <span class="w">افتادن</span> <span class="w">افراشتن</span> <span class="w">افروختن</span> <span class="w">افزودن</span> </div>
     <div class="title-block">
     <h1>دخترِ آسیابان</h1>
     <p class="sub">قصه‌ای با فعل‌های سادهٔ فارسی</p>
     <p class="by">نوشتهٔ هوشوارهٔ کلاد (Claude Opus 5.5) با کوششِ بیشینه، بر پایهٔ فهرستِ افعالِ سادهٔ متداول از پرویز ناتل خانلری، ۲۶مهر۱۴۰۵</p>
-    <nav aria-label="پیوندها">
+    </div>
+    <nav class="links" aria-label="پیوندها">
       <a class="main" href="#story">قصه را بخوانید</a>
       <a href="#verbs">جدولِ فعل‌ها</a>
       <a href="downloads/dokhtar-e-asiaban.pdf">PDF</a>
       <a href="downloads/dokhtar-e-asiaban.docx">Word</a>
     </nav>
-    </div>
     <span class="words" aria-hidden="true"> <span class="w">افسردن</span> <span class="w">افشاندن</span> <span class="w">افگندن</span> <span class="w">انباشتن</span> <span class="w">انجامیدن</span> <span class="w">انداختن</span> <span class="w">اندوختن</span> <span class="w">اندودن</span> <span class="w">اندیشیدن</span> <span class="w">انگاشتن</span> <span class="w">انگیختن</span> <span class="w">اوباشتن</span> <span class="w">ایستادن</span> <span class="w">باختن</span> <span class="w">باریدن</span> <span class="w">بافتن</span> <span class="w">بالیدن</span> <span class="w">بایستن</span> <span class="w">بخشودن</span> <span class="w">بخشیدن</span> <span class="w">برازیدن</span> <span class="w">بردن</span> <span class="w">بریدن</span> <span class="w">بستن</span> <span class="w">بِسودن</span> <span class="w">بَسیجیدن</span> <span class="w">بلعیدن</span> <span class="w">بودن</span> <span class="w">بوسیدن</span> <span class="w">بوییدن</span> <span class="w">بیختن</span> <span class="w">پاشیدن</span> <span class="w">پالودن</span> <span class="w">پختن</span> <span class="w">پذیرفتن</span> <span class="w">پراکندن</span> <span class="w">پرداختن</span> <span class="w">پرستیدن</span> <span class="w">پرسیدن</span> <span class="w">پروردن</span> <span class="w">پریدن</span> <span class="w">پژمردن</span> <span class="w">پژوهیدن</span> <span class="w">پسندیدن</span> <span class="w">پلاسیدن</span> <span class="w">پلکیدن</span> <span class="w">پناهیدن</span> <span class="w">پنداشتن</span> <span class="w">پوسیدن</span> <span class="w">پوشیدن</span> <span class="w">پوییدن</span> <span class="w">پیچیدن</span> <span class="w">پیراستن</span> <span class="w">پیمودن</span> <span class="w">پیوستن</span> <span class="w">تاختن</span> <span class="w">تافتن</span> <span class="w">تپیدن</span> <span class="w">تراشیدن</span> <span class="w">تراویدن</span> <span class="w">ترسیدن</span> <span class="w">ترشیدن</span> <span class="w">ترکیدن</span> <span class="w">تکاندن و تکانیدن</span> <span class="w">تنیدن</span> <span class="w">توانستن</span> <span class="w">جَستن</span> <span class="w">جُستن</span> <span class="w">جنبیدن</span> <span class="w">جنگیدن</span> <span class="w">جوشیدن</span> <span class="w">جویدن</span> <span class="w">جهیدن</span> <span class="w">چاپیدن</span> <span class="w">چاییدن</span> <span class="w">چپیدن</span> <span class="w">چربیدن</span> <span class="w">چرخیدن</span> <span class="w">چریدن</span> <span class="w">چسبیدن</span> <span class="w">چشیدن</span> <span class="w">چکیدن</span> <span class="w">چلاندن و چلانیدن</span> <span class="w">چمیدن</span> <span class="w">چیدن</span> <span class="w">خاریدن</span> <span class="w">خاستن</span> <span class="w">خاییدن</span> <span class="w">خراشیدن</span> <span class="w">خرامیدن</span> <span class="w">خروشیدن</span> <span class="w">خریدن</span> <span class="w">خزیدن</span> <span class="w">خستن</span> <span class="w">خشکیدن</span> <span class="w">خلیدن</span> <span class="w">خمیدن</span> <span class="w">خوابیدن</span> <span class="w">خواستن</span> <span class="w">خواندن</span> <span class="w">خوردن</span> <span class="w">خوفیدن</span> <span class="w">خیسیدن</span> <span class="w">دادن</span> <span class="w">داشتن</span> <span class="w">دانستن</span> <span class="w">درخشیدن</span> <span class="w">درودن</span> <span class="w">دریدن</span> <span class="w">دزدیدن</span> <span class="w">دمیدن</span> <span class="w">دوختن</span> <span class="w">دوشیدن</span> <span class="w">دویدن</span> <span class="w">دیدن</span> <span class="w">ربودن</span> <span class="w">رخشیدن</span> <span class="w">رسیدن</span> <span class="w">رَستن</span> <span class="w">رُستن</span> <span class="w">رشتن</span> <span class="w">رَفتن</span> <span class="w">رُفتن و روفتن</span> <span class="w">رقصیدن</span> <span class="w">رمیدن</span> <span class="w">رنجیدن</span> <span class="w">رندیدن</span> <span class="w">روییدن</span> <span class="w">ریختن</span> <span class="w x">ریدن</span> <span class="w">زاریدن</span> <span class="w">زاییدن</span> <span class="w">زدن</span> <span class="w">زدودن</span> <span class="w">زیستن</span> <span class="w">ساختن</span> <span class="w">سپردن</span> <span class="w">سپوختن</span> <span class="w">ستدن</span> <span class="w">ستردن</span> <span class="w">ستودن</span> <span class="w">ستیزیدن</span> <span class="w">سرودن</span> <span class="w">سرشتن</span> <span class="w">سُریدن</span> <span class="w">سزیدن</span> <span class="w">سُفتن</span> <span class="w">سگالیدن</span> <span class="w">سنجیدن</span> <span class="w">سوختن</span> <span class="w">سودن</span> <span class="w x">شاشیدن</span> <span class="w">شایستن</span> <span class="w">شتافتن</span> <span class="w">شدن</span> <span class="w">شستن</span> <span class="w">شکافتن</span> <span class="w">شکستن</span> <span class="w">شکفتن</span> <span class="w">شکیفتن</span> <span class="w">شگِفتن</span> <span class="w">شمردن</span> <span class="w">شناختن</span> <span class="w">شنیدن</span> <span class="w">شوریدن</span> <span class="w">طلبیدن</span> <span class="w">طوفیدن</span> <span class="w">غارتیدن</span> <span class="w">غُریدن</span> <span class="w">غلطیدن</span> <span class="w">غُنودن</span> <span class="w">فرستادن</span> <span class="w">فرسودن</span> <span class="w">فرمودن</span> <span class="w">فروختن</span> <span class="w">فریفتن</span> <span class="w">فشردن</span> <span class="w">فهمیدن</span> <span class="w">قاپیدن</span> <span class="w">قبولاندن</span> <span class="w">کاستن</span> <span class="w">کاشتن</span> <span class="w">کاویدن</span> <span class="w">کردن</span> <span class="w">کشتن</span> <span class="w">کشیدن</span> <span class="w">کَفتن</span> <span class="w">کَفیدن</span> <span class="w">کندن</span> <span class="w">کوچیدن</span> <span class="w">کوشیدن</span> <span class="w">کوفتن</span> <span class="w x">گاییدن</span> <span class="w">گداختن</span> <span class="w">گذاشتن</span> <span class="w">گذشتن</span> <span class="w">گرازیدن</span> <span class="w">گراییدن</span> <span class="w">گردیدن</span> <span class="w">گرفتن</span> <span class="w">گرویدن</span> <span class="w">گریختن</span> <span class="w">گریستن</span> <span class="w">گزاردن</span> <span class="w">گَزیدن</span> <span class="w">گُزیدن</span> <span class="w">گُساردن</span> <span class="w">گستردن</span> <span class="w">گسستن</span> <span class="w">گشتن</span> <span class="w">گشودن</span> <span class="w">گفتن</span> <span class="w">گماشتن</span> <span class="w">گُنجیدن</span> <span class="w">گندیدن</span> <span class="w">گواریدن</span> <span class="w x">گوزیدن</span> <span class="w">لرزیدن</span> <span class="w">لغزیدن</span> <span class="w">لمیدن</span> <span class="w">لُندیدن</span> <span class="w">لنگیدن</span> <span class="w">لهیدن</span> <span class="w">لیسیدن</span> <span class="w">ماسیدن</span> <span class="w">مالیدن</span> <span class="w">ماندن</span> <span class="w">مردن</span> <span class="w">مکیدن</span> <span class="w">مولیدن</span> <span class="w">موییدن</span> <span class="w">نازیدن</span> <span class="w">نالیدن</span> <span class="w">نامیدن</span> <span class="w">نشستن</span> <span class="w">نکوهیدن</span> <span class="w">نگاشتن</span> <span class="w">نگریستن</span> <span class="w">نمودن</span> <span class="w">نواختن</span> <span class="w">نَوردیدن</span> <span class="w">نوشتن</span> <span class="w">نوشیدن</span> <span class="w">نهادن</span> <span class="w">نهفتن</span> <span class="w">نیوشیدن</span> <span class="w">ورزیدن</span> <span class="w">وزیدن</span> <span class="w">هراسیدن</span> <span class="w">هشتن</span> <span class="w">یارستن</span> <span class="w">یازیدن</span> <span class="w">یافتن</span></span>
+    <div class="words words-c" aria-hidden="true"></div>
   </div>
 </header>
 
@@ -636,8 +640,6 @@ footer p{margin:.3rem 0}
     var R = tb.getBoundingClientRect(), W = R.width, H = R.height, rects = [];
     function add(rs){ for(var k = 0; k < rs.length; k++){ var q = rs[k]; if(q.width > 0 && q.height > 0) rects.push({l:q.left - R.left, t:q.top - R.top, b:q.bottom - R.top}); } }
     tb.querySelectorAll('h1, .sub, .by').forEach(function(el){ var rg = document.createRange(); rg.selectNodeContents(el); add(rg.getClientRects()); });
-    var below = tb.classList.contains('roomy') ? 2 : 0;   /* a few more pixels under the buttons, only where verbs come too close */
-    tb.querySelectorAll('nav a').forEach(function(a){ var q = a.getBoundingClientRect(); add([{left:q.left, top:q.top, bottom:q.bottom + below, width:q.width, height:q.height}]); });
     rects.sort(function(a, b){ return a.t - b.t; });
     var bands = [];
     rects.forEach(function(q){
@@ -672,9 +674,6 @@ footer p{margin:.3rem 0}
       });
       var rg = document.createRange(); rg.selectNodeContents(tb.querySelector('.by'));
       Array.prototype.forEach.call(rg.getClientRects(), box);
-      var below = tb.classList.contains('roomy') ? 2 : 0, nb = 0;   /* a few more pixels under the buttons, only where verbs come too close */
-      tb.querySelectorAll('nav a').forEach(function(a){ var q = a.getBoundingClientRect(); g.fillRect(q.left - R.left, q.top - R.top, q.width, q.height + below); nb = Math.max(nb, q.bottom - R.top); });
-      if(below) g.fillRect(0, nb, W, below);
       tb.style.shapeOutside = 'url(' + c.toDataURL('image/png') + ')';
       tb.classList.add('glyphs');
       window.__heroShape = c;
@@ -684,25 +683,61 @@ footer p{margin:.3rem 0}
     var fine = document.fonts && document.fonts.check && document.fonts.check('900 16px Sahel');
     if(fine && window.CSS && CSS.supports('shape-outside','url(x.png)')) glyphs(); else shape();
   }
-  /* after each layout, look under the buttons: if a verb sits closer than 14px, give that width a few more pixels */
+  /* the verbs above the title end on a full line: borrow verbs from below until one more would start a new line */
+  var wa = document.querySelector('.words-a'), wb = document.querySelector('.hero-in > span.words'), base = wa ? wa.children.length : 0;
+  function fill(){
+    if(!wa || !wb) return;
+    while(wa.children.length > base){ wb.insertBefore(document.createTextNode(' '), wb.firstChild); wb.insertBefore(wa.lastElementChild, wb.firstChild); }
+    var top = function(){ return wa.lastElementChild.getBoundingClientRect().top; }, t = top(), k;
+    while((k = wb.querySelector('.w'))){
+      wa.appendChild(document.createTextNode(' ')); wa.appendChild(k);
+      if(top() > t + 2){ wb.insertBefore(document.createTextNode(' '), wb.firstChild); wb.insertBefore(k, wb.firstChild); break; }
+    }
+  }
+  function all(){ fill(); layout(); }
+
+  /* the verbs that fall below the buttons move into their own block, which starts right at the buttons' lower edge:
+     the same small gap at every width, in every browser */
+  var nav = document.querySelector('.hero nav.links'), wc = document.querySelector('.words-c'), hin = document.querySelector('.hero-in'), G = 14, busy = false, again = false;
   function frames(){ return new Promise(function(r){ requestAnimationFrame(function(){ requestAnimationFrame(r); }); }); }
-  function gapBelow(){
-    var bs = Array.prototype.map.call(tb.querySelectorAll('nav a'), function(a){ return a.getBoundingClientRect(); });
-    var ws = Array.prototype.map.call(document.querySelectorAll('.words .w'), function(w){ return w.getBoundingClientRect(); });
-    var gap = Infinity;
-    bs.forEach(function(t){
-      if(bs.some(function(o){ return o !== t && o.top >= t.bottom && o.left < t.right && o.right > t.left; })) return;
-      ws.forEach(function(q){ if(q.right > t.left && q.left < t.right && q.top >= t.bottom - 1) gap = Math.min(gap, q.top - t.bottom); });
-    });
-    return gap;
+  function unsplit(){ if(!wc || !wb) return; while(wc.firstElementChild){ wb.appendChild(document.createTextNode(' ')); wb.appendChild(wc.firstElementChild); } }
+  function split(){
+    var L = parseFloat(getComputedStyle(hin).lineHeight), first = wb.querySelector('.w');
+    if(!first) return;
+    var hl = (L - first.getBoundingClientRect().height) / 2, ws = wb.querySelectorAll('.w'), k = -1;
+    var edge = nav.getBoundingClientRect().bottom + (parseFloat(getComputedStyle(nav).marginBottom) || 0);   /* the buttons' outer lower edge */
+    /* every line that reaches below that edge moves down, so the new block can start right at it */
+    for(var n = 0; n < ws.length; n++) if(ws[n].getBoundingClientRect().top - hl + L > edge + 0.5){ k = n; break; }
+    if(k < 0) return;
+    /* that line straddles the edge. If it reaches less than half a line below it, keep it beside the buttons and
+       let the buttons' room grow to its bottom; otherwise move it down. Either way no gap grows past half a line. */
+    var t = ws[k].getBoundingClientRect().top - hl;
+    if(t + L - edge <= L / 2){
+      nav.style.marginBottom = (parseFloat(nav.style.marginBottom) + (t + L - edge)) + 'px';
+      var end = t + L; k = -1;
+      for(n = 0; n < ws.length; n++) if(ws[n].getBoundingClientRect().top - hl >= end - 0.5){ k = n; break; }
+      if(k < 0) return;
+    }
+    for(var m = k; m < ws.length; m++){ wc.appendChild(ws[m]); wc.appendChild(document.createTextNode(' ')); }
   }
   function settle(){
-    tb.classList.remove('roomy'); layout();
-    return frames().then(function(){ if(gapBelow() < 14){ tb.classList.add('roomy'); layout(); } });
+    if(!nav || !wc || !hin) return;
+    if(busy){ again = true; return; }
+    busy = true;
+    unsplit(); all();
+    frames().then(function(){
+      var L = parseFloat(getComputedStyle(hin).lineHeight), w = document.querySelector('.words .w'), hl = (L - w.getBoundingClientRect().height) / 2;
+      nav.style.marginBottom = Math.max(0, Math.ceil(G - hl)) + 'px';
+      return frames();
+    }).then(function(){ split(); busy = false; if(again){ again = false; settle(); } });
   }
-  shape();
+  fill(); shape();
   if(document.fonts && document.fonts.ready) document.fonts.ready.then(settle); else settle();
-  var rz; window.addEventListener('resize', function(){ clearTimeout(rz); rz = setTimeout(settle, 120); });
+  var rz, rf = 0;
+  window.addEventListener('resize', function(){
+    if(!rf) rf = requestAnimationFrame(function(){ rf = 0; unsplit(); all(); });
+    clearTimeout(rz); rz = setTimeout(settle, 150);
+  });
 
   var spans = document.querySelectorAll('.words .w:not(.x)'), i = 0;
   if(spans.length && !reduce){
