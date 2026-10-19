@@ -60,7 +60,7 @@ a{color:inherit}
 .hero .by{margin:1.5rem 0 0;max-width:34rem;color:#B9BECB;font-size:1rem;line-height:1.9}
 @media (max-width:900px){.hero-in{font-size:.8rem;line-height:1.85;word-spacing:.35em}}
 @media (max-width:480px){.hero-in{font-size:.72rem}}
-.hero nav{margin-top:2rem;padding-bottom:1.75rem;display:flex;flex-wrap:wrap;gap:.6rem}
+.hero nav{margin-top:2rem;padding-bottom:1.5rem;display:flex;flex-wrap:wrap;gap:.6rem}
 .hero nav a{display:inline-block;text-decoration:none;padding:.45rem 1.1rem;border-radius:999px;border:1.5px solid #4A5675;color:#F4F5F0;font-size:1rem;line-height:1.6;background:rgba(15,19,29,.55)}
 .hero nav a.main{background:#D9A21B;border-color:#D9A21B;color:#1F2638;font-weight:700}
 .hero nav a:hover{border-color:#D9A21B}
@@ -629,13 +629,13 @@ footer p{margin:.3rem 0}
   /* one moment on load: the simple verbs light up in the hero texture */
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   /* the verbs flow around the title's own lines, not around a box */
-  var tb = document.querySelector('.title-block');
+  var tb = document.querySelector('.title-block'), hin = document.querySelector('.hero-in');
   function shape(){
     if(!tb || !(window.CSS && CSS.supports('shape-outside','polygon(0 0)'))) return;
     var R = tb.getBoundingClientRect(), W = R.width, H = R.height, rects = [];
     function add(rs){ for(var k = 0; k < rs.length; k++){ var q = rs[k]; if(q.width > 0 && q.height > 0) rects.push({l:q.left - R.left, t:q.top - R.top, b:q.bottom - R.top}); } }
     tb.querySelectorAll('h1, .sub, .by').forEach(function(el){ var rg = document.createRange(); rg.selectNodeContents(el); add(rg.getClientRects()); });
-    tb.querySelectorAll('nav a').forEach(function(a){ var q = a.getBoundingClientRect(); add([{left:q.left - 10, top:q.top - 6, bottom:q.bottom + 18, width:q.width, height:q.height}]); });
+    tb.querySelectorAll('nav a').forEach(function(a){ var q = a.getBoundingClientRect(); add([{left:q.left - 8, top:q.top - 4, bottom:q.bottom + 8, width:q.width, height:q.height}]); });
     rects.sort(function(a, b){ return a.t - b.t; });
     var bands = [];
     rects.forEach(function(q){
@@ -670,19 +670,27 @@ footer p{margin:.3rem 0}
       });
       var rg = document.createRange(); rg.selectNodeContents(tb.querySelector('.by'));
       Array.prototype.forEach.call(rg.getClientRects(), box);
-      tb.querySelectorAll('nav a').forEach(function(a){ box(a.getBoundingClientRect(), [6, 10, 18]); });   /* buttons: more room, most of all below */
+      var nb = 0;
+      tb.querySelectorAll('nav a').forEach(function(a){ var q = a.getBoundingClientRect(); box(q, [4, 5, 4]); nb = Math.max(nb, q.bottom - R.top); });
+      /* under the buttons: one even strip across, so the next line of verbs starts the same small gap below them at every width */
+      var strip = Math.round(parseFloat(getComputedStyle(hin).fontSize) * 0.4);
+      g.fillRect(0, nb, W, strip);
+      /* where only a sliver is left at the left edge, close it: no verb fits there anyway */
+      var D = g.getImageData(0, 0, W, H).data, tight = Math.max(64, parseFloat(getComputedStyle(tb).fontSize) * 5);
+      for(var y = 0; y < H; y++){
+        for(var x = 0; x < W && x < tight; x++) if(D[(y * W + x) * 4 + 3] > 100) break;
+        if(x > 0 && x < tight) g.fillRect(0, y, x, 1);
+      }
       tb.style.shapeOutside = 'url(' + c.toDataURL('image/png') + ')';
       tb.classList.add('glyphs');
       window.__heroShape = c;
     }catch(e){ shape(); }
   }
-  function layout(){
-    var fine = document.fonts && document.fonts.check && document.fonts.check('900 16px Sahel');
-    if(fine && window.CSS && CSS.supports('shape-outside','url(x.png)')) glyphs(); else shape();
-  }
+  function fine(){ return document.fonts && document.fonts.check && document.fonts.check('900 16px Sahel') && window.CSS && CSS.supports('shape-outside','url(x.png)'); }
+  function layout(){ if(fine()) glyphs(); else shape(); }
   shape();
   if(document.fonts && document.fonts.ready) document.fonts.ready.then(layout); else layout();
-  var rz; window.addEventListener('resize', function(){ clearTimeout(rz); rz = setTimeout(layout, 120); });
+  var rz = 0; window.addEventListener('resize', function(){ if(!rz) rz = requestAnimationFrame(function(){ rz = 0; layout(); }); });
 
   var spans = document.querySelectorAll('.words .w:not(.x)'), i = 0;
   if(spans.length && !reduce){
