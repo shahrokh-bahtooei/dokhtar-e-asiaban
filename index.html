@@ -656,88 +656,106 @@ footer p{margin:.3rem 0}
     pts.push(Math.ceil(W) + 'px ' + Math.ceil(H) + 'px', Math.ceil(W) + 'px 0px');
     tb.style.shapeOutside = 'polygon(' + pts.join(',') + ') border-box';
   }
-  /* finer: trace the letters of the title and subtitle themselves */
+  /* finer: trace the letters of the title and subtitle themselves, as a polygon (no image to encode or decode) */
+  var ink = {};
   function glyphs(){
-    try{
-      var R = tb.getBoundingClientRect(), W = Math.ceil(R.width), H = Math.ceil(R.height);
-      var c = document.createElement('canvas'); c.width = W; c.height = H;
-      var g = c.getContext('2d'); g.fillStyle = '#000';
-      function box(q){ g.fillRect(q.left - R.left, q.top - R.top, q.width, q.height); }
-      tb.querySelectorAll('h1, .sub').forEach(function(el){
-        var rg = document.createRange(); rg.selectNodeContents(el); var rs = rg.getClientRects();
-        var cs = getComputedStyle(el);
-        g.font = cs.fontWeight + ' ' + cs.fontSize + ' ' + cs.fontFamily;
-        g.direction = 'rtl'; g.textAlign = 'right'; g.textBaseline = 'alphabetic';
-        var asc = g.measureText(el.textContent).fontBoundingBoxAscent;
-        if(rs.length !== 1 || !asc){ Array.prototype.forEach.call(rs, box); return; }
-        g.fillText(el.textContent, rs[0].right - R.left, rs[0].top - R.top + asc);
-      });
-      var rg = document.createRange(); rg.selectNodeContents(tb.querySelector('.by'));
-      Array.prototype.forEach.call(rg.getClientRects(), box);
-      tb.style.shapeOutside = 'url(' + c.toDataURL('image/png') + ')';
-      tb.classList.add('glyphs');
-      window.__heroShape = c;
-    }catch(e){ shape(); }
-  }
-  function layout(){
-    var fine = document.fonts && document.fonts.check && document.fonts.check('900 16px Sahel');
-    if(fine && window.CSS && CSS.supports('shape-outside','url(x.png)')) glyphs(); else shape();
-  }
-  /* the verbs above the title end on a full line: borrow verbs from below until one more would start a new line */
-  var wa = document.querySelector('.words-a'), wb = document.querySelector('.hero-in > span.words'), base = wa ? wa.children.length : 0;
-  function fill(){
-    if(!wa || !wb) return;
-    while(wa.children.length > base){ wb.insertBefore(document.createTextNode(' '), wb.firstChild); wb.insertBefore(wa.lastElementChild, wb.firstChild); }
-    var top = function(){ return wa.lastElementChild.getBoundingClientRect().top; }, t = top(), k;
-    while((k = wb.querySelector('.w'))){
-      wa.appendChild(document.createTextNode(' ')); wa.appendChild(k);
-      if(top() > t + 2){ wb.insertBefore(document.createTextNode(' '), wb.firstChild); wb.insertBefore(k, wb.firstChild); break; }
+    var R = tb.getBoundingClientRect(), W = Math.ceil(R.width), H = Math.ceil(R.height), left = new Float32Array(H).fill(W);
+    function rect(q){ var y0 = Math.max(0, Math.floor(q.top - R.top)), y1 = Math.min(H, Math.ceil(q.bottom - R.top)), x = q.left - R.left; for(var y = y0; y < y1; y++) if(x < left[y]) left[y] = x; }
+    tb.querySelectorAll('h1, .sub').forEach(function(el){
+      var rg = document.createRange(); rg.selectNodeContents(el); var rs = rg.getClientRects();
+      if(rs.length !== 1){ Array.prototype.forEach.call(rs, rect); return; }
+      var cs = getComputedStyle(el), font = cs.fontWeight + ' ' + cs.fontSize + ' ' + cs.fontFamily, key = font + '|' + el.textContent, p = ink[key];
+      if(!p){   /* the left edge of the ink, row by row, measured once per size */
+        var c = document.createElement('canvas'), g = c.getContext('2d'); g.font = font;
+        var m = g.measureText(el.textContent), asc = m.fontBoundingBoxAscent, desc = m.fontBoundingBoxDescent;
+        if(!asc){ rect(rs[0]); return; }
+        var pad = 4, over = 40, cw = Math.ceil(m.width) + pad + over, ch = Math.ceil(asc + desc) + 2 * pad;
+        c.width = cw; c.height = ch; g = c.getContext('2d');
+        g.font = font; g.direction = 'rtl'; g.textAlign = 'right'; g.textBaseline = 'alphabetic';
+        g.fillText(el.textContent, cw - pad, pad + asc);
+        var d = g.getImageData(0, 0, cw, ch).data, dist = new Float32Array(ch).fill(-1);
+        for(var y = 0; y < ch; y++) for(var x = 0; x < cw; x++) if(d[(y * cw + x) * 4 + 3] > 100){ dist[y] = cw - pad - x; break; }
+        if(Object.keys(ink).length > 120) ink = {};
+        p = ink[key] = {dist:dist, pad:pad};
+      }
+      var right = rs[0].right - R.left, top = rs[0].top - R.top - p.pad;
+      for(var r = 0; r < p.dist.length; r++){
+        if(p.dist[r] < 0) continue;
+        var Y = Math.round(top + r); if(Y < 0 || Y >= H) continue;
+        var X = right - p.dist[r]; if(X < left[Y]) left[Y] = X;
+      }
+    });
+    var rb = document.createRange(); rb.selectNodeContents(tb.querySelector('.by'));
+    Array.prototype.forEach.call(rb.getClientRects(), rect);
+    /* where only a sliver is left at the left edge, close it: no verb fits there anyway */
+    var tight = Math.max(64, parseFloat(getComputedStyle(tb).fontSize) * 5), pts = [W + 'px 0px'], prev = W;
+    for(var y2 = 0; y2 < H; y2++){
+      var v = left[y2] >= W ? W : (left[y2] < tight ? 0 : Math.max(0, Math.floor(left[y2])));
+      if(v !== prev){ pts.push(prev + 'px ' + y2 + 'px', v + 'px ' + y2 + 'px'); prev = v; }
     }
+    pts.push(prev + 'px ' + H + 'px', W + 'px ' + H + 'px');
+    tb.style.shapeOutside = 'polygon(' + pts.join(',') + ') border-box';
+    tb.classList.add('glyphs');
   }
-  function all(){ fill(); layout(); }
+  function fine(){ return document.fonts && document.fonts.check && document.fonts.check('900 16px Sahel'); }
+  function layout(){ if(fine()) glyphs(); else shape(); }
+
+  /* the verbs above the title end on a full line: borrow verbs from below, measured in one go */
+  var wa = document.querySelector('.words-a'), wb = document.querySelector('.hero-in > span.words'), base = wa ? wa.children.length : 0;
+  var hin = document.querySelector('.hero-in'), nav = document.querySelector('.hero nav.links'), wc = document.querySelector('.words-c');
+  var G = 14, L = 0, hl = 0, lastTop = 0, lastWidth = -1;
+  function back(){ wb.insertBefore(document.createTextNode(' '), wb.firstChild); wb.insertBefore(wa.lastElementChild, wb.firstChild); }
+  function fill(){   /* reads once, then writes */
+    while(wa.children.length > base) back();
+    var as = wa.children, cs = getComputedStyle(hin), first = as[0].getBoundingClientRect();
+    L = parseFloat(cs.lineHeight); hl = (L - first.height) / 2;
+    var width = hin.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    var sp = parseFloat(cs.fontSize) * 0.28 + (parseFloat(cs.wordSpacing) || 0), used = 0;   /* one plain space */
+    lastTop = as[as.length - 1].getBoundingClientRect().top;
+    for(var k = as.length - 1; k >= 0; k--){ var q = as[k].getBoundingClientRect(); if(Math.abs(q.top - lastTop) > 2) break; used += q.width + sp; }
+    var bs = wb.children, take = 0;
+    for(var j = 0; j < bs.length && j < 40; j++){ var w = bs[j].getBoundingClientRect().width + sp; if(used + w > width - 2) break; used += w; take++; }
+    nav.style.marginBottom = Math.max(0, Math.ceil(G - hl)) + 'px';
+    for(var t = 0; t < take; t++){ wa.appendChild(document.createTextNode(' ')); wa.appendChild(wb.querySelector('.w')); }
+  }
+  function fillCheck(){   /* the estimate can be one word off: give one back if it wrapped (rare) */
+    while(wa.children.length > base && wa.lastElementChild.getBoundingClientRect().top > lastTop + 2) back();
+  }
 
   /* the verbs that fall below the buttons move into their own block, which starts right at the buttons' lower edge:
      the same small gap at every width, in every browser */
-  var nav = document.querySelector('.hero nav.links'), wc = document.querySelector('.words-c'), hin = document.querySelector('.hero-in'), G = 14, busy = false, again = false;
-  function frames(){ return new Promise(function(r){ requestAnimationFrame(function(){ requestAnimationFrame(r); }); }); }
-  function unsplit(){ if(!wc || !wb) return; while(wc.firstElementChild){ wb.appendChild(document.createTextNode(' ')); wb.appendChild(wc.firstElementChild); } }
-  function split(){
-    var L = parseFloat(getComputedStyle(hin).lineHeight), first = wb.querySelector('.w');
-    if(!first) return;
-    var hl = (L - first.getBoundingClientRect().height) / 2, ws = wb.querySelectorAll('.w'), k = -1;
-    var edge = nav.getBoundingClientRect().bottom + (parseFloat(getComputedStyle(nav).marginBottom) || 0);   /* the buttons' outer lower edge */
-    /* every line that reaches below that edge moves down, so the new block can start right at it */
-    for(var n = 0; n < ws.length; n++) if(ws[n].getBoundingClientRect().top - hl + L > edge + 0.5){ k = n; break; }
+  function unsplit(){ if(!wc.firstElementChild) return; var frag = document.createDocumentFragment(); while(wc.firstChild){ frag.appendChild(document.createTextNode(' ')); frag.appendChild(wc.firstChild); } wb.appendChild(frag); }
+  function split(){   /* reads once, then writes */
+    var ws = wb.children, margin = parseFloat(nav.style.marginBottom) || 0, edge = nav.getBoundingClientRect().bottom + margin, k = -1, n, tops = [];
+    for(n = 0; n < ws.length; n++){ tops[n] = ws[n].getBoundingClientRect().top - hl; if(k < 0 && tops[n] + L > edge + 0.5) k = n; if(k >= 0 && tops[n] > tops[k] + 0.5) break; }
     if(k < 0) return;
     /* that line straddles the edge. If it reaches less than half a line below it, keep it beside the buttons and
        let the buttons' room grow to its bottom; otherwise move it down. Either way no gap grows past half a line. */
-    var t = ws[k].getBoundingClientRect().top - hl;
+    var t = tops[k];
     if(t + L - edge <= L / 2){
-      nav.style.marginBottom = (parseFloat(nav.style.marginBottom) + (t + L - edge)) + 'px';
-      var end = t + L; k = -1;
-      for(n = 0; n < ws.length; n++) if(ws[n].getBoundingClientRect().top - hl >= end - 0.5){ k = n; break; }
-      if(k < 0) return;
+      while(k < ws.length && (tops[k] === undefined || tops[k] < t + 0.5)){ k++; if(tops[k] === undefined && k < ws.length) tops[k] = ws[k].getBoundingClientRect().top - hl; }
+      margin += t + L - edge;
     }
-    for(var m = k; m < ws.length; m++){ wc.appendChild(ws[m]); wc.appendChild(document.createTextNode(' ')); }
+    nav.style.marginBottom = margin + 'px';
+    if(k >= ws.length) return;
+    var frag = document.createDocumentFragment(), rest = Array.prototype.slice.call(ws, k);
+    rest.forEach(function(w){ frag.appendChild(w); frag.appendChild(document.createTextNode(' ')); });
+    wc.appendChild(frag);
   }
-  function settle(){
-    if(!nav || !wc || !hin) return;
-    if(busy){ again = true; return; }
-    busy = true;
-    unsplit(); all();
-    frames().then(function(){
-      var L = parseFloat(getComputedStyle(hin).lineHeight), w = document.querySelector('.words .w'), hl = (L - w.getBoundingClientRect().height) / 2;
-      nav.style.marginBottom = Math.max(0, Math.ceil(G - hl)) + 'px';
-      return frames();
-    }).then(function(){ split(); busy = false; if(again){ again = false; settle(); } });
+  /* everything in one pass, in the same frame as the resize: three layouts in all */
+  function arrange(force){
+    if(!wa || !wb || !wc || !nav || !hin) return;
+    var width = hin.clientWidth;
+    if(!force && width === lastWidth) return;   /* only the height changed (a phone's address bar): nothing to do */
+    lastWidth = width;
+    unsplit(); fill();
+    fillCheck(); layout();
+    split();
   }
   fill(); shape();
-  if(document.fonts && document.fonts.ready) document.fonts.ready.then(settle); else settle();
-  var rz, rf = 0;
-  window.addEventListener('resize', function(){
-    if(!rf) rf = requestAnimationFrame(function(){ rf = 0; unsplit(); all(); });
-    clearTimeout(rz); rz = setTimeout(settle, 150);
-  });
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ arrange(true); }); else arrange(true);
+  var rf = 0;
+  window.addEventListener('resize', function(){ if(!rf) rf = requestAnimationFrame(function(){ rf = 0; arrange(); }); });
 
   var spans = document.querySelectorAll('.words .w:not(.x)'), i = 0;
   if(spans.length && !reduce){
