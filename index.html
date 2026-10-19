@@ -59,7 +59,8 @@ a{color:inherit}
 .hero .sub{margin:.35em 0 0;font-weight:700;font-size:clamp(1.2rem,3.4vw,1.75rem);color:#D9A21B;line-height:1.5}
 .hero .by{margin:1.5rem 0 0;max-width:34rem;color:#B9BECB;font-size:1rem;line-height:1.9}
 @media (max-width:900px){.hero-in{font-size:.8rem;line-height:1.85;word-spacing:.35em}}
-@media (max-width:480px){.hero-in{font-size:.72rem}.hero nav{padding-bottom:9px}.title-block{padding-bottom:calc(1rem - 9px)}}
+@media (max-width:480px){.hero-in{font-size:.72rem}}
+.title-block.roomy{padding-bottom:calc(1rem - 9px)}.title-block.roomy nav{padding-bottom:9px}
 .hero nav{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.6rem}
 .hero nav a{display:inline-block;text-decoration:none;padding:.45rem 1.1rem;border-radius:999px;border:1.5px solid #4A5675;color:#F4F5F0;font-size:1rem;line-height:1.6;background:rgba(15,19,29,.55)}
 .hero nav a.main{background:#D9A21B;border-color:#D9A21B;color:#1F2638;font-weight:700}
@@ -635,7 +636,7 @@ footer p{margin:.3rem 0}
     var R = tb.getBoundingClientRect(), W = R.width, H = R.height, rects = [];
     function add(rs){ for(var k = 0; k < rs.length; k++){ var q = rs[k]; if(q.width > 0 && q.height > 0) rects.push({l:q.left - R.left, t:q.top - R.top, b:q.bottom - R.top}); } }
     tb.querySelectorAll('h1, .sub, .by').forEach(function(el){ var rg = document.createRange(); rg.selectNodeContents(el); add(rg.getClientRects()); });
-    var below = parseFloat(getComputedStyle(tb.querySelector('nav')).paddingBottom) ? 2 : 0;   /* narrow screens: a few more pixels under the buttons */
+    var below = tb.classList.contains('roomy') ? 2 : 0;   /* a few more pixels under the buttons, only where verbs come too close */
     tb.querySelectorAll('nav a').forEach(function(a){ var q = a.getBoundingClientRect(); add([{left:q.left, top:q.top, bottom:q.bottom + below, width:q.width, height:q.height}]); });
     rects.sort(function(a, b){ return a.t - b.t; });
     var bands = [];
@@ -671,7 +672,7 @@ footer p{margin:.3rem 0}
       });
       var rg = document.createRange(); rg.selectNodeContents(tb.querySelector('.by'));
       Array.prototype.forEach.call(rg.getClientRects(), box);
-      var below = parseFloat(getComputedStyle(tb.querySelector('nav')).paddingBottom) ? 2 : 0, nb = 0;   /* narrow screens: a few more pixels under the buttons */
+      var below = tb.classList.contains('roomy') ? 2 : 0, nb = 0;   /* a few more pixels under the buttons, only where verbs come too close */
       tb.querySelectorAll('nav a').forEach(function(a){ var q = a.getBoundingClientRect(); g.fillRect(q.left - R.left, q.top - R.top, q.width, q.height + below); nb = Math.max(nb, q.bottom - R.top); });
       if(below) g.fillRect(0, nb, W, below);
       tb.style.shapeOutside = 'url(' + c.toDataURL('image/png') + ')';
@@ -683,9 +684,25 @@ footer p{margin:.3rem 0}
     var fine = document.fonts && document.fonts.check && document.fonts.check('900 16px Sahel');
     if(fine && window.CSS && CSS.supports('shape-outside','url(x.png)')) glyphs(); else shape();
   }
+  /* after each layout, look under the buttons: if a verb sits closer than 14px, give that width a few more pixels */
+  function frames(){ return new Promise(function(r){ requestAnimationFrame(function(){ requestAnimationFrame(r); }); }); }
+  function gapBelow(){
+    var bs = Array.prototype.map.call(tb.querySelectorAll('nav a'), function(a){ return a.getBoundingClientRect(); });
+    var ws = Array.prototype.map.call(document.querySelectorAll('.words .w'), function(w){ return w.getBoundingClientRect(); });
+    var gap = Infinity;
+    bs.forEach(function(t){
+      if(bs.some(function(o){ return o !== t && o.top >= t.bottom && o.left < t.right && o.right > t.left; })) return;
+      ws.forEach(function(q){ if(q.right > t.left && q.left < t.right && q.top >= t.bottom - 1) gap = Math.min(gap, q.top - t.bottom); });
+    });
+    return gap;
+  }
+  function settle(){
+    tb.classList.remove('roomy'); layout();
+    return frames().then(function(){ if(gapBelow() < 14){ tb.classList.add('roomy'); layout(); } });
+  }
   shape();
-  if(document.fonts && document.fonts.ready) document.fonts.ready.then(layout); else layout();
-  var rz; window.addEventListener('resize', function(){ clearTimeout(rz); rz = setTimeout(layout, 120); });
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(settle); else settle();
+  var rz; window.addEventListener('resize', function(){ clearTimeout(rz); rz = setTimeout(settle, 120); });
 
   var spans = document.querySelectorAll('.words .w:not(.x)'), i = 0;
   if(spans.length && !reduce){
