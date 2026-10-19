@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>دخترِ آسیابان؛ قصه‌ای با فعل‌های سادهٔ فارسی</title>
-<meta name="description" content="قصه‌ای که همهٔ ۲۷۷ فعلِ سادهٔ متداولِ فهرستِ پرویز ناتل خانلری در آن آمده است، با جدولی از مصدر و امر و معادلِ مرکبِ هر فعل، تا فعل‌های ساده را در گفتار و نوشتار به جای فعل‌های مرکب بنشانیم.">
+<meta name="description" content="قصه‌ای با هر ۲۷۷ فعلِ فهرستِ «افعالِ سادهٔ متداول» از پرویز ناتل خانلری و جدولی از مصدر و امر و معادلِ مرکبِ هر فعل تا فعل‌های ساده را در گفتار و نوشتار به‌جای فعل‌های مرکب بنشانیم.">
 <meta name="keywords" content="پرویز ناتل خانلری, محمدرضا باطنی, محمدرضا باطنی‌زاده, افعال سادهٔ متداول, فعل ساده, فعل مرکب, زبان فارسی, قصه">
 <meta property="og:title" content="دخترِ آسیابان؛ قصه‌ای با فعل‌های سادهٔ فارسی">
-<meta property="og:description" content="همهٔ ۲۷۷ فعلِ سادهٔ متداولِ فهرستِ خانلری در یک قصه، با جدولِ مصدر و امر و معادلِ مرکب.">
+<meta property="og:description" content="هر ۲۷۷ فعلِ فهرستِ خانلری در یک قصه، با جدولِ مصدر و امر و معادلِ مرکب.">
 <meta property="og:locale" content="fa_IR">
 <meta name="color-scheme" content="light dark">
 <link rel="preload" href="assets/fonts/Sahel.woff2" as="font" type="font/woff2" crossorigin>
@@ -30,19 +30,25 @@
   --card:#FFFFFF;
   --field:#1F2638;
   --field-ink:#323C55;
+  --link:#9E2149;       /* barberry red (zereshki): links, coloured instead of underlined (a line under Persian letters cuts their dots and tails) */
+  --link-hover:#7A1838;
+  --link-wash:rgba(158,33,73,.08);
 }
 @media (prefers-color-scheme: dark){
   :root{
     --flour:#151A26; --ink:#E9E7DF; --stone:#9DA2AE; --rule:#2C3446;
     --saffron:#E6B44A; --wash:rgba(230,180,74,.16); --pom:#E58AA3; --card:#1E2534;
     --field:#0F131D; --field-ink:#262F44;
+    --link:#E7708F; --link-hover:#F59AB3; --link-wash:rgba(231,112,143,.14);
   }
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--flour);color:var(--ink);font-family:Sahel,Tahoma,sans-serif;font-size:1.125rem;line-height:1.95;font-feature-settings:"kern"}
-a{color:inherit}
+a{color:var(--link);text-decoration:none}
+a:hover{color:var(--link-hover)}
+.note a:hover,td.form a:hover,.tools a:hover,footer a:hover,.vcard a:hover{background:var(--link-wash);border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 :focus-visible{outline:3px solid var(--saffron);outline-offset:3px;border-radius:3px}
 .wrap{max-width:36rem;margin-inline:auto;padding-inline:1rem}
 .wide{max-width:60rem}
@@ -94,13 +100,14 @@ h2{font-weight:900;font-size:2rem;line-height:1.4;margin:0 0 1.25rem}
 .note ul{padding-inline-start:1.2rem;margin:.5rem 0 1.5rem}
 .note li p{margin:.2rem 0}
 .note h3{font-weight:700;font-size:1.3rem;line-height:1.5;margin:2.2rem 0 .6rem}
-.note p.lic{margin-top:2rem;border-inline-start:4px solid var(--saffron);padding-inline-start:1rem;font-size:1rem;color:var(--stone)}
+.note p.src{margin:2.2rem 0 .8rem;font-size:.95rem;line-height:1.9;color:var(--stone)}
+.note p.lic{margin-top:1rem;border-inline-start:4px solid var(--saffron);padding-inline-start:1rem;font-size:1rem;color:var(--stone)}
 
 .story-grid{display:grid;grid-template-columns:minmax(0,1fr) min(36rem,100%) minmax(0,1fr);padding-inline:1rem}
 .story-grid > .story{grid-column:2;padding-inline:0}
 .toc-box{grid-column:1;grid-row:1}
 .toc{list-style:none;padding:0;margin:0 0 1rem;display:flex;flex-wrap:wrap;gap:.25rem 1.1rem;font-size:.95rem;color:var(--stone)}
-.toc a{text-decoration:none}
+.toc a{color:inherit}
 .toc a:hover{color:var(--ink)}
 .toc .num{color:var(--pom);font-weight:700}
 .toc-box{display:none}
@@ -142,7 +149,7 @@ a.v.flash{animation:flash 1.6s ease}
 .tools input{font:inherit;font-size:1rem;flex:1 1 16rem;padding:.55rem .9rem;border:1.5px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink)}
 .tools input:focus{border-color:var(--saffron);outline:none;box-shadow:0 0 0 3px var(--wash)}
 .tools .count{color:var(--stone);font-size:.95rem}
-.tools a{font-size:.95rem;color:var(--stone)}
+.tools a{font-size:.95rem}
 .tablebox{overflow-x:auto;border-top:2px solid var(--ink)}
 table{width:100%;border-collapse:collapse;font-size:1rem;line-height:1.7}
 th{position:sticky;top:0;background:var(--flour);text-align:start;font-weight:700;color:var(--stone);font-size:.9rem;padding:.6rem .6rem;border-bottom:1px solid var(--rule)}
@@ -150,7 +157,7 @@ td{padding:.5rem .6rem;border-bottom:1px solid var(--rule);vertical-align:top}
 td.n{color:var(--stone);font-size:.9rem;width:3rem}
 td.inf{font-weight:700;white-space:nowrap}
 td.imp{white-space:nowrap}
-td.form a{text-decoration:none;border-bottom:2px solid var(--saffron);white-space:nowrap}
+td.form a{white-space:nowrap}
 td.eq{color:var(--stone)}
 tr:target td{background:var(--wash)}
 tr{scroll-margin-top:3rem}
@@ -187,18 +194,20 @@ footer p{margin:.3rem 0}
 <main>
   <section class="wrap note" id="note">
     <h2>یادداشت</h2>
-    <p>پرویز ناتل خانلری فهرستِ «افعالِ سادهٔ متداول» را، با ۲۷۷ فعل، در <a href="sources/khanlari-afal-e-sade-ye-motadavel.pdf">پیوستِ ۱ جلدِ دومِ «تاریخ زبان فارسی»</a> (صص ۳۹۵ تا ۳۹۸) آورده است. همهٔ آن‌ها در این قصه آمده‌اند و قصه هیچ فعلِ مرکب، مانند «نگاه‌کردن»، یا پیشوندی، مانند «برگشتن»، ندارد. چند فعلِ فهرست عامیانه و رکیک‌اند و تنها در صحنه‌های خنده‌دار می‌آیند.</p>
+    <p>بازیِ این قصه دو قاعده دارد: هر ۲۷۷ فعلِ فهرستِ <a href="sources/khanlari-afal-e-sade-ye-motadavel.pdf">«افعالِ سادهٔ متداول»</a> از پرویز ناتل خانلری در قصه بیاید و هیچ فعلِ مرکب یا پیشوندی، مانند «نگاه‌کردن» یا «برگشتن»، نیاید. چند فعلِ فهرست عامیانه و رکیک است. این‌ها را به صحنه‌های خنده‌دار سپرده‌ایم.</p>
 <h3>چرا فعلِ ساده؟</h3>
-<p>محمدرضا باطنی در جستارِ <a href="sources/bateni-farsi-zabani-aghim.pdf">«فارسی زبانی عقیم؟»</a> (آدینه، شمارهٔ ۳۳، فروردینِ ۱۳۶۸، صص ۶۶ تا ۷۱) می‌گوید در فارسی تنها فعل‌های ساده زایا هستند: از «نمودن» نما و نمایش و نماینده زاده‌اند، اما از «نشان‌دادن»، که امروز جای آن می‌نشیند، هیچ واژه‌ای نمی‌زاید؛ فعلِ مرکب عقیم است. او فهرستِ خانلری را نیز می‌آورد و می‌گوید بسیاری از این ۲۷۷ فعل را دیگر نه می‌گوییم و نه می‌نویسیم؛ به گمانش فعل‌های سادهٔ زنده دست‌بالا دویست‌اند. فارسیِ امروز هم دیگر فعلِ ساده نمی‌سازد و برای هر چیزِ تازه، با «کردن» و «زدن»، فعلِ مرکب می‌سازد، مانند «تلفن‌کردن». باطنی بارورترین راه برای ساختنِ واژه‌های علمی را ساختنِ فعل از نام و صفت می‌شمارد، چنان‌که «بوسیدن» و «لنگیدن» را ساخته‌اند.</p>
-<p>پس هر فعلِ ساده که بمیرد، ریشه‌ای از زبان می‌خشکد، و هر فعلِ ساده که دوباره بگوییم و بنویسیم، ریشه‌ای است که هنوز می‌تواند واژه‌های تازه برویاند. این تارنما گامی کوچک در همین راه است: می‌کوشد همین ۲۷۷ فعل را در گوش و زبانِ ما بنشاند، تا این فعل‌ها بمانند و فارسی باز فعل‌های سادهٔ تازه بزاید.</p>
+<p>از «نمودن» نما و نمایش و نماینده زاده است؛ اما از «نشان‌دادن» که امروز به‌جای آن می‌نشیند، یک واژه هم نمی‌زاید. محمدرضا باطنی در جستارِ <a href="sources/bateni-farsi-zabani-aghim.pdf">«فارسی زبانی عقیم؟»</a> همین را می‌گوید: در فارسی تنها فعلِ ساده زایاست و فعلِ مرکب عقیم. دریغ که فعل‌های ساده اندک است و هر روز می‌کاهد. باطنی به همین فهرستِ خانلری می‌نگرد و می‌بیند که بسیاری از این ۲۷۷ فعل را دیگر نه می‌گوییم و نه می‌نویسیم.</p>
+<p>فارسیِ امروز فعلِ سادهٔ تازه هم نمی‌سازد. وقتی محمود هومن «فلسفیدن» را ساخت، آن را «دور از ذوقِ سلیم» شمردند. باطنی اما بارورترین راه را همین می‌داند: باز از نام و صفت فعل‌های تازه بسازیم؛ چنان‌که پیشینیان «بوسیدن» و «لنگیدن» را ساختند.</p>
+<p>فعلِ ساده دانه است و فعلِ مرکب آرد: با آرد نانِ امروز را می‌پزیم؛ ولی آرد نمی‌روید. آسیابانِ دانا همهٔ دانه‌ها را نمی‌ساید و مشتی را برای سالِ دیگر می‌اندوزد. این تارنما همان مشتِ دانه است: ۲۷۷ فعلِ ساده که در قصه‌ای اندوخته‌ایم تا آن‌ها را دوباره در گفتار و نوشتارِ خود بکاریم و از هرکدام خوشه‌ای تازه بروید.</p>
 <h3>راهِ تمرین</h3>
 <ul>
-<li><p>هر فعلِ فهرست یک بار در قصه <strong>پررنگ</strong> آمده است؛ <a href="#verbs">جدولِ فعل‌ها</a>، در پایانِ صفحه، همان صورت را کنارِ مصدر و امر و معادلِ مرکبش می‌نهد.<span class="web"> روی هر فعلِ پررنگ بزنید تا همین‌ها را همان‌جا ببینید.</span></p></li>
-<li><p>قصه را بلند بخوانید و برای هر فعلِ پررنگ، فعلِ مرکبی را بیابید که خودتان معمولاً جایش می‌گویید.</p></li>
-<li><p>گذشتهٔ هر فعل را از مصدرش و حالش را از امرش بسازید؛ راهش در آغازِ جدول آمده است.</p></li>
-<li><p>هر روز چند فعل از جدول بگزینید و در گفت‌وگو و نوشتهٔ همان روز به جای معادلِ مرکبشان بنشانید.</p></li>
+<li><p>هر فعلِ فهرست یک بار در قصه <strong>پررنگ</strong> آمده است. <a href="#verbs">جدولِ فعل‌ها</a>، در پایانِ صفحه، مصدر و امر و معادلِ مرکبِ هرکدام را می‌نماید.</p></li>
+<li><p>قصه را بلند بخوانید و به هر فعلِ پررنگ که رسیدید، از خود بپرسید که معمولاً چه فعلِ مرکبی جایش می‌گویید.</p></li>
+<li><p>گذشته و حالِ هر فعل را بسازید: گذشته را از مصدر و حال را از امر. راهش در آغازِ جدول آمده است.</p></li>
+<li><p>هر روز چند فعل از جدول بگزینید و در گفت‌وگو و نوشتهٔ همان روز به‌جای معادلِ مرکبشان بنشانید. شاید دیگران هم از شما بیاموزند.</p></li>
 </ul>
-<p class="lic">این قصه و جدولِ همراهش با پروانهٔ <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.fa">CC0 1.0</a> در قلمروِ همگانی‌اند: هرکس می‌تواند آن‌ها را بی‌آنکه دستوری بطلبد، بپراکند، بفروشد، بیاراید یا بپیراید. بایسته هم نیست نامی از سازنده بیاید.</p>
+<p class="src">سرچشمه‌ها: پرویز ناتل خانلری، <cite>تاریخ زبان فارسی</cite>، ج۲، پیوستِ ۱، ص۳۹۵ تا ۳۹۸؛ محمدرضا باطنی، «فارسی زبانی عقیم؟»، <cite>آدینه</cite>، ش۳۳، فروردین۱۳۶۸، ص۶۶ تا ۷۱.</p>
+<p class="lic">این قصه و جدولِ همراهش با پروانهٔ <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.fa">CC0 1.0</a> در قلمروِ همگانی است: هرکس می‌تواند آن‌ها را بی‌آنکه دستوری بطلبد، بپراکند، بفروشد، بیاراید یا بپیراید. بایسته هم نیست نامی از سازنده بیاید. هرچه بیشتر بپراکنید، بهتر.</p>
   </section>
 
   <div class="story-grid">
@@ -267,15 +276,15 @@ footer p{margin:.3rem 0}
 
   <section class="wrap wide" id="verbs">
     <h2>جدولِ فعل‌ها</h2>
-    <p style="max-width:36rem">هر ۲۷۷ مصدرِ فهرست به ترتیبِ الفبا آمده است؛ با صورتی که در قصه پررنگ است و فعلِ مرکبی که جایش می‌نشیند. مصدر بنِ گذشته را می‌نماید و امر بنِ حال را: امر همان «بِ» با بنِ حال است و در فعل‌هایی که با «ا» یا «آ» می‌آغازند «ب» و «ی» می‌آید (انداختن ← بینداز، آموختن ← بیاموز). حال را نیز از همین بن می‌سازیم: «می» + بن + شناسه (بیندیش ← می‌اندیشم، می‌اندیشی، می‌اندیشد).</p>
+    <p style="max-width:36rem">هر ۲۷۷ مصدرِ فهرست به ترتیبِ الفبا آمده است، با صورتی که در قصه پررنگ است و فعلِ مرکبی که جایش می‌نشیند. مصدر بنِ گذشته را می‌نماید و امر بنِ حال را. امر همان «بِ» با بنِ حال است و در فعل‌هایی که با «ا» یا «آ» می‌آغازد، «ب» و «ی» می‌آید: انداختن ← بینداز و آموختن ← بیاموز. حال را نیز از همین بن می‌سازیم: «می» + بن + شناسه، مانند بیندیش ← می‌اندیشم و می‌اندیشی و می‌اندیشد.</p>
     <div class="tools">
-      <input id="q" type="search" placeholder="مصدر یا امر یا فعلِ مرکب را بنویسید؛ مثلاً «نگاه»" aria-label="جست‌وجو در جدول">
+      <input id="q" type="search" placeholder="مصدر یا امر یا فعلِ مرکب را بنویسید، مثلاً «نگاه»" aria-label="جست‌وجو در جدول">
       <span class="count" id="count" aria-live="polite">۲۷۷ فعل</span>
       <a href="data/verbs.csv" download>دریافتِ جدول (CSV)</a>
     </div>
     <div class="tablebox">
       <table>
-        <thead><tr><th>ردیف</th><th>مصدر</th><th>امر</th><th>در قصه</th><th>به جای این فعل‌های مرکب (یا معنا)</th></tr></thead>
+        <thead><tr><th>ردیف</th><th>مصدر</th><th>امر</th><th>در قصه</th><th>به‌جای این فعل‌های مرکب (یا معنا)</th></tr></thead>
         <tbody id="tb">
 <tr id="v-1"><td class="n">۱</td><td class="inf">آراستن</td><td class="imp">بیارای</td><td class="form"><a href="#s-1">آراستند</a></td><td class="eq">تزئین‌کردن، آرایش‌دادن</td></tr>
 <tr id="v-2"><td class="n">۲</td><td class="inf">آرامیدن</td><td class="imp">بیارام</td><td class="form"><a href="#s-2">نیارامید</a></td><td class="eq">آرام‌گرفتن</td></tr>
@@ -563,9 +572,9 @@ footer p{margin:.3rem 0}
 
 <footer>
   <div class="wrap wide">
-    <p>این قصه و جدولِ همراهش با پروانهٔ <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.fa">CC0 1.0</a> در قلمروِ همگانی‌اند.</p>
-    <p>فهرستِ فعل‌ها را از <a href="sources/khanlari-afal-e-sade-ye-motadavel.pdf">پیوستِ ۱ جلدِ دومِ «تاریخ زبان فارسی»</a>، نوشتهٔ پرویز ناتل خانلری، گرفته‌ایم.</p>
-    <p>برگ‌های این پیوست و <a href="sources/bateni-farsi-zabani-aghim.pdf">جستارِ باطنی</a> را تنها برای آسانیِ خواننده در ریپو نهاده‌ایم؛ این دو زیرِ CC0 نیستند و حقشان از آنِ دارندگانشان است.</p>
+    <p>این قصه و جدولِ همراهش با پروانهٔ <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.fa">CC0 1.0</a> در قلمروِ همگانی است.</p>
+    <p>فهرستِ فعل‌ها را از <a href="sources/khanlari-afal-e-sade-ye-motadavel.pdf">پیوستِ ۱ جلدِ دومِ <cite>تاریخ زبان فارسی</cite></a>، نوشتهٔ پرویز ناتل خانلری، گرفته‌ایم.</p>
+    <p>برگ‌های این پیوست و <a href="sources/bateni-farsi-zabani-aghim.pdf">جستارِ باطنی</a> را تنها برای آسانیِ خواننده در ریپو نهاده‌ایم. این دو زیرِ CC0 نیست و حقشان از آنِ دارندگانشان است.</p>
     <p>قلمِ این صفحه <a href="https://github.com/rastikerdar/sahel-font">ساحل</a> ساختهٔ صابر راستی‌کردار است، با پروانهٔ SIL OFL 1.1.</p>
     <p><a href="https://github.com/shahrokh-bahtooei/dokhtar-e-asiaban">سرچشمهٔ این صفحه در گیت‌هاب</a></p>
   </div>
@@ -577,7 +586,7 @@ footer p{margin:.3rem 0}
     <dt>امر</dt><dd id="vc-imp"></dd>
     <dt>در قصه</dt><dd id="vc-form"></dd>
   </dl>
-  <div class="eq"><span>به جای</span><b id="vc-eq"></b></div>
+  <div class="eq"><span>به‌جای</span><b id="vc-eq"></b></div>
   <div class="row"><a id="vc-row" href="#verbs">در جدول ببینید</a><button type="button" id="vc-x" aria-label="بستن">بستن</button></div>
 </div>
 
