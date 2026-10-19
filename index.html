@@ -79,8 +79,8 @@ a{color:inherit}
 .hero .bt a{display:inline-block;text-decoration:none;padding:.45rem 1.1rem;border-radius:999px;border:1.5px solid #4A5675;color:#F4F5F0;font-size:1rem;line-height:1.6;background:rgba(15,19,29,.55)}
 .hero .bt a.main{background:#D9A21B;border-color:#D9A21B;color:#1F2638;font-weight:700}
 .hero .bt a:hover{border-color:#D9A21B}
-/* the star badge from shields.io, at the top left: a float on the same line grid, at a fixed size so nothing moves when it loads */
-.hero .badge{float:left;box-sizing:border-box;height:round(up, calc(26px + var(--pb)), var(--L));padding-bottom:var(--pb);margin-right:.75rem;display:flex;align-items:flex-end}
+/* the star and fork badges from shields.io, at the top left: a float on the same line grid, at a fixed size so nothing moves when it loads */
+.hero .badge{float:left;box-sizing:border-box;height:round(up, calc(26px + var(--pb)), var(--L));padding-bottom:var(--pb);margin-right:.75rem;display:flex;align-items:flex-end;gap:6px;direction:ltr}
 .hero .badge a{display:block}
 .hero .badge img{display:block;width:112px;height:26px;object-fit:contain;object-position:left center}
 /* PDF and Word: file icons from Bootstrap Icons (MIT, see assets/icons/bootstrap-icons-LICENSE.txt) */
@@ -167,7 +167,7 @@ footer p{margin:.3rem 0}
 
 <header class="hero">
   <div class="hero-in">
-    <span class="badge"><a href="https://github.com/shahrokh-bahtooei/dokhtar-e-asiaban" title="سرچشمهٔ این صفحه در گیت‌هاب"><img src="https://img.shields.io/github/stars/shahrokh-bahtooei/dokhtar-e-asiaban?style=flat&amp;logo=github&amp;logoColor=F4F5F0&amp;label=Stars&amp;labelColor=323C55&amp;color=D9A21B" alt="ستاره‌های این صفحه در گیت‌هاب" width="112" height="26"></a></span>
+    <span class="badge"><a href="https://github.com/shahrokh-bahtooei/dokhtar-e-asiaban" title="سرچشمهٔ این صفحه در گیت‌هاب"><img src="https://img.shields.io/github/stars/shahrokh-bahtooei/dokhtar-e-asiaban?style=flat&amp;logo=github&amp;logoColor=F4F5F0&amp;label=Stars&amp;labelColor=323C55&amp;color=D9A21B" alt="ستاره‌های این صفحه در گیت‌هاب" width="112" height="26"></a><a href="https://github.com/shahrokh-bahtooei/dokhtar-e-asiaban/forks" title="شاخه‌های این صفحه در گیت‌هاب"><img src="https://img.shields.io/github/forks/shahrokh-bahtooei/dokhtar-e-asiaban?style=flat&amp;logo=github&amp;logoColor=F4F5F0&amp;label=Forks&amp;labelColor=323C55&amp;color=D9A21B" alt="شاخه‌های این صفحه در گیت‌هاب" width="112" height="26"></a></span>
     <span class="sp" aria-hidden="true"></span>
     <h1>دخترِ آسیابان</h1>
     <p class="sub">قصه‌ای با فعل‌های سادهٔ فارسی</p>
@@ -188,6 +188,8 @@ footer p{margin:.3rem 0}
   <section class="wrap note" id="note">
     <h2>یادداشت</h2>
     <p>همهٔ ۲۷۷ مصدرِ فهرستِ «افعالِ سادهٔ متداول» در این قصه آمده‌اند؛ خانلری این فهرست را در پیوستِ ۱ جلدِ دومِ «تاریخ زبان فارسی» (صص ۳۹۵ تا ۳۹۸) آورده است. در قصه هیچ فعلِ مرکب، مانند «نگاه‌کردن»، یا پیشوندی، مانند «برگشتن»، نیامده است.</p>
+<p>چرا فعلِ ساده؟ محمدرضا باطنی در جستارِ <a href="https://archive.org/details/golstar_gmail">«فارسی زبانی عقیم؟»</a> (آدینه، شمارهٔ ۳۳، فروردینِ ۱۳۶۸) از همین فهرستِ خانلری می‌آغازد و می‌گوید بسیاری از این ۲۷۷ فعل را دیگر نه می‌گوییم و نه می‌نویسیم. سخنِ او این است که در فارسی تنها فعل‌های ساده زایا هستند و از هرکدام خانواده‌ای از واژه می‌زاید، چنان‌که «دانش» و «دانا» و «دانشگاه» از «دانستن»؛ اما فعلِ مرکب عقیم است و واژه‌ای از آن نمی‌زاید. فارسیِ امروز هم دیگر فعلِ ساده نمی‌سازد و هر نیازِ تازه را با «کردن» و «شدن» می‌پوشاند. باطنی ساختنِ فعل از نام و صفت را، چنان‌که در «لنگیدن» و «بوسیدن» می‌بینیم، پربارترین راه برای ساختنِ واژه‌های علمی می‌شمارد.</p>
+<p>پس هر فعلِ ساده که بمیرد، ریشه‌ای از زبان می‌خشکد، و هر فعلِ ساده که دوباره بگوییم و بنویسیم، ریشه‌ای است که هنوز می‌تواند واژه‌های تازه برویاند. این تارنما گامی کوچک در همین راه است: می‌کوشد ۲۷۷ فعلِ سادهٔ فهرستِ خانلری را دوباره در گوش و زبانِ ما بنشاند، تا این فعل‌ها بمانند و فارسی دوباره فعل‌های سادهٔ تازه بزاید.</p>
 <p>راهِ تمرین:</p>
 <ul>
 <li><p>هر فعلِ فهرست یک بار در قصه <strong>پررنگ</strong> آمده است؛ جدولِ پایانِ سند همان صورت را کنارِ مصدر و امر و معادلِ مرکبش می‌نهد.</p></li>
