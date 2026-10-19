@@ -53,14 +53,14 @@ a{color:inherit}
 .words{user-select:none}
 .words .w{transition:color 1.2s ease}
 .words .w.lit{color:#D9A21B}
-.title-block{float:right;width:100%;margin:0;padding:.4rem 0 1rem;text-align:right;word-spacing:normal;color:#F4F5F0;shape-margin:.9em;shape-image-threshold:.4}
+.title-block{float:right;width:100%;margin:0;padding:0;text-align:right;word-spacing:normal;color:#F4F5F0;shape-margin:.9em;shape-image-threshold:.4}
 .title-block.glyphs{shape-margin:.7em}
-.hero h1{margin:0;font-weight:900;font-size:clamp(3.1rem,11vw,7rem);line-height:1.5;letter-spacing:0}
+.hero h1{margin:0;padding-top:.4rem;font-weight:900;font-size:clamp(3.1rem,11vw,7rem);line-height:1.5;letter-spacing:0}
 .hero .sub{margin:.35em 0 0;font-weight:700;font-size:clamp(1.2rem,3.4vw,1.75rem);color:#D9A21B;line-height:1.5}
 .hero .by{margin:1.5rem 0 0;max-width:34rem;color:#B9BECB;font-size:1rem;line-height:1.9}
 @media (max-width:900px){.hero-in{font-size:.8rem;line-height:1.85;word-spacing:.35em}}
 @media (max-width:480px){.hero-in{font-size:.72rem}}
-.hero nav{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.6rem}
+.hero nav{margin-top:2rem;padding-bottom:1.75rem;display:flex;flex-wrap:wrap;gap:.6rem}
 .hero nav a{display:inline-block;text-decoration:none;padding:.45rem 1.1rem;border-radius:999px;border:1.5px solid #4A5675;color:#F4F5F0;font-size:1rem;line-height:1.6;background:rgba(15,19,29,.55)}
 .hero nav a.main{background:#D9A21B;border-color:#D9A21B;color:#1F2638;font-weight:700}
 .hero nav a:hover{border-color:#D9A21B}
@@ -635,7 +635,7 @@ footer p{margin:.3rem 0}
     var R = tb.getBoundingClientRect(), W = R.width, H = R.height, rects = [];
     function add(rs){ for(var k = 0; k < rs.length; k++){ var q = rs[k]; if(q.width > 0 && q.height > 0) rects.push({l:q.left - R.left, t:q.top - R.top, b:q.bottom - R.top}); } }
     tb.querySelectorAll('h1, .sub, .by').forEach(function(el){ var rg = document.createRange(); rg.selectNodeContents(el); add(rg.getClientRects()); });
-    tb.querySelectorAll('nav a').forEach(function(a){ add([a.getBoundingClientRect()]); });
+    tb.querySelectorAll('nav a').forEach(function(a){ var q = a.getBoundingClientRect(); add([{left:q.left - 10, top:q.top - 6, bottom:q.bottom + 18, width:q.width, height:q.height}]); });
     rects.sort(function(a, b){ return a.t - b.t; });
     var bands = [];
     rects.forEach(function(q){
@@ -658,7 +658,7 @@ footer p{margin:.3rem 0}
       var R = tb.getBoundingClientRect(), W = Math.ceil(R.width), H = Math.ceil(R.height);
       var c = document.createElement('canvas'); c.width = W; c.height = H;
       var g = c.getContext('2d'); g.fillStyle = '#000';
-      function box(q){ g.fillRect(q.left - R.left, q.top - R.top, q.width, q.height); }
+      function box(q, pad){ pad = pad || [0, 0, 0]; g.fillRect(q.left - R.left - pad[1], q.top - R.top - pad[0], q.width + 2 * pad[1], q.height + pad[0] + pad[2]); }
       tb.querySelectorAll('h1, .sub').forEach(function(el){
         var rg = document.createRange(); rg.selectNodeContents(el); var rs = rg.getClientRects();
         var cs = getComputedStyle(el);
@@ -670,7 +670,7 @@ footer p{margin:.3rem 0}
       });
       var rg = document.createRange(); rg.selectNodeContents(tb.querySelector('.by'));
       Array.prototype.forEach.call(rg.getClientRects(), box);
-      tb.querySelectorAll('nav a').forEach(function(a){ box(a.getBoundingClientRect()); });
+      tb.querySelectorAll('nav a').forEach(function(a){ box(a.getBoundingClientRect(), [6, 10, 18]); });   /* buttons: more room, most of all below */
       tb.style.shapeOutside = 'url(' + c.toDataURL('image/png') + ')';
       tb.classList.add('glyphs');
       window.__heroShape = c;
