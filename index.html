@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>دخترِ آسیابان؛ قصه‌ای با فعل‌های سادهٔ فارسی</title>
+<meta name="description" content="قصه‌ای که همهٔ ۲۷۷ فعلِ سادهٔ متداولِ فهرستِ پرویز ناتل خانلری را به کار می‌برد، با جدولِ مصدر، امر و معادلِ مرکبِ هر فعل؛ برای تمرینِ جانشین‌کردنِ فعل‌های مرکب با فعل‌های ساده.">
+<meta name="keywords" content="پرویز ناتل خانلری, محمدرضا باطنی‌زاده, افعال سادهٔ متداول, فعل ساده, فعل مرکب, زبان فارسی, قصه">
+<meta property="og:title" content="دخترِ آسیابان؛ قصه‌ای با فعل‌های سادهٔ فارسی">
+<meta property="og:description" content="همهٔ ۲۷۷ فعلِ سادهٔ متداولِ فهرستِ خانلری در یک قصه، با جدولِ مصدر و امر و معادلِ مرکب.">
+<meta property="og:locale" content="fa_IR">
+<meta name="color-scheme" content="light dark">
+<link rel="preload" href="assets/fonts/Sahel.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23243049'/%3E%3Ccircle cx='32' cy='32' r='7' fill='%23D9A21B'/%3E%3C/svg%3E">
+<style>
+@font-face{font-family:Sahel;src:url(assets/fonts/Sahel.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Sahel;src:url(assets/fonts/Sahel-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:Sahel;src:url(assets/fonts/Sahel-Black.woff2) format("woff2");font-weight:900;font-display:swap}
+
+:root{
+  --flour:#F4F5F0;      /* page: flour on the miller's table */
+  --ink:#1F2638;        /* indigo ink */
+  --stone:#6B707C;      /* millstone grey */
+  --rule:#D9DBD3;
+  --saffron:#B97E0E;    /* the simple verbs */
+  --wash:#F5E6B8;
+  --pom:#8B2343;        /* pomegranate: chapter numerals */
+  --card:#FFFFFF;
+  --field:#1F2638;
+  --field-ink:#323C55;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --flour:#151A26; --ink:#E9E7DF; --stone:#9DA2AE; --rule:#2C3446;
+    --saffron:#E6B44A; --wash:rgba(230,180,74,.16); --pom:#E58AA3; --card:#1E2534;
+    --field:#0F131D; --field-ink:#262F44;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--flour);color:var(--ink);font-family:Sahel,Tahoma,sans-serif;font-size:1.125rem;line-height:1.95;font-feature-settings:"kern"}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:3px;border-radius:3px}
+.wrap{max-width:36rem;margin-inline:auto;padding-inline:1rem}
+.wide{max-width:60rem}
+
+/* ---------- hero: the list itself is the texture ---------- */
+.hero{position:relative;overflow:hidden;background:var(--field);color:#F4F5F0;isolation:isolate}
+.field{position:absolute;inset:-1rem;z-index:-1;color:var(--field-ink);font-size:1.05rem;line-height:2.1;word-spacing:.6em;text-align:justify;padding:1rem;user-select:none;
+  -webkit-mask-image:linear-gradient(to bottom,#000 0,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0,#000 55%,transparent 100%)}
+.field span.lit{color:#D9A21B;transition:color 1.2s ease}
+.hero-in{max-width:60rem;margin-inline:auto;padding:clamp(4rem,12vw,8.5rem) 1rem clamp(3rem,8vw,5.5rem)}
+.hero h1{margin:0;font-weight:900;font-size:clamp(3.1rem,11vw,7rem);line-height:1.15;letter-spacing:0}
+.hero .sub{margin:.4rem 0 0;font-weight:700;font-size:clamp(1.2rem,3.4vw,1.75rem);color:#D9A21B;line-height:1.5}
+.hero .by{margin:1.5rem 0 0;max-width:34rem;color:#B9BECB;font-size:1rem;line-height:1.9}
+.hero nav{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.6rem}
+.hero nav a{display:inline-block;text-decoration:none;padding:.45rem 1.1rem;border-radius:999px;border:1.5px solid #4A5675;color:#F4F5F0;font-size:1rem;line-height:1.6;background:rgba(15,19,29,.55)}
+.hero nav a.main{background:#D9A21B;border-color:#D9A21B;color:#1F2638;font-weight:700}
+.hero nav a:hover{border-color:#D9A21B}
+
+/* ---------- sections ---------- */
+section{padding-block:3.5rem 1rem}
+h2{font-weight:900;font-size:2rem;line-height:1.4;margin:0 0 1.25rem}
+.note p,.note li{color:var(--ink)}
+.note ul{padding-inline-start:1.2rem;margin:.5rem 0 1.5rem}
+.note li p{margin:.2rem 0}
+.note p:last-child{border-inline-start:4px solid var(--saffron);padding-inline-start:1rem;font-size:1rem;color:var(--stone)}
+.note strong{color:var(--saffron)}
+
+.toc{list-style:none;padding:0;margin:0 0 1rem;display:flex;flex-wrap:wrap;gap:.25rem 1.1rem;font-size:.95rem;color:var(--stone)}
+.toc a{text-decoration:none}
+.toc a:hover{color:var(--ink)}
+.toc .num{color:var(--pom);font-weight:700}
+
+.story p{margin:0 0 1.15rem;text-align:start}
+.chapter{display:flex;align-items:baseline;gap:.9rem;margin:3rem 0 1rem;font-weight:700;font-size:1.5rem;line-height:1.4;scroll-margin-top:1rem}
+.chapter .num{font-weight:900;font-size:3rem;line-height:1;color:var(--pom);min-width:2.2rem}
+.story .chapter:first-of-type{margin-top:1rem}
+
+a.v{color:inherit;text-decoration:none;font-weight:700;background:linear-gradient(var(--wash),var(--wash)) bottom/100% 38% no-repeat;border-bottom:2px solid var(--saffron);padding-inline:.08em;scroll-margin-top:40vh;cursor:pointer}
+a.v:hover,a.v[aria-expanded="true"]{background-size:100% 100%}
+a.v.flash{animation:flash 1.6s ease}
+@keyframes flash{0%,40%{background-color:var(--saffron);color:var(--flour)}100%{background-color:transparent}}
+
+/* ---------- verb card ---------- */
+.vcard{position:absolute;z-index:20;width:min(19rem,calc(100vw - 2rem));background:var(--card);color:var(--ink);border:1px solid var(--rule);border-top:4px solid var(--saffron);border-radius:10px;box-shadow:0 12px 32px rgba(20,25,40,.18);padding:.85rem 1rem 1rem;font-size:1rem;line-height:1.8}
+.vcard[hidden]{display:none}
+.vcard .inf{font-weight:900;font-size:1.6rem;line-height:1.4}
+.vcard dl{margin:.4rem 0 .6rem;display:grid;grid-template-columns:auto 1fr;gap:.1rem .9rem}
+.vcard dt{color:var(--stone)}
+.vcard dd{margin:0;font-weight:700}
+.vcard .eq{border-top:1px dashed var(--rule);padding-top:.5rem;color:var(--ink)}
+.vcard .eq span{color:var(--stone);display:block;font-size:.9rem}
+.vcard .row{display:flex;justify-content:space-between;align-items:center;margin-top:.6rem;font-size:.9rem}
+.vcard button{font:inherit;background:none;border:0;color:var(--stone);cursor:pointer;padding:.2rem .4rem}
+@media (max-width:560px){.vcard{position:fixed;inset:auto 0 0 0;width:auto;border-radius:14px 14px 0 0;margin:0;padding-bottom:1.4rem}}
+
+/* ---------- table ---------- */
+.tools{display:flex;flex-wrap:wrap;gap:.75rem 1rem;align-items:center;margin:1rem 0}
+.tools input{font:inherit;font-size:1rem;flex:1 1 16rem;padding:.55rem .9rem;border:1.5px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink)}
+.tools input:focus{border-color:var(--saffron);outline:none;box-shadow:0 0 0 3px var(--wash)}
+.tools .count{color:var(--stone);font-size:.95rem}
+.tools a{font-size:.95rem;color:var(--stone)}
+.tablebox{overflow-x:auto;border-top:2px solid var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:1rem;line-height:1.7}
+th{position:sticky;top:0;background:var(--flour);text-align:start;font-weight:700;color:var(--stone);font-size:.9rem;padding:.6rem .6rem;border-bottom:1px solid var(--rule)}
+td{padding:.5rem .6rem;border-bottom:1px solid var(--rule);vertical-align:top}
+td.n{color:var(--stone);font-size:.9rem;width:3rem}
+td.inf{font-weight:700;white-space:nowrap}
+td.imp{white-space:nowrap}
+td.form a{text-decoration:none;border-bottom:2px solid var(--saffron);white-space:nowrap}
+td.eq{color:var(--stone)}
+tr:target td{background:var(--wash)}
+tr{scroll-margin-top:3rem}
+tr[hidden]{display:none}
+.empty{color:var(--stone);padding:1rem 0}
+
+footer{margin-top:4rem;padding-block:2.5rem 3rem;border-top:1px solid var(--rule);color:var(--stone);font-size:.95rem;line-height:1.9}
+footer p{margin:.3rem 0}
+@media (max-width:560px){body{font-size:1.06rem}.chapter .num{font-size:2.4rem}}
+@media print{.hero{background:none;color:#000}.field,.hero nav,.tools,.vcard{display:none}.hero .sub{color:#000}a.v{background:none;border:0}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="field" aria-hidden="true">آراستن آرامیدن آزردن آزمودن آسودن آشامیدن آشفتن آغازیدن آغشتن آفریدن آگندن آلودن آمدن آمرزیدن آموختن آمیختن آوردن آویختن آهیختن ارزیدن افتادن افراشتن افروختن افزودن افسردن افشاندن افگندن انباشتن انجامیدن انداختن اندوختن اندودن اندیشیدن انگاشتن انگیختن اوباشتن ایستادن باختن باریدن بافتن بالیدن بایستن بخشودن بخشیدن برازیدن بردن بریدن بستن بِسودن بَسیجیدن بلعیدن بودن بوسیدن بوییدن بیختن پاشیدن پالودن پختن پذیرفتن پراکندن پرداختن پرستیدن پرسیدن پروردن پریدن پژمردن پژوهیدن پسندیدن پلاسیدن پلکیدن پناهیدن پنداشتن پوسیدن پوشیدن پوییدن پیچیدن پیراستن پیمودن پیوستن تاختن تافتن تپیدن تراشیدن تراویدن ترسیدن ترشیدن ترکیدن تکاندن و تکانیدن تنیدن توانستن جَستن جُستن جنبیدن جنگیدن جوشیدن جویدن جهیدن چاپیدن چاییدن چپیدن چربیدن چرخیدن چریدن چسبیدن چشیدن چکیدن چلاندن و چلانیدن چمیدن چیدن خاریدن خاستن خاییدن خراشیدن خرامیدن خروشیدن خریدن خزیدن خستن خشکیدن خلیدن خمیدن خوابیدن خواستن خواندن خوردن خوفیدن خیسیدن دادن داشتن دانستن درخشیدن درودن دریدن دزدیدن دمیدن دوختن دوشیدن دویدن دیدن ربودن رخشیدن رسیدن رَستن رُستن رشتن رَفتن رُفتن و روفتن رقصیدن رمیدن رنجیدن رندیدن روییدن ریختن ریدن زاریدن زاییدن زدن زدودن زیستن ساختن سپردن سپوختن ستدن ستردن ستودن ستیزیدن سرودن سرشتن سُریدن سزیدن سُفتن سگالیدن سنجیدن سوختن سودن شاشیدن شایستن شتافتن شدن شستن شکافتن شکستن شکفتن شکیفتن شگِفتن شمردن شناختن شنیدن شوریدن طلبیدن طوفیدن غارتیدن غُریدن غلطیدن غُنودن فرستادن فرسودن فرمودن فروختن فریفتن فشردن فهمیدن قاپیدن قبولاندن کاستن کاشتن کاویدن کردن کشتن کشیدن کَفتن کَفیدن کندن کوچیدن کوشیدن کوفتن گاییدن گداختن گذاشتن گذشتن گرازیدن گراییدن گردیدن گرفتن گرویدن گریختن گریستن گزاردن گَزیدن گُزیدن گُساردن گستردن گسستن گشتن گشودن گفتن گماشتن گُنجیدن گندیدن گواریدن گوزیدن لرزیدن لغزیدن لمیدن لُندیدن لنگیدن لهیدن لیسیدن ماسیدن مالیدن ماندن مردن مکیدن مولیدن موییدن نازیدن نالیدن نامیدن نشستن نکوهیدن نگاشتن نگریستن نمودن نواختن نَوردیدن نوشتن نوشیدن نهادن نهفتن نیوشیدن ورزیدن وزیدن هراسیدن هشتن یارستن یازیدن یافتن</div>
+  <div class="hero-in">
+    <h1>دخترِ آسیابان</h1>
+    <p class="sub">قصه‌ای با فعل‌های سادهٔ فارسی</p>
+    <p class="by">نوشتهٔ هوشوارهٔ کلاد (Claude Opus 5.5) با کوششِ بیشینه، بر پایهٔ فهرستِ افعالِ سادهٔ متداول از پرویز ناتل خانلری، ۲۶مهر۱۴۰۵</p>
+    <nav aria-label="پیوندها">
+      <a class="main" href="#story">قصه را بخوانید</a>
+      <a href="#verbs">جدولِ فعل‌ها</a>
+      <a href="downloads/dokhtar-e-asiaban.pdf">PDF</a>
+      <a href="downloads/dokhtar-e-asiaban.docx">Word</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap note" id="note">
+    <h2>یادداشت</h2>
+    <p>همهٔ ۲۷۷ مصدرِ فهرستِ «افعالِ سادهٔ متداول» در این قصه آمده‌اند؛ خانلری این فهرست را در پیوستِ ۱ «تاریخ زبان فارسی» (صص ۳۹۵ تا ۳۹۸) آورده است. در قصه هیچ فعلِ مرکب، مانند «نگاه‌کردن»، یا پیشوندی، مانند «برگشتن»، نیامده است.</p>
+<p>راهِ تمرین:</p>
+<ul>
+<li><p>هر فعلِ فهرست یک بار در قصه <strong>پررنگ</strong> آمده است؛ جدولِ پایانِ سند همان صورت را کنارِ مصدر و امر و معادلِ مرکبش می‌نهد.</p></li>
+<li><p>قصه را بلند بخوانید و برای هر فعلِ پررنگ، فعلِ مرکبی را بیابید که خودتان معمولاً جایش می‌گویید.</p></li>
+<li><p>هر روز چند فعل از جدول بگزینید و در گفت‌وگو و نوشتهٔ همان روز به جای معادلِ مرکبشان بنشانید.</p></li>
+<li><p>چند فعلِ فهرست عامیانه و رکیک‌اند؛ آن‌ها را در صحنه‌ای خنده‌دار آورده‌ام.</p></li>
+</ul>
+<p>پروانه: این قصه و جدولِ همراهش با پروانهٔ <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> در قلمروِ همگانی است: هرکس می‌تواند آن را بی‌آنکه دستوری بطلبد، بپراکند، بفروشد، بیاراید یا بپیراید و بایسته نیست نامی از سازنده بیاید.</p>
+  </section>
+
+  <section class="wrap story" id="story">
+    <h2>قصه</h2>
+    <ul class="toc"><li><a href="#ch-1"><span class="num">۱</span> سپیدار</a></li><li><a href="#ch-2"><span class="num">۲</span> خانِ آزمند</a></li><li><a href="#ch-3"><span class="num">۳</span> شبِ تاراج</a></li><li><a href="#ch-4"><span class="num">۴</span> غار</a></li><li><a href="#ch-5"><span class="num">۵</span> راه</a></li><li><a href="#ch-6"><span class="num">۶</span> مامِ زرین</a></li><li><a href="#ch-7"><span class="num">۷</span> نیرنگ</a></li><li><a href="#ch-8"><span class="num">۸</span> نامه</a></li><li><a href="#ch-9"><span class="num">۹</span> بهار</a></li></ul>
+    <p class="hint" style="color:var(--stone);font-size:.95rem">روی هر فعلِ پررنگ بزنید تا مصدر، امر و معادلِ مرکبش را ببینید.</p>
+    <h3 class="chapter" id="ch-1"><span class="num">۱</span><span class="name">سپیدار</span></h3>
+<p>روزی <a class="v" id="s-52" href="#v-52" data-n="52">بود</a>، روزگاری بود. در دامنهٔ کوهی بلند دهی بود که مردمش آن را «سپیدار» <a class="v" id="s-258" href="#v-258" data-n="258">می‌نامیدند</a>. گویی خدا آن دره را در روزی خوش <a class="v" id="s-10" href="#v-10" data-n="10">آفریده بود</a>: از دلِ کوه چشمه‌ای <a class="v" id="s-95" href="#v-95" data-n="95">می‌جوشید</a>، آبش از میانِ سنگ‌ها <a class="v" id="s-84" href="#v-84" data-n="84">می‌تراوید</a>، در دره <a class="v" id="s-76" href="#v-76" data-n="76">می‌پیچید</a> و از کنارِ خانه‌ها <a class="v" id="s-220" href="#v-220" data-n="220">می‌گذشت</a>. بهار که <a class="v" id="s-13" href="#v-13" data-n="13">می‌آمد</a>، باران‌های نرم <a class="v" id="s-39" href="#v-39" data-n="39">می‌بارید</a>، باد از سوی دشت <a class="v" id="s-272" href="#v-272" data-n="272">می‌وزید</a>، سبزه از خاک <a class="v" id="s-144" href="#v-144" data-n="144">می‌رُست</a> و شکوفه‌ها بر شاخه‌ها <a class="v" id="s-183" href="#v-183" data-n="183">می‌شکفتند</a>.</p>
+<p>آسیابانِ ده پیرمردی بود که همه «بابا یحیی» می‌خواندندش. پیش از آنکه آفتاب بدمد، از بستر <a class="v" id="s-111" href="#v-111" data-n="111">می‌خاست</a>، چراغ را <a class="v" id="s-23" href="#v-23" data-n="23">می‌افروخت</a>، رویش را با آبِ سرد <a class="v" id="s-180" href="#v-180" data-n="180">می‌شست</a> و به آسیاب <a class="v" id="s-178" href="#v-178" data-n="178">می‌شتافت</a>. چرخِ آسیاب در آب <a class="v" id="s-102" href="#v-102" data-n="102">می‌چرخید</a> و سنگ‌ها دانه‌ها را <a class="v" id="s-175" href="#v-175" data-n="175">می‌سودند</a>.</p>
+<p>بابا یحیی دختری <a class="v" id="s-129" href="#v-129" data-n="129">داشت</a> به نامِ شیرین. مادرِ شیرین همان روزی که او را <a class="v" id="s-156" href="#v-156" data-n="156">زایید</a>، <a class="v" id="s-252" href="#v-252" data-n="252">مُرد</a> و مادربزرگ دخترک را <a class="v" id="s-64" href="#v-64" data-n="64">پرورده بود</a>. شیرین آرد را <a class="v" id="s-55" href="#v-55" data-n="55">می‌بیخت</a>، با آب و نمک <a class="v" id="s-16" href="#v-16" data-n="16">می‌آمیخت</a>، خمیر را <a class="v" id="s-168" href="#v-168" data-n="168">می‌سرشت</a> و در تنور نان <a class="v" id="s-58" href="#v-58" data-n="58">می‌پخت</a> و بوی نانش در کوچه‌ها می‌پیچید. صبح‌ها گوسفندان را به صحرا <a class="v" id="s-46" href="#v-46" data-n="46">می‌برد</a> تا <a class="v" id="s-103" href="#v-103" data-n="103">بچرند</a>. پلنگ، سگِ گله، گردِ گوسفندان <a class="v" id="s-223" href="#v-223" data-n="223">می‌گردید</a> و <a class="v" id="s-219" href="#v-219" data-n="219">نمی‌گذاشت</a> گرگی به برّه‌ها بتازد. غروب، شیرین بزها را <a class="v" id="s-137" href="#v-137" data-n="137">می‌دوشید</a> و شیر را می‌جوشاند و شب تا سحر ماست در کاسه‌ها <a class="v" id="s-249" href="#v-249" data-n="249">می‌ماسید</a>؛ ولی اگر دیر <a class="v" id="s-93" href="#v-93" data-n="93">می‌جنبید</a>، شیر در گرمای تابستان <a class="v" id="s-86" href="#v-86" data-n="86">می‌ترشید</a>.</p>
+<p>تابستان، گندم در کشتزارها <a class="v" id="s-41" href="#v-41" data-n="41">می‌بالید</a>. مردان خوشه‌ها را با داس <a class="v" id="s-132" href="#v-132" data-n="132">می‌درودند</a>، در خرمنگاه <a class="v" id="s-216" href="#v-216" data-n="216">می‌کوفتند</a> و دانه را در کندوها <a class="v" id="s-153" href="#v-153" data-n="153">می‌ریختند</a>، و زنان از باغ‌ها سیب و زردآلو <a class="v" id="s-109" href="#v-109" data-n="109">می‌چیدند</a> و شیرهٔ انگور را <a class="v" id="s-57" href="#v-57" data-n="57">می‌پالودند</a>. پاییز، دهقانان با گاوآهن زمین را <a class="v" id="s-181" href="#v-181" data-n="181">می‌شکافتند</a>، تخم را در شیارها <a class="v" id="s-26" href="#v-26" data-n="26">می‌افشاندند</a> و گندمِ سالِ دیگر را <a class="v" id="s-206" href="#v-206" data-n="206">می‌کاشتند</a>. زمستان، مادربزرگ کنارِ کرسی <a class="v" id="s-259" href="#v-259" data-n="259">می‌نشست</a>، پشم <a class="v" id="s-145" href="#v-145" data-n="145">می‌رشت</a>، قالی <a class="v" id="s-40" href="#v-40" data-n="40">می‌بافت</a> و جامه <a class="v" id="s-136" href="#v-136" data-n="136">می‌دوخت</a>. <a class="v" id="s-236" href="#v-236" data-n="236">می‌گفت</a>: «نخ را باید آهسته رشت؛ اگر تند <a class="v" id="s-210" href="#v-210" data-n="210">بکشی</a>، می‌گسلد.»</p>
+<p>خرِ بابا یحیی، «سرمه»، بارِ گندم را تا آسیاب می‌برد؛ اما خری بود سخت تنبل. در راه <a class="v" id="s-254" href="#v-254" data-n="254">می‌مولید</a>، هر جا سبزه‌ای <a class="v" id="s-139" href="#v-139" data-n="139">می‌دید</a> <a class="v" id="s-37" href="#v-37" data-n="37">می‌ایستاد</a> و اگر کسی او را می‌راند، گوش‌هایش را <a class="v" id="s-88" href="#v-88" data-n="88">می‌تکاند</a> و بلند <a class="v" id="s-241" href="#v-241" data-n="241">می‌گوزید</a>. پشتش که <a class="v" id="s-110" href="#v-110" data-n="110">می‌خارید</a>، خودش را به تنهٔ درختِ گردو <a class="v" id="s-250" href="#v-250" data-n="250">می‌مالید</a>. بابا یحیی <a class="v" id="s-245" href="#v-245" data-n="245">می‌لندید</a>: «این خر نیست، بلای جان است!» ولی او را به هیچ بهایی <a class="v" id="s-199" href="#v-199" data-n="199">نمی‌فروخت</a>.</p>
+<p>همهٔ ده بابا یحیی را <a class="v" id="s-165" href="#v-165" data-n="165">می‌ستودند</a>. او به شیرین <a class="v" id="s-15" href="#v-15" data-n="15">می‌آموخت</a>: «هر چیز را پیش از آنکه <a class="v" id="s-116" href="#v-116" data-n="116">بخری</a>، <a class="v" id="s-173" href="#v-173" data-n="173">بسنج</a>؛ هرچه را پیش از آنکه بگویی، <a class="v" id="s-33" href="#v-33" data-n="33">بیندیش</a>؛ و آدمی را از کارش <a class="v" id="s-187" href="#v-187" data-n="187">بشناس</a>، نه از جامه‌اش.»</p>
+<h3 class="chapter" id="ch-2"><span class="num">۲</span><span class="name">خانِ آزمند</span></h3>
+<p>در شهر، خانی <a class="v" id="s-159" href="#v-159" data-n="159">می‌زیست</a> به نامِ بهمن‌خان. زر و سیم <a class="v" id="s-31" href="#v-31" data-n="31">می‌اندوخت</a>، در انبارهایش گندم <a class="v" id="s-28" href="#v-28" data-n="28">می‌انباشت</a> و هرچه داشت، باز هم بیشتر <a class="v" id="s-123" href="#v-123" data-n="123">می‌خواست</a>. گندمِ انبارهایش <a class="v" id="s-239" href="#v-239" data-n="239">می‌گندید</a>؛ ولی دانه‌ای از آن را به گرسنه‌ای <a class="v" id="s-128" href="#v-128" data-n="128">نمی‌داد</a>. گویی اژدهایی بود که هرچه <a class="v" id="s-277" href="#v-277" data-n="277">می‌یافت</a>، <a class="v" id="s-36" href="#v-36" data-n="36">می‌اوباشت</a>. شب‌ها بر بالش‌های ابریشمین <a class="v" id="s-244" href="#v-244" data-n="244">می‌لمید</a>. سکه‌هایش را <a class="v" id="s-186" href="#v-186" data-n="186">می‌شمرد</a> و به آن‌ها <a class="v" id="s-256" href="#v-256" data-n="256">می‌نازید</a> و در باغش طاووس‌ها <a class="v" id="s-108" href="#v-108" data-n="108">می‌چمیدند</a>.</p>
+<p>روزی بازرگانی به درگاهِ خان آمد و قالیچه‌ای پیشِ او <a class="v" id="s-232" href="#v-232" data-n="232">گسترد</a>. خان آن را <a class="v" id="s-68" href="#v-68" data-n="68">پسندید</a> و <a class="v" id="s-63" href="#v-63" data-n="63">پرسید</a>: «این را کجا بافته‌اند؟» بازرگان گفت: «در سپیدار، دهی در دامنهٔ کوه. هر قالیِ آن ده به صد سکه <a class="v" id="s-20" href="#v-20" data-n="20">می‌ارزد</a> و در همهٔ ولایت گندمی به پاکیِ گندمِ آن نیست.» سخنِ بازرگان آزِ خان را <a class="v" id="s-35" href="#v-35" data-n="35">انگیخت</a>. خان شب تا سحر اندیشید و <a class="v" id="s-172" href="#v-172" data-n="172">سگالید</a> که سپیدار را <a class="v" id="s-98" href="#v-98" data-n="98">بچاپد</a>.</p>
+<p>بامداد، سردارش تیمور را <a class="v" id="s-190" href="#v-190" data-n="190">طلبید</a>. تیمور مردی سنگدل بود که بر اسبِ سیاهش <a class="v" id="s-221" href="#v-221" data-n="221">می‌گرازید</a> و هیچ‌کس <a class="v" id="s-275" href="#v-275" data-n="275">نمی‌یارست</a> در چشمانش بنگرد. خان <a class="v" id="s-198" href="#v-198" data-n="198">فرمود</a>: «به سپیدار بتاز و هرچه گندم و قالی و گوسفند هست، برایم <a class="v" id="s-17" href="#v-17" data-n="17">بیاور</a>.» آن‌گاه تیمور را بر سیصد سوار <a class="v" id="s-237" href="#v-237" data-n="237">گماشت</a> و تیمور همان روز سوارانش را <a class="v" id="s-50" href="#v-50" data-n="50">بسیجید</a>.</p>
+<h3 class="chapter" id="ch-3"><span class="num">۳</span><span class="name">شبِ تاراج</span></h3>
+<p>آن سال، چند روز پس از خرمن، شبی که ماه در آسمان <a class="v" id="s-131" href="#v-131" data-n="131">می‌درخشید</a> و ستاره‌ها <a class="v" id="s-141" href="#v-141" data-n="141">می‌رخشیدند</a>، پلنگ ناگهان <a class="v" id="s-193" href="#v-193" data-n="193">غرید</a>. زمین زیرِ سمِ اسب‌ها <a class="v" id="s-242" href="#v-242" data-n="242">لرزید</a> و سوارانِ تیمور به ده <a class="v" id="s-80" href="#v-80" data-n="80">تاختند</a>. درها را <a class="v" id="s-182" href="#v-182" data-n="182">شکستند</a>، گندم را از کندوها <a class="v" id="s-134" href="#v-134" data-n="134">دزدیدند</a>، گوسفندان را <a class="v" id="s-140" href="#v-140" data-n="140">ربودند</a> و هرچه یافتند، <a class="v" id="s-192" href="#v-192" data-n="192">غارتیدند</a>. گوسفندان <a class="v" id="s-149" href="#v-149" data-n="149">رمیدند</a> و مرغ‌ها از لانه‌ها <a class="v" id="s-65" href="#v-65" data-n="65">پریدند</a>. پلنگ به ساقِ سواری <a class="v" id="s-104" href="#v-104" data-n="104">چسبید</a> و آن را <a class="v" id="s-229" href="#v-229" data-n="229">گَزید</a>.</p>
+<p>تیمور شمشیرش را <a class="v" id="s-19" href="#v-19" data-n="19">آهیخت</a> و <a class="v" id="s-115" href="#v-115" data-n="115">خروشید</a>: «هر که بجنبد، او را <a class="v" id="s-209" href="#v-209" data-n="209">می‌کشم</a>!» جوانی که مردم او را سهراب می‌خواندند، با چوبدستی به سوی او <a class="v" id="s-97" href="#v-97" data-n="97">جهید</a>؛ اما تیمور با تازیانه بر سرش <a class="v" id="s-157" href="#v-157" data-n="157">زد</a> و بازویش را با شمشیر <a class="v" id="s-118" href="#v-118" data-n="118">خَست</a>. سهراب بر خاک <a class="v" id="s-194" href="#v-194" data-n="194">غلطید</a>. خونش بر خاک <a class="v" id="s-106" href="#v-106" data-n="106">چکید</a> و تیمور نوکِ شمشیرش را به آن خون <a class="v" id="s-9" href="#v-9" data-n="9">آغشت</a> و آن را به مردم <a class="v" id="s-263" href="#v-263" data-n="263">نمود</a>. شیرین دامنش را <a class="v" id="s-133" href="#v-133" data-n="133">درید</a> و زخمِ سهراب را <a class="v" id="s-48" href="#v-48" data-n="48">بست</a>.</p>
+<p>یکی از سواران مشعلی در انبارِ کاه <a class="v" id="s-27" href="#v-27" data-n="27">افگند</a>. انبار <a class="v" id="s-174" href="#v-174" data-n="174">سوخت</a> و دودی سیاه هوای دره را <a class="v" id="s-12" href="#v-12" data-n="12">آلود</a>. سقفِ خانهٔ بابا یحیی ریخت. مردم <a class="v" id="s-226" href="#v-226" data-n="226">گریختند</a>. بابا یحیی و شیرین مادربزرگ را بر پشتِ سرمه نشاندند و از کوره‌راهی به سوی کوه <a class="v" id="s-146" href="#v-146" data-n="146">رفتند</a>. در تاریکی، پای بابا یحیی بر سنگی <a class="v" id="s-243" href="#v-243" data-n="243">لغزید</a> و از شیبِ تپه غلطید و مچِ پایش پیچید. از آن شب <a class="v" id="s-246" href="#v-246" data-n="246">می‌لنگید</a>. شیرین زیرِ بازوی پدر را <a class="v" id="s-224" href="#v-224" data-n="224">گرفت</a> و او را تا کوه برد. سرمه، که از هیاهو رمیده بود، این بار نمولید و پابه‌پای آنان رفت.</p>
+<h3 class="chapter" id="ch-4"><span class="num">۴</span><span class="name">غار</span></h3>
+<p>مردمِ سپیدار به غاری در دلِ کوه <a class="v" id="s-71" href="#v-71" data-n="71">پناهیدند</a>. غار تنگ بود و همه در آن <a class="v" id="s-238" href="#v-238" data-n="238">نمی‌گنجیدند</a>. کودکان در شکاف‌های سنگ <a class="v" id="s-100" href="#v-100" data-n="100">چپیدند</a> و مردان بر دهانهٔ غار <a class="v" id="s-251" href="#v-251" data-n="251">ماندند</a> و راه را پاییدند.</p>
+<p>شب، باد سرد می‌وزید و آب از سقفِ غار می‌چکید. مادربزرگ از دردِ استخوان‌هایش آهسته <a class="v" id="s-257" href="#v-257" data-n="257">می‌نالید</a>. زنی بر خانهٔ سوخته‌اش <a class="v" id="s-255" href="#v-255" data-n="255">می‌مویید</a> و زنی دیگر بر پسرش، که سواران او را برده بودند، <a class="v" id="s-155" href="#v-155" data-n="155">می‌زارید</a>. کودکی خردسال از تاریکی <a class="v" id="s-126" href="#v-126" data-n="126">می‌خوفید</a> و <a class="v" id="s-227" href="#v-227" data-n="227">می‌گریست</a>. شیرین او را در آغوش <a class="v" id="s-201" href="#v-201" data-n="201">فشرد</a> و برایش آهسته خواند تا <a class="v" id="s-195" href="#v-195" data-n="195">غنود</a>. پلنگ کنارِ پای کودک <a class="v" id="s-122" href="#v-122" data-n="122">خوابید</a> و در گوشهٔ غار عنکبوتی، بی‌خبر از همه، آرام تار <a class="v" id="s-89" href="#v-89" data-n="89">می‌تنید</a>. آن شب هیچ‌کس <a class="v" id="s-5" href="#v-5" data-n="5">نیاسود</a> و دلِ شیرین از اندوه <a class="v" id="s-25" href="#v-25" data-n="25">افسرد</a>.</p>
+<p>سپیده که دمید، شیرین بر دهانهٔ غار ایستاد و به دره <a class="v" id="s-262" href="#v-262" data-n="262">نگریست</a>. از دِه جز خاکستر و دود چیزی نمانده بود. با خود اندیشید: «تا کی باید در این غار بمانیم؟ اگر کسی را نجوییم که ما را برهاند، همه از گرسنگی خواهیم مُرد.»</p>
+<p>بابا یحیی گفت: «<a class="v" id="s-188" href="#v-188" data-n="188">شنیده‌ام</a> که آن سوی کوه‌ها، کنارِ چشمه‌ای، پیرزنی دانا می‌زید که مردم او را مامِ زرین می‌نامند. سال‌ها در گیاهان و ستارگان <a class="v" id="s-67" href="#v-67" data-n="67">پژوهیده است</a> و می‌گویند هرچه از او بپرسی، <a class="v" id="s-130" href="#v-130" data-n="130">می‌داند</a>. ولی راهِ آنجا دراز است و پرخطر.» شیرین گفت: «من می‌روم.» پدر نخست <a class="v" id="s-59" href="#v-59" data-n="59">نپذیرفت</a>؛ ولی شیرین آن‌قدر گفت تا سرانجام به پدر <a class="v" id="s-204" href="#v-204" data-n="204">قبولاند</a> که جز این راهی نیست.</p>
+<p>مادربزرگ نان و پنیر و مشتی گردو در دستمالی پیچید و به شیرین <a class="v" id="s-161" href="#v-161" data-n="161">سپرد</a>. بابا یحیی انگشتری از انگشتش کشید و گفت: «این انگشترِ مادرت است. <a class="v" id="s-163" href="#v-163" data-n="163">بِستان</a>. اگر در راه نان خواستی، آن را بفروش.» شیرین دستِ پدر و مادربزرگ را <a class="v" id="s-53" href="#v-53" data-n="53">بوسید</a>، سرمه را نزدِ پدر <a class="v" id="s-274" href="#v-274" data-n="274">هشت</a> تا آب و هیزم بیاورد، دستمال را بر دوش افگند و به سوی کوه شتافت.</p>
+<h3 class="chapter" id="ch-5"><span class="num">۵</span><span class="name">راه</span></h3>
+<p>شیرین راهی دراز و سنگلاخ را <a class="v" id="s-78" href="#v-78" data-n="78">پیمود</a>. از دره‌ها گذشت و دشت‌ها را <a class="v" id="s-265" href="#v-265" data-n="265">نوردید</a>. روزها <a class="v" id="s-75" href="#v-75" data-n="75">می‌پویید</a> و شب‌ها زیرِ آسمان می‌خوابید. سنگ‌های تیز پاهایش را <a class="v" id="s-3" href="#v-3" data-n="3">می‌آزردند</a> و شاخه‌های خاربُن دست‌هایش را <a class="v" id="s-113" href="#v-113" data-n="113">می‌خراشیدند</a> و کفش‌هایش در همان روزهای نخست <a class="v" id="s-197" href="#v-197" data-n="197">فرسود</a>. یک بار خاری در پایش <a class="v" id="s-120" href="#v-120" data-n="120">خلید</a>؛ آن را با سوزنِ مادربزرگ از پایش کشید و رفت. هر جا که <a class="v" id="s-90" href="#v-90" data-n="90">می‌توانست</a>، زیرِ درختی می‌آسود و پاهایش را می‌مالید.</p>
+<p>پاییز بود. آفتابِ کم‌رنگ بر کوه <a class="v" id="s-81" href="#v-81" data-n="81">می‌تافت</a> و گل‌های کوهی <a class="v" id="s-66" href="#v-66" data-n="66">پژمرده بودند</a> و سبزه‌ها <a class="v" id="s-69" href="#v-69" data-n="69">پلاسیده بودند</a>. باد برگ‌های زرد را <a class="v" id="s-60" href="#v-60" data-n="60">می‌پراکند</a>. انارهای وحشی بر شاخه <a class="v" id="s-212" href="#v-212" data-n="212">کفیده بودند</a>. شیرین اناری چید و دانه‌هایش را <a class="v" id="s-105" href="#v-105" data-n="105">چشید</a>. انگورهایی که از تاک افتاده بودند، زیرِ پایش <a class="v" id="s-247" href="#v-247" data-n="247">می‌لهیدند</a> و زمین در جاهایی که آب نبود، از تشنگی <a class="v" id="s-211" href="#v-211" data-n="211">کَفته بود</a>. از آبِ جوی‌ها <a class="v" id="s-6" href="#v-6" data-n="6">می‌آشامید</a> و از توت‌های خشکیده <a class="v" id="s-125" href="#v-125" data-n="125">می‌خورد</a>.</p>
+<p>در راه ایلی را دید که از ییلاق به قشلاق <a class="v" id="s-214" href="#v-214" data-n="214">می‌کوچید</a>. سگی گردِ دیگِ آشِ ایل <a class="v" id="s-70" href="#v-70" data-n="70">می‌پلکید</a>. روزی ماری از زیرِ سنگی <a class="v" id="s-117" href="#v-117" data-n="117">خزید</a>. شیرین بر جای <a class="v" id="s-119" href="#v-119" data-n="119">خشکید</a> و دلش تند <a class="v" id="s-82" href="#v-82" data-n="82">می‌تپید</a>؛ ولی مار رفت و او را نگزید.</p>
+<p>روزِ سوم به رودی خروشان <a class="v" id="s-142" href="#v-142" data-n="142">رسید</a>. بر رود پلی کهنه بود که طناب‌هایش <a class="v" id="s-73" href="#v-73" data-n="73">پوسیده بود</a>. شیرین پا بر پل <a class="v" id="s-268" href="#v-268" data-n="268">نهاد</a>؛ طناب‌ها <a class="v" id="s-233" href="#v-233" data-n="233">گسستند</a> و او در آب <a class="v" id="s-21" href="#v-21" data-n="21">افتاد</a>. آب او را با خود برد؛ ولی شیرین به شاخهٔ بیدی چسبید و خودش را به کنارهٔ رود کشید. سراپا <a class="v" id="s-127" href="#v-127" data-n="127">خیسیده بود</a>. آبِ دامنش را <a class="v" id="s-107" href="#v-107" data-n="107">چلاند</a>. چادرش را بر سنگی گسترد تا در آفتاب بخشکد و خودش، لرزان، کنارِ سنگ نشست. آن شب <a class="v" id="s-99" href="#v-99" data-n="99">چایید</a> و تا سحر در تب سوخت.</p>
+<p>بامداد، پسری چوپان که گوسفندانش را در آن نزدیکی می‌چراند، او را دید و به سویش <a class="v" id="s-138" href="#v-138" data-n="138">دوید</a>. پرسید: «از کجا می‌آیی؟ چه <a class="v" id="s-179" href="#v-179" data-n="179">شده است</a>؟» نامش داراب بود. آتشی افروخت و کاسه‌ای شیر بر آتش جوشاند و به شیرین داد. شیرین نانِ خشکیده‌اش را در شیر خیساند و آرام <a class="v" id="s-96" href="#v-96" data-n="96">جَوید</a>. کنارشان برّه‌ای پستانِ مادرش را <a class="v" id="s-253" href="#v-253" data-n="253">می‌مکید</a> و میش پشتِ برّه را <a class="v" id="s-248" href="#v-248" data-n="248">می‌لیسید</a>.</p>
+<p>شیرین قصهٔ ده را برای داراب گفت و داراب خاموش <a class="v" id="s-270" href="#v-270" data-n="270">نیوشید</a>. داراب پیش از آن <a class="v" id="s-72" href="#v-72" data-n="72">می‌پنداشت</a> که دخترانِ ده از کوه و رود <a class="v" id="s-273" href="#v-273" data-n="273">می‌هراسند</a>؛ اکنون از دلیریِ شیرین <a class="v" id="s-185" href="#v-185" data-n="185">می‌شگِفت</a>. گفت: «من راه را می‌دانم.» آن‌گاه گوسفندانش را به برادرِ کوچکش سپرد و به شیرین <a class="v" id="s-79" href="#v-79" data-n="79">پیوست</a>.</p>
+<p>دو روزِ دیگر رفتند. داراب راه را به او می‌نمود. آهویی از میانِ بوته‌ها <a class="v" id="s-91" href="#v-91" data-n="91">جَست</a> و دوید. کلاغی تکه‌نانی را که شیرین بر سنگی نهاده بود <a class="v" id="s-203" href="#v-203" data-n="203">قاپید</a> و داراب سنگی به سویش <a class="v" id="s-30" href="#v-30" data-n="30">انداخت</a>. مشکِ آبِ داراب از دوشش افتاد و <a class="v" id="s-87" href="#v-87" data-n="87">ترکید</a>. بر سرِ گردنه، که برفِ نخستین بر آن نشسته بود، داراب بر یخ <a class="v" id="s-169" href="#v-169" data-n="169">سُرید</a> و به پشت افتاد و شیرین خندید. داراب از خنده‌اش <a class="v" id="s-150" href="#v-150" data-n="150">رنجید</a> و چیزی نگفت. شیرین گفت: «مرا ببخش!» و داراب او را <a class="v" id="s-43" href="#v-43" data-n="43">بخشود</a> و خودش هم خندید.</p>
+<p>در دهی سرِ راه، شیرین انگشترِ مادرش را فروخت و با بهایش کفش و نان خرید.</p>
+<h3 class="chapter" id="ch-6"><span class="num">۶</span><span class="name">مامِ زرین</span></h3>
+<p>روزِ پنجم به چشمه‌ای رسیدند که آبش از دلِ سنگ می‌جوشید. کنارِ چشمه غاری بود و بر درِ غار پیرزنی نشسته بود. مویش چون برف سپید بود و چشمانش چون دو ستاره می‌درخشید. شیرین از آبِ چشمه <a class="v" id="s-267" href="#v-267" data-n="267">نوشید</a> و آن آب چنان بر او <a class="v" id="s-240" href="#v-240" data-n="240">گوارید</a> که گویی هرگز آبی نچشیده بود.</p>
+<p>بر دیوارهای غار نقش‌هایی <a class="v" id="s-261" href="#v-261" data-n="261">نگاشته بودند</a>: مردمانی که خورشید را <a class="v" id="s-62" href="#v-62" data-n="62">می‌پرستیدند</a> و اسبانی که می‌تاختند و زنانی که گردِ آتش <a class="v" id="s-148" href="#v-148" data-n="148">می‌رقصیدند</a>. شیرین دستش را بر نقش‌ها <a class="v" id="s-49" href="#v-49" data-n="49">بسود</a>.</p>
+<p>پیرزن گفت: «پیش از آنکه بگویی چه می‌خواهی، باید تو را <a class="v" id="s-4" href="#v-4" data-n="4">بیازمایم</a>.» آن‌گاه پرسید: «آن چیست که هرچه از آن <a class="v" id="s-205" href="#v-205" data-n="205">بکاهی</a>، بر آن <a class="v" id="s-24" href="#v-24" data-n="24">می‌افزایی</a>؟» شیرین اندکی اندیشید و گفت: «چاله.» پیرزن پرسید: «آن چیست که بی‌پا می‌دود و بی‌دهان می‌خروشد؟» شیرین گفت: «رود.» پیرزن پرسید: «آن چیست که هرچه بیشترش ببخشی، بیشترش داری؟» شیرین گفت: «دانش.» پیرزن خندید و گفت: «بنشین و قصه‌ات را بگو.»</p>
+<p>شیرین قصه‌اش را <a class="v" id="s-8" href="#v-8" data-n="8">آغازید</a> و پیرزن خاموش نیوشید. چون قصه <a class="v" id="s-29" href="#v-29" data-n="29">انجامید</a>، پیرزن گفت: «مردمِ این کوه مرا مامِ زرین می‌نامند. روزگاری دایهٔ بهمن‌خان بودم و او را با این دست‌ها پروردم. نمی‌دانم آن کودکِ مهربان را چه شد که امروز هرچه می‌یابد، <a class="v" id="s-51" href="#v-51" data-n="51">می‌بلعد</a>. سوارانش بسیارند و شما اندک. با شمشیر بر آنان نمی‌چربید. باید آنان را بفریبید.»</p>
+<p>آن‌گاه ریشهٔ گیاهی را به شیرین داد و گفت: «این ریشهٔ گیاهِ خواب است. آن را بکوب، یک شب در آب بخیسان، بجوشان، آبش را بپالای و با شراب بیامیز. هر که از آن شراب بنوشد، تا سپیده خواهد غنود.» شیرین ریشه را در کیسه‌ای <a class="v" id="s-269" href="#v-269" data-n="269">نهفت</a>.</p>
+<p>مامِ زرین گفت: «جامهٔ پیرزنی می‌فروش را <a class="v" id="s-74" href="#v-74" data-n="74">بپوش</a> و به لشکرگاهِ تیمور برو. <a class="v" id="s-177" href="#v-177" data-n="177">نشاید</a> که دختری تنها به آنجا برود؛ داراب نوه‌ات خواهد بود.» شیرین سه روز <a class="v" id="s-271" href="#v-271" data-n="271">ورزید</a> تا توانست چون پیرزنان بخمد و آهسته بلنگد و صدایش را بلرزاند. هرچه مامِ زرین گفت، شیرین همان <a class="v" id="s-208" href="#v-208" data-n="208">کرد</a>. پیرزن گیسوانش را به خاکستر آغشت و نامه‌ای <a class="v" id="s-266" href="#v-266" data-n="266">نوشت</a> و گفت: «چون تیمور گریخت، این نامه را برای بهمن‌خان بفرست.»</p>
+<p>آن شب شیرین تا سحر <a class="v" id="s-2" href="#v-2" data-n="2">نیارامید</a>. داراب در نی <a class="v" id="s-135" href="#v-135" data-n="135">دمید</a> و آهنگی <a class="v" id="s-264" href="#v-264" data-n="264">نواخت</a> و شیرین نیوشید و نمی‌دانست چرا دلش به آن پسرِ چوپان <a class="v" id="s-222" href="#v-222" data-n="222">می‌گرایید</a>.</p>
+<h3 class="chapter" id="ch-7"><span class="num">۷</span><span class="name">نیرنگ</span></h3>
+<p>شیرین و داراب به غارِ مردمِ سپیدار رسیدند. شیرین با چشم پدرش را در میانِ مردم <a class="v" id="s-92" href="#v-92" data-n="92">جُست</a> و او را یافت. آن‌گاه نیرنگِ مامِ زرین را برای مردم گفت. پیرمردان نخست نپذیرفتند؛ ولی چون سخنانش را نیوشیدند، به او <a class="v" id="s-225" href="#v-225" data-n="225">گرویدند</a>. شیرین از میانِ جوانان، ده تن را <a class="v" id="s-230" href="#v-230" data-n="230">گُزید</a> و داراب پیغامِ او را به مردانی که راه‌های کوه را می‌پاییدند <a class="v" id="s-228" href="#v-228" data-n="228">گزارد</a>.</p>
+<p>سوارانِ تیمور در دِه چادر <a class="v" id="s-22" href="#v-22" data-n="22">افراشته بودند</a>. از گندم و گوسفندِ مردم می‌خوردند و شب‌ها در کوچه‌های سوخته <a class="v" id="s-234" href="#v-234" data-n="234">می‌گشتند</a> و بر ویرانه‌ها می‌خندیدند.</p>
+<p>پیش از غروب، پیرزنی خمیده و لنگان با خمره‌ای بر دوش به لشکرگاه آمد و پسری که نوه‌اش می‌نمود، پشتِ سرش می‌آمد. سواران او را دیوانه‌ای <a class="v" id="s-34" href="#v-34" data-n="34">انگاشتند</a> و بر او خندیدند. شیرین <a class="v" id="s-85" href="#v-85" data-n="85">می‌ترسید</a>؛ ولی <a class="v" id="s-215" href="#v-215" data-n="215">کوشید</a> تا صدایش نلرزد. تیمور شراب را <a class="v" id="s-54" href="#v-54" data-n="54">بویید</a> و چشید و پرسید: «بهایش چند است؟» شیرین گفت: «یک سکه، سردار.» تیمور سکه‌ای پیشِ پایش انداخت؛ شیرین <a class="v" id="s-121" href="#v-121" data-n="121">خمید</a> و سکه را از خاک گرفت. تیمور شمشیرش را در غلاف <a class="v" id="s-162" href="#v-162" data-n="162">سپوخت</a> و دستش را به سوی خمره <a class="v" id="s-276" href="#v-276" data-n="276">یازید</a> و خندید.</p>
+<p>شیرین با زبانی شیرین سواران را <a class="v" id="s-200" href="#v-200" data-n="200">فریفت</a>: برایشان خواند، دلاوری‌هایشان را ستود و هر جامی را که می‌نوشیدند، باز از خمره <a class="v" id="s-11" href="#v-11" data-n="11">می‌آگند</a>. اسب‌ها در آخور جو <a class="v" id="s-112" href="#v-112" data-n="112">می‌خاییدند</a> و سواران تا نیمه‌شب باده <a class="v" id="s-231" href="#v-231" data-n="231">گساردند</a> و رقصیدند و خروشیدند. تیمور، مست، در تاس‌بازی اسبش را به یکی از سوارانش <a class="v" id="s-38" href="#v-38" data-n="38">باخت</a>. سرانجام سواران یکی‌یکی بر زمین غلطیدند و خوابیدند. شیرین <a class="v" id="s-184" href="#v-184" data-n="184">شِکیفت</a> تا آخرین سوار هم غنود؛ آن‌گاه بر سرِ تپه آتشی افروخت.</p>
+<p>مردمِ ده آهسته از کوه آمدند. <a class="v" id="s-42" href="#v-42" data-n="42">می‌بایست</a> پیش از آنکه سواران از خواب بخیزند، گوسفندان و گندم را به کوه ببرند. داراب طنابِ اسب‌ها را <a class="v" id="s-47" href="#v-47" data-n="47">برید</a>. جوانان درِ آغل‌ها را <a class="v" id="s-235" href="#v-235" data-n="235">گشودند</a> و گوسفندان را به سوی کوه راندند و زنان کیسه‌های گندم را بر دوش بردند.</p>
+<p>در این میان سرمه، که با مردم از کوه آمده بود و جوِ اسب‌ها را از دور بوییده بود، به آخور رفت و شکمش را از جو انباشت. آن‌گاه درست کنارِ چادرِ تیمور ایستاد و <a class="v" id="s-176" href="#v-176" data-n="176">شاشید</a> و <a class="v" id="s-154" href="#v-154" data-n="154">رید</a> و چنان بلند گوزید که اسب‌ها رمیدند و در تاریکی گریختند. تیمور از خواب جَست و شمشیرش را جُست؛ ولی شمشیر را یکی از جوانانِ ده ربوده بود. سواری که پایش بر سَرگینِ سرمه سُرید و به پشت افتاد، غرید: «این خرِ گوزو ما را <a class="v" id="s-217" href="#v-217" data-n="217">گایید</a>!»</p>
+<p>مردانِ ده با داس و چوب بر سواران <a class="v" id="s-189" href="#v-189" data-n="189">شوریدند</a> و با آنان <a class="v" id="s-94" href="#v-94" data-n="94">جنگیدند</a>. سهراب، که دیگر از زخمش نمی‌نالید، با تیمور <a class="v" id="s-166" href="#v-166" data-n="166">ستیزید</a>. تیمور او را به خاک افگند و شمشیری از دستِ سواری قاپید؛ ولی شیرین مشتی خاکستر در چشمانش <a class="v" id="s-56" href="#v-56" data-n="56">پاشید</a>. ترسِ سواران بر آزشان <a class="v" id="s-101" href="#v-101" data-n="101">چربید</a> و هیچ‌یک نیارِست بماند. تیمور، کور و لنگان و بی‌اسب، به شهر گریخت. آن شب هم اسبش را باخته بود، هم شمشیرش را، هم آبرویش را. مردمِ سپیدار از چنگِ او <a class="v" id="s-143" href="#v-143" data-n="143">رَستند</a> و تیمور هرگز <a class="v" id="s-202" href="#v-202" data-n="202">نفهمید</a> که آن پیرزنِ می‌فروش که بود.</p>
+<h3 class="chapter" id="ch-8"><span class="num">۸</span><span class="name">نامه</span></h3>
+<p>بامداد، شیرین نامهٔ مامِ زرین را با پیکی برای بهمن‌خان <a class="v" id="s-196" href="#v-196" data-n="196">فرستاد</a>. خان چون شنید که سوارانش از دختری و خری گریخته‌اند، <a class="v" id="s-7" href="#v-7" data-n="7">آشفت</a> و در کاخش خروشید؛ ولی مردمِ شهر بر او خندیدند و او را <a class="v" id="s-260" href="#v-260" data-n="260">نکوهیدند</a>. آن‌گاه نامه را <a class="v" id="s-124" href="#v-124" data-n="124">خواند</a>. مامِ زرین نوشته بود: «بهمن، تو را با شیرِ خود پروردم و به تو آموختم که با مردم مهربان باشی. اکنون می‌شنوم که دِه‌ها را می‌چاپی. اگر هنوز مرا دایهٔ خود می‌دانی، هرچه از سپیدار برده‌ای به مردمش بسپار و بهای خانه‌های سوخته را بپرداز؛ وگرنه دیگر مرا دایهٔ خود مدان.»</p>
+<p>خان، با همهٔ آزش، هرگاه دایه‌اش را می‌دید، دستش را می‌بوسید. نامه را چند بار خواند و تا شب چیزی نگفت. آن‌گاه فرمود هرچه از سپیدار برده بودند، به مردمش بسپارند. بهای خانه‌های سوخته را از گنجِ خود <a class="v" id="s-61" href="#v-61" data-n="61">پرداخت</a> و از باجِ آن دِه کاست.</p>
+<h3 class="chapter" id="ch-9"><span class="num">۹</span><span class="name">بهار</span></h3>
+<p>مردمِ سپیدار به ده آمدند. شیرین در میانِ خاکسترِ خانه‌شان <a class="v" id="s-207" href="#v-207" data-n="207">کاوید</a> و دوکِ مادربزرگ را یافت. خاکستر را از خانه‌ها <a class="v" id="s-147" href="#v-147" data-n="147">روفتند</a> و دوده را از دیوارها <a class="v" id="s-158" href="#v-158" data-n="158">زدودند</a> و دیوارها را با کاهگل <a class="v" id="s-32" href="#v-32" data-n="32">اندودند</a>. مردان تیرها را <a class="v" id="s-83" href="#v-83" data-n="83">تراشیدند</a> و بام‌ها را از نو <a class="v" id="s-160" href="#v-160" data-n="160">ساختند</a>. بابا یحیی تخته‌ها را <a class="v" id="s-151" href="#v-151" data-n="151">رَندید</a> و برای آسیاب دری تازه ساخت. زنان پرده‌ها را بر درها <a class="v" id="s-18" href="#v-18" data-n="18">آویختند</a>.</p>
+<p>زمستان گذشت. برف‌ها در آفتابِ بهار <a class="v" id="s-218" href="#v-218" data-n="218">گداختند</a> و رودها خروشیدند. دهقانان درختانِ باغ را <a class="v" id="s-77" href="#v-77" data-n="77">پیراستند</a> و چاهی تازه <a class="v" id="s-213" href="#v-213" data-n="213">کندند</a>. گندم از خاک <a class="v" id="s-152" href="#v-152" data-n="152">رویید</a> و میش‌ها برّه زاییدند.</p>
+<p>تابستان، چون گندم را درودند، مردم دِه را برای جشن <a class="v" id="s-1" href="#v-1" data-n="1">آراستند</a>. در میدانِ ده آتشی افروختند و گردِ آن <a class="v" id="s-191" href="#v-191" data-n="191">طوفیدند</a>. داراب نی نواخت و پیرمردان خواندند و جوانان رقصیدند. پلنگ گردِ دیگ‌ها می‌پلکید و استخوانی را که از دیگ ربوده بود، درسته بلعید. سرمه در گوشه‌ای جو می‌خایید و گهگاه می‌گوزید، و کودکان او را «پهلوانِ آن شب» می‌نامیدند.</p>
+<p>شیرین با جامه‌ای که مادربزرگ برایش دوخته بود، در میانِ مردم <a class="v" id="s-114" href="#v-114" data-n="114">می‌خرامید</a> و تاجی از گلِ کوهی بر سرش <a class="v" id="s-45" href="#v-45" data-n="45">می‌برازید</a>. داراب برایش شعری <a class="v" id="s-167" href="#v-167" data-n="167">سرود</a> و گردنبندی از مرواریدهای رود به او <a class="v" id="s-44" href="#v-44" data-n="44">بخشید</a>؛ مرواریدها را خودش یک‌به‌یک <a class="v" id="s-171" href="#v-171" data-n="171">سُفته بود</a>. پیرمردان گفتند: «شیرین را <a class="v" id="s-170" href="#v-170" data-n="170">سزد</a> که بانوی سپیدار باشد.» و بابا یحیی به دخترش می‌بالید.</p>
+<p>پاییزِ آن سال، بابا یحیی شبی آرام در خواب مُرد. مردمِ ده بر او موییدند و شیرین گریست. مادربزرگ گفت: «خدا <a class="v" id="s-14" href="#v-14" data-n="14">بیامرزدش</a>.» شیرین اشک‌هایش را <a class="v" id="s-164" href="#v-164" data-n="164">سترد</a> و دانه‌هایی را که پدرش برای سالِ دیگر اندوخته بود، در زمین افشاند. بهارِ دیگر، از آن دانه‌ها گندم رُست.</p>
+  </section>
+
+  <section class="wrap wide" id="verbs">
+    <h2>جدولِ فعل‌ها</h2>
+    <p style="max-width:36rem">هر ۲۷۷ مصدرِ فهرست به ترتیبِ الفبا آمده است؛ با صورتی که در قصه پررنگ است و فعلِ مرکبی که جایش می‌نشیند. مصدر بنِ گذشته را می‌نماید و امر بنِ حال را: امر همان «بِ» با بنِ حال است و در فعل‌هایی که با «ا» یا «آ» می‌آغازند «ب» و «ی» می‌آید (انداختن ← بینداز، آموختن ← بیاموز). حال را نیز از همین بن می‌سازیم: «می» + بن + شناسه (بیندیش ← می‌اندیشم، می‌اندیشی، می‌اندیشد).</p>
+    <div class="tools">
+      <input id="q" type="search" placeholder="جست‌وجو: مصدر، امر یا فعلِ مرکب، مثلاً «نگاه»" aria-label="جست‌وجو در جدول">
+      <span class="count" id="count" aria-live="polite">۲۷۷ فعل</span>
+      <a href="data/verbs.csv" download>دریافتِ جدول (CSV)</a>
+    </div>
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>ردیف</th><th>مصدر</th><th>امر</th><th>در قصه</th><th>به جای این فعل‌های مرکب (یا معنا)</th></tr></thead>
+        <tbody id="tb">
+<tr id="v-1"><td class="n">۱</td><td class="inf">آراستن</td><td class="imp">بیارای</td><td class="form"><a href="#s-1">آراستند</a></td><td class="eq">تزئین‌کردن، آرایش‌دادن</td></tr>
+<tr id="v-2"><td class="n">۲</td><td class="inf">آرامیدن</td><td class="imp">بیارام</td><td class="form"><a href="#s-2">نیارامید</a></td><td class="eq">آرام‌گرفتن</td></tr>
+<tr id="v-3"><td class="n">۳</td><td class="inf">آزردن</td><td class="imp">بیازار</td><td class="form"><a href="#s-3">می‌آزردند</a></td><td class="eq">آزاردادن، اذیت‌کردن</td></tr>
+<tr id="v-4"><td class="n">۴</td><td class="inf">آزمودن</td><td class="imp">بیازمای</td><td class="form"><a href="#s-4">بیازمایم</a></td><td class="eq">امتحان‌کردن، آزمایش‌کردن</td></tr>
+<tr id="v-5"><td class="n">۵</td><td class="inf">آسودن</td><td class="imp">بیاسای</td><td class="form"><a href="#s-5">نیاسود</a></td><td class="eq">استراحت‌کردن</td></tr>
+<tr id="v-6"><td class="n">۶</td><td class="inf">آشامیدن</td><td class="imp">بیاشام</td><td class="form"><a href="#s-6">می‌آشامید</a></td><td class="eq">(آب) نوشیدن، میل‌کردن</td></tr>
+<tr id="v-7"><td class="n">۷</td><td class="inf">آشفتن</td><td class="imp">بیاشوب</td><td class="form"><a href="#s-7">آشفت</a></td><td class="eq">آشفته‌شدن، به‌هم‌ریختن، عصبانی‌شدن</td></tr>
+<tr id="v-8"><td class="n">۸</td><td class="inf">آغازیدن</td><td class="imp">بیاغاز</td><td class="form"><a href="#s-8">آغازید</a></td><td class="eq">شروع‌کردن</td></tr>
+<tr id="v-9"><td class="n">۹</td><td class="inf">آغشتن</td><td class="imp">بیاغار</td><td class="form"><a href="#s-9">آغشت</a></td><td class="eq">آغشته‌کردن، آلوده‌کردن</td></tr>
+<tr id="v-10"><td class="n">۱۰</td><td class="inf">آفریدن</td><td class="imp">بیافرین</td><td class="form"><a href="#s-10">آفریده بود</a></td><td class="eq">خلق‌کردن</td></tr>
+<tr id="v-11"><td class="n">۱۱</td><td class="inf">آگندن</td><td class="imp">بیاگن</td><td class="form"><a href="#s-11">می‌آگند</a></td><td class="eq">پُرکردن</td></tr>
+<tr id="v-12"><td class="n">۱۲</td><td class="inf">آلودن</td><td class="imp">بیالای</td><td class="form"><a href="#s-12">آلود</a></td><td class="eq">آلوده‌کردن، کثیف‌کردن</td></tr>
+<tr id="v-13"><td class="n">۱۳</td><td class="inf">آمدن</td><td class="imp">بیا</td><td class="form"><a href="#s-13">می‌آمد</a></td><td class="eq">تشریف‌آوردن</td></tr>
+<tr id="v-14"><td class="n">۱۴</td><td class="inf">آمرزیدن</td><td class="imp">بیامرز</td><td class="form"><a href="#s-14">بیامرزدش</a></td><td class="eq">مغفرت‌کردن، گناه را بخشیدن</td></tr>
+<tr id="v-15"><td class="n">۱۵</td><td class="inf">آموختن</td><td class="imp">بیاموز</td><td class="form"><a href="#s-15">می‌آموخت</a></td><td class="eq">یادگرفتن، یاددادن، تعلیم‌دادن</td></tr>
+<tr id="v-16"><td class="n">۱۶</td><td class="inf">آمیختن</td><td class="imp">بیامیز</td><td class="form"><a href="#s-16">می‌آمیخت</a></td><td class="eq">مخلوط‌کردن</td></tr>
+<tr id="v-17"><td class="n">۱۷</td><td class="inf">آوردن</td><td class="imp">بیاور</td><td class="form"><a href="#s-17">بیاور</a></td><td class="eq">همراه‌آوردن، تحویل‌دادن</td></tr>
+<tr id="v-18"><td class="n">۱۸</td><td class="inf">آویختن</td><td class="imp">بیاویز</td><td class="form"><a href="#s-18">آویختند</a></td><td class="eq">آویزان‌کردن</td></tr>
+<tr id="v-19"><td class="n">۱۹</td><td class="inf">آهیختن</td><td class="imp">بیاهنج</td><td class="form"><a href="#s-19">آهیخت</a></td><td class="eq">(شمشیر) بیرون‌کشیدن</td></tr>
+<tr id="v-20"><td class="n">۲۰</td><td class="inf">ارزیدن</td><td class="imp">(مضارع: می‌ارزد)</td><td class="form"><a href="#s-20">می‌ارزد</a></td><td class="eq">ارزش‌داشتن، قیمت‌داشتن</td></tr>
+<tr id="v-21"><td class="n">۲۱</td><td class="inf">افتادن</td><td class="imp">بیفت</td><td class="form"><a href="#s-21">افتاد</a></td><td class="eq">زمین‌خوردن، سقوط‌کردن</td></tr>
+<tr id="v-22"><td class="n">۲۲</td><td class="inf">افراشتن</td><td class="imp">بیفراز</td><td class="form"><a href="#s-22">افراشته بودند</a></td><td class="eq">برپاکردن، بلندکردن</td></tr>
+<tr id="v-23"><td class="n">۲۳</td><td class="inf">افروختن</td><td class="imp">بیفروز</td><td class="form"><a href="#s-23">می‌افروخت</a></td><td class="eq">روشن‌کردن (آتش، چراغ)</td></tr>
+<tr id="v-24"><td class="n">۲۴</td><td class="inf">افزودن</td><td class="imp">بیفزای</td><td class="form"><a href="#s-24">می‌افزایی</a></td><td class="eq">اضافه‌کردن، زیادکردن</td></tr>
+<tr id="v-25"><td class="n">۲۵</td><td class="inf">افسردن</td><td class="imp">بیفسر</td><td class="form"><a href="#s-25">افسرد</a></td><td class="eq">افسرده‌شدن، یخ‌زدن</td></tr>
+<tr id="v-26"><td class="n">۲۶</td><td class="inf">افشاندن</td><td class="imp">بیفشان</td><td class="form"><a href="#s-26">می‌افشاندند</a></td><td class="eq">پخش‌کردن، پاشیدن (دانه)</td></tr>
+<tr id="v-27"><td class="n">۲۷</td><td class="inf">افگندن</td><td class="imp">بیفگن</td><td class="form"><a href="#s-27">افگند</a></td><td class="eq">پرتاب‌کردن</td></tr>
+<tr id="v-28"><td class="n">۲۸</td><td class="inf">انباشتن</td><td class="imp">بینبار</td><td class="form"><a href="#s-28">می‌انباشت</a></td><td class="eq">انبارکردن، روی هم جمع‌کردن</td></tr>
+<tr id="v-29"><td class="n">۲۹</td><td class="inf">انجامیدن</td><td class="imp">بینجام</td><td class="form"><a href="#s-29">انجامید</a></td><td class="eq">تمام‌شدن، به‌پایان‌رسیدن، منجرشدن</td></tr>
+<tr id="v-30"><td class="n">۳۰</td><td class="inf">انداختن</td><td class="imp">بینداز</td><td class="form"><a href="#s-30">انداخت</a></td><td class="eq">پرتاب‌کردن</td></tr>
+<tr id="v-31"><td class="n">۳۱</td><td class="inf">اندوختن</td><td class="imp">بیندوز</td><td class="form"><a href="#s-31">می‌اندوخت</a></td><td class="eq">پس‌اندازکردن، ذخیره‌کردن</td></tr>
+<tr id="v-32"><td class="n">۳۲</td><td class="inf">اندودن</td><td class="imp">بیندای</td><td class="form"><a href="#s-32">اندودند</a></td><td class="eq">اندودکردن، کاهگل‌کردن، رنگ‌زدن</td></tr>
+<tr id="v-33"><td class="n">۳۳</td><td class="inf">اندیشیدن</td><td class="imp">بیندیش</td><td class="form"><a href="#s-33">بیندیش</a></td><td class="eq">فکرکردن</td></tr>
+<tr id="v-34"><td class="n">۳۴</td><td class="inf">انگاشتن</td><td class="imp">بینگار</td><td class="form"><a href="#s-34">انگاشتند</a></td><td class="eq">فرض‌کردن، تصورکردن</td></tr>
+<tr id="v-35"><td class="n">۳۵</td><td class="inf">انگیختن</td><td class="imp">بینگیز</td><td class="form"><a href="#s-35">انگیخت</a></td><td class="eq">تحریک‌کردن</td></tr>
+<tr id="v-36"><td class="n">۳۶</td><td class="inf">اوباشتن</td><td class="imp">بیوبار</td><td class="form"><a href="#s-36">می‌اوباشت</a></td><td class="eq">قورت‌دادن</td></tr>
+<tr id="v-37"><td class="n">۳۷</td><td class="inf">ایستادن</td><td class="imp">بایست</td><td class="form"><a href="#s-37">می‌ایستاد</a></td><td class="eq">توقف‌کردن، سرپا ماندن</td></tr>
+<tr id="v-38"><td class="n">۳۸</td><td class="inf">باختن</td><td class="imp">بباز</td><td class="form"><a href="#s-38">باخت</a></td><td class="eq">شکست‌خوردن، ازدست‌دادن</td></tr>
+<tr id="v-39"><td class="n">۳۹</td><td class="inf">باریدن</td><td class="imp">ببار</td><td class="form"><a href="#s-39">می‌بارید</a></td><td class="eq">(باران، برف) آمدن</td></tr>
+<tr id="v-40"><td class="n">۴۰</td><td class="inf">بافتن</td><td class="imp">بباف</td><td class="form"><a href="#s-40">می‌بافت</a></td><td class="eq">بافتنی‌کردن، قالی‌بافی‌کردن</td></tr>
+<tr id="v-41"><td class="n">۴۱</td><td class="inf">بالیدن</td><td class="imp">ببال</td><td class="form"><a href="#s-41">می‌بالید</a></td><td class="eq">رشدکردن؛ افتخارکردن</td></tr>
+<tr id="v-42"><td class="n">۴۲</td><td class="inf">بایستن</td><td class="imp">(مضارع: می‌باید)</td><td class="form"><a href="#s-42">می‌بایست</a></td><td class="eq">لازم‌بودن، واجب‌بودن</td></tr>
+<tr id="v-43"><td class="n">۴۳</td><td class="inf">بخشودن</td><td class="imp">ببخشای</td><td class="form"><a href="#s-43">بخشود</a></td><td class="eq">عفوکردن، گذشت‌کردن</td></tr>
+<tr id="v-44"><td class="n">۴۴</td><td class="inf">بخشیدن</td><td class="imp">ببخش</td><td class="form"><a href="#s-44">بخشید</a></td><td class="eq">هدیه‌دادن؛ عفوکردن</td></tr>
+<tr id="v-45"><td class="n">۴۵</td><td class="inf">برازیدن</td><td class="imp">(مضارع: می‌برازد)</td><td class="form"><a href="#s-45">می‌برازید</a></td><td class="eq">برازنده‌بودن، شایسته‌بودن</td></tr>
+<tr id="v-46"><td class="n">۴۶</td><td class="inf">بردن</td><td class="imp">بِبَر</td><td class="form"><a href="#s-46">می‌برد</a></td><td class="eq">حمل‌کردن، با خود بردن</td></tr>
+<tr id="v-47"><td class="n">۴۷</td><td class="inf">بریدن</td><td class="imp">بِبُر</td><td class="form"><a href="#s-47">برید</a></td><td class="eq">قطع‌کردن</td></tr>
+<tr id="v-48"><td class="n">۴۸</td><td class="inf">بستن</td><td class="imp">ببند</td><td class="form"><a href="#s-48">بست</a></td><td class="eq">گره‌زدن؛ مسدودکردن</td></tr>
+<tr id="v-49"><td class="n">۴۹</td><td class="inf">بِسودن</td><td class="imp">ببسای</td><td class="form"><a href="#s-49">بسود</a></td><td class="eq">لمس‌کردن، دست‌زدن</td></tr>
+<tr id="v-50"><td class="n">۵۰</td><td class="inf">بَسیجیدن</td><td class="imp">ببسیج</td><td class="form"><a href="#s-50">بسیجید</a></td><td class="eq">آماده‌کردن، بسیج‌کردن</td></tr>
+<tr id="v-51"><td class="n">۵۱</td><td class="inf">بلعیدن</td><td class="imp">ببلع</td><td class="form"><a href="#s-51">می‌بلعد</a></td><td class="eq">قورت‌دادن</td></tr>
+<tr id="v-52"><td class="n">۵۲</td><td class="inf">بودن</td><td class="imp">باش</td><td class="form"><a href="#s-52">بود</a></td><td class="eq">وجودداشتن، قرارداشتن</td></tr>
+<tr id="v-53"><td class="n">۵۳</td><td class="inf">بوسیدن</td><td class="imp">ببوس</td><td class="form"><a href="#s-53">بوسید</a></td><td class="eq">ماچ‌کردن</td></tr>
+<tr id="v-54"><td class="n">۵۴</td><td class="inf">بوییدن</td><td class="imp">ببوی</td><td class="form"><a href="#s-54">بویید</a></td><td class="eq">بوکردن</td></tr>
+<tr id="v-55"><td class="n">۵۵</td><td class="inf">بیختن</td><td class="imp">ببیز</td><td class="form"><a href="#s-55">می‌بیخت</a></td><td class="eq">الک‌کردن</td></tr>
+<tr id="v-56"><td class="n">۵۶</td><td class="inf">پاشیدن</td><td class="imp">بپاش</td><td class="form"><a href="#s-56">پاشید</a></td><td class="eq">پخش‌کردن، اسپری‌کردن</td></tr>
+<tr id="v-57"><td class="n">۵۷</td><td class="inf">پالودن</td><td class="imp">بپالای</td><td class="form"><a href="#s-57">می‌پالودند</a></td><td class="eq">صاف‌کردن، تصفیه‌کردن</td></tr>
+<tr id="v-58"><td class="n">۵۸</td><td class="inf">پختن</td><td class="imp">بپز</td><td class="form"><a href="#s-58">می‌پخت</a></td><td class="eq">طبخ‌کردن</td></tr>
+<tr id="v-59"><td class="n">۵۹</td><td class="inf">پذیرفتن</td><td class="imp">بپذیر</td><td class="form"><a href="#s-59">نپذیرفت</a></td><td class="eq">قبول‌کردن</td></tr>
+<tr id="v-60"><td class="n">۶۰</td><td class="inf">پراکندن</td><td class="imp">بپراکن</td><td class="form"><a href="#s-60">می‌پراکند</a></td><td class="eq">پخش‌کردن، متفرق‌کردن</td></tr>
+<tr id="v-61"><td class="n">۶۱</td><td class="inf">پرداختن</td><td class="imp">بپرداز</td><td class="form"><a href="#s-61">پرداخت</a></td><td class="eq">پرداخت‌کردن؛ مشغول‌شدن</td></tr>
+<tr id="v-62"><td class="n">۶۲</td><td class="inf">پرستیدن</td><td class="imp">بپرست</td><td class="form"><a href="#s-62">می‌پرستیدند</a></td><td class="eq">عبادت‌کردن</td></tr>
+<tr id="v-63"><td class="n">۶۳</td><td class="inf">پرسیدن</td><td class="imp">بپرس</td><td class="form"><a href="#s-63">پرسید</a></td><td class="eq">سؤال‌کردن</td></tr>
+<tr id="v-64"><td class="n">۶۴</td><td class="inf">پروردن</td><td class="imp">بپرور</td><td class="form"><a href="#s-64">پرورده بود</a></td><td class="eq">پرورش‌دادن، تربیت‌کردن</td></tr>
+<tr id="v-65"><td class="n">۶۵</td><td class="inf">پریدن</td><td class="imp">بپر</td><td class="form"><a href="#s-65">پریدند</a></td><td class="eq">پروازکردن؛ پرش‌کردن</td></tr>
+<tr id="v-66"><td class="n">۶۶</td><td class="inf">پژمردن</td><td class="imp">بپژمر</td><td class="form"><a href="#s-66">پژمرده بودند</a></td><td class="eq">پژمرده‌شدن</td></tr>
+<tr id="v-67"><td class="n">۶۷</td><td class="inf">پژوهیدن</td><td class="imp">بپژوه</td><td class="form"><a href="#s-67">پژوهیده است</a></td><td class="eq">تحقیق‌کردن</td></tr>
+<tr id="v-68"><td class="n">۶۸</td><td class="inf">پسندیدن</td><td class="imp">بپسند</td><td class="form"><a href="#s-68">پسندید</a></td><td class="eq">خوش‌آمدن، دوست‌داشتن</td></tr>
+<tr id="v-69"><td class="n">۶۹</td><td class="inf">پلاسیدن</td><td class="imp">بپلاس</td><td class="form"><a href="#s-69">پلاسیده بودند</a></td><td class="eq">پلاسیده‌شدن، پژمرده‌شدن</td></tr>
+<tr id="v-70"><td class="n">۷۰</td><td class="inf">پلکیدن</td><td class="imp">بپلک</td><td class="form"><a href="#s-70">می‌پلکید</a></td><td class="eq">پرسه‌زدن، ول‌گشتن</td></tr>
+<tr id="v-71"><td class="n">۷۱</td><td class="inf">پناهیدن</td><td class="imp">بپناه</td><td class="form"><a href="#s-71">پناهیدند</a></td><td class="eq">پناه‌بردن</td></tr>
+<tr id="v-72"><td class="n">۷۲</td><td class="inf">پنداشتن</td><td class="imp">بپندار</td><td class="form"><a href="#s-72">می‌پنداشت</a></td><td class="eq">گمان‌کردن، خیال‌کردن</td></tr>
+<tr id="v-73"><td class="n">۷۳</td><td class="inf">پوسیدن</td><td class="imp">بپوس</td><td class="form"><a href="#s-73">پوسیده بود</a></td><td class="eq">پوسیده‌شدن، فاسدشدن</td></tr>
+<tr id="v-74"><td class="n">۷۴</td><td class="inf">پوشیدن</td><td class="imp">بپوش</td><td class="form"><a href="#s-74">بپوش</a></td><td class="eq">به‌تن‌کردن؛ پنهان‌کردن</td></tr>
+<tr id="v-75"><td class="n">۷۵</td><td class="inf">پوییدن</td><td class="imp">بپوی</td><td class="form"><a href="#s-75">می‌پویید</a></td><td class="eq">تکاپوکردن، دوندگی‌کردن</td></tr>
+<tr id="v-76"><td class="n">۷۶</td><td class="inf">پیچیدن</td><td class="imp">بپیچ</td><td class="form"><a href="#s-76">می‌پیچید</a></td><td class="eq">تاب‌دادن، دور چیزی گرفتن؛ (پا) رگ‌به‌رگ‌شدن</td></tr>
+<tr id="v-77"><td class="n">۷۷</td><td class="inf">پیراستن</td><td class="imp">بپیرای</td><td class="form"><a href="#s-77">پیراستند</a></td><td class="eq">هرس‌کردن، اصلاح‌کردن</td></tr>
+<tr id="v-78"><td class="n">۷۸</td><td class="inf">پیمودن</td><td class="imp">بپیمای</td><td class="form"><a href="#s-78">پیمود</a></td><td class="eq">طی‌کردن؛ اندازه‌گرفتن</td></tr>
+<tr id="v-79"><td class="n">۷۹</td><td class="inf">پیوستن</td><td class="imp">بپیوند</td><td class="form"><a href="#s-79">پیوست</a></td><td class="eq">ملحق‌شدن، وصل‌شدن</td></tr>
+<tr id="v-80"><td class="n">۸۰</td><td class="inf">تاختن</td><td class="imp">بتاز</td><td class="form"><a href="#s-80">تاختند</a></td><td class="eq">حمله‌کردن، یورش‌بردن</td></tr>
+<tr id="v-81"><td class="n">۸۱</td><td class="inf">تافتن</td><td class="imp">بتاب</td><td class="form"><a href="#s-81">می‌تافت</a></td><td class="eq">نوردادن، تابیدن؛ تاب‌دادن</td></tr>
+<tr id="v-82"><td class="n">۸۲</td><td class="inf">تپیدن</td><td class="imp">بتپ</td><td class="form"><a href="#s-82">می‌تپید</a></td><td class="eq">(دل) ضربان‌داشتن</td></tr>
+<tr id="v-83"><td class="n">۸۳</td><td class="inf">تراشیدن</td><td class="imp">بتراش</td><td class="form"><a href="#s-83">تراشیدند</a></td><td class="eq">اصلاح‌کردن (ریش)، صاف‌کردن (چوب)</td></tr>
+<tr id="v-84"><td class="n">۸۴</td><td class="inf">تراویدن</td><td class="imp">بتراو</td><td class="form"><a href="#s-84">می‌تراوید</a></td><td class="eq">نشت‌کردن، تراوش‌کردن</td></tr>
+<tr id="v-85"><td class="n">۸۵</td><td class="inf">ترسیدن</td><td class="imp">بترس</td><td class="form"><a href="#s-85">می‌ترسید</a></td><td class="eq">ترس‌داشتن، وحشت‌کردن</td></tr>
+<tr id="v-86"><td class="n">۸۶</td><td class="inf">ترشیدن</td><td class="imp">بترش</td><td class="form"><a href="#s-86">می‌ترشید</a></td><td class="eq">ترش‌شدن</td></tr>
+<tr id="v-87"><td class="n">۸۷</td><td class="inf">ترکیدن</td><td class="imp">بترک</td><td class="form"><a href="#s-87">ترکید</a></td><td class="eq">منفجرشدن، پاره‌شدن</td></tr>
+<tr id="v-88"><td class="n">۸۸</td><td class="inf">تکاندن و تکانیدن</td><td class="imp">بتکان</td><td class="form"><a href="#s-88">می‌تکاند</a></td><td class="eq">تکان‌دادن، گردگیری‌کردن</td></tr>
+<tr id="v-89"><td class="n">۸۹</td><td class="inf">تنیدن</td><td class="imp">بِتَن</td><td class="form"><a href="#s-89">می‌تنید</a></td><td class="eq">(تار) درست‌کردن</td></tr>
+<tr id="v-90"><td class="n">۹۰</td><td class="inf">توانستن</td><td class="imp">(مضارع: می‌تواند)</td><td class="form"><a href="#s-90">می‌توانست</a></td><td class="eq">قادربودن، توان‌داشتن</td></tr>
+<tr id="v-91"><td class="n">۹۱</td><td class="inf">جَستن</td><td class="imp">بِجَه</td><td class="form"><a href="#s-91">جَست</a></td><td class="eq">پرش‌کردن</td></tr>
+<tr id="v-92"><td class="n">۹۲</td><td class="inf">جُستن</td><td class="imp">بجوی</td><td class="form"><a href="#s-92">جُست</a></td><td class="eq">جستجوکردن، دنبال‌گشتن</td></tr>
+<tr id="v-93"><td class="n">۹۳</td><td class="inf">جنبیدن</td><td class="imp">بجنب</td><td class="form"><a href="#s-93">می‌جنبید</a></td><td class="eq">حرکت‌کردن، تکان‌خوردن؛ عجله‌کردن</td></tr>
+<tr id="v-94"><td class="n">۹۴</td><td class="inf">جنگیدن</td><td class="imp">بجنگ</td><td class="form"><a href="#s-94">جنگیدند</a></td><td class="eq">جنگ‌کردن، نبردکردن</td></tr>
+<tr id="v-95"><td class="n">۹۵</td><td class="inf">جوشیدن</td><td class="imp">بجوش</td><td class="form"><a href="#s-95">می‌جوشید</a></td><td class="eq">جوش‌آمدن؛ (چشمه) بیرون‌زدن</td></tr>
+<tr id="v-96"><td class="n">۹۶</td><td class="inf">جویدن</td><td class="imp">بِجُو</td><td class="form"><a href="#s-96">جَوید</a></td><td class="eq">در دهان نرم‌کردن</td></tr>
+<tr id="v-97"><td class="n">۹۷</td><td class="inf">جهیدن</td><td class="imp">بِجَه</td><td class="form"><a href="#s-97">جهید</a></td><td class="eq">پرش‌کردن</td></tr>
+<tr id="v-98"><td class="n">۹۸</td><td class="inf">چاپیدن</td><td class="imp">بچاپ</td><td class="form"><a href="#s-98">بچاپد</a></td><td class="eq">چپاول‌کردن، غارت‌کردن</td></tr>
+<tr id="v-99"><td class="n">۹۹</td><td class="inf">چاییدن</td><td class="imp">بچای</td><td class="form"><a href="#s-99">چایید</a></td><td class="eq">سرماخوردن</td></tr>
+<tr id="v-100"><td class="n">۱۰۰</td><td class="inf">چپیدن</td><td class="imp">بچپ</td><td class="form"><a href="#s-100">چپیدند</a></td><td class="eq">در جای تنگ فرورفتن</td></tr>
+<tr id="v-101"><td class="n">۱۰۱</td><td class="inf">چربیدن</td><td class="imp">بچرب</td><td class="form"><a href="#s-101">چربید</a></td><td class="eq">غلبه‌کردن، سنگینی‌کردن</td></tr>
+<tr id="v-102"><td class="n">۱۰۲</td><td class="inf">چرخیدن</td><td class="imp">بچرخ</td><td class="form"><a href="#s-102">می‌چرخید</a></td><td class="eq">دورزدن</td></tr>
+<tr id="v-103"><td class="n">۱۰۳</td><td class="inf">چریدن</td><td class="imp">بچر</td><td class="form"><a href="#s-103">بچرند</a></td><td class="eq">علف‌خوردن</td></tr>
+<tr id="v-104"><td class="n">۱۰۴</td><td class="inf">چسبیدن</td><td class="imp">بچسب</td><td class="form"><a href="#s-104">چسبید</a></td><td class="eq">محکم‌گرفتن، جدانشدن</td></tr>
+<tr id="v-105"><td class="n">۱۰۵</td><td class="inf">چشیدن</td><td class="imp">بچش</td><td class="form"><a href="#s-105">چشید</a></td><td class="eq">مزه‌کردن</td></tr>
+<tr id="v-106"><td class="n">۱۰۶</td><td class="inf">چکیدن</td><td class="imp">بچک</td><td class="form"><a href="#s-106">چکید</a></td><td class="eq">چکه‌کردن</td></tr>
+<tr id="v-107"><td class="n">۱۰۷</td><td class="inf">چلاندن و چلانیدن</td><td class="imp">بچلان</td><td class="form"><a href="#s-107">چلاند</a></td><td class="eq">آب‌گرفتن، فشاردادن</td></tr>
+<tr id="v-108"><td class="n">۱۰۸</td><td class="inf">چمیدن</td><td class="imp">بچم</td><td class="form"><a href="#s-108">می‌چمیدند</a></td><td class="eq">با ناز راه‌رفتن</td></tr>
+<tr id="v-109"><td class="n">۱۰۹</td><td class="inf">چیدن</td><td class="imp">بچین</td><td class="form"><a href="#s-109">می‌چیدند</a></td><td class="eq">(میوه) کندن؛ مرتب‌کردن</td></tr>
+<tr id="v-110"><td class="n">۱۱۰</td><td class="inf">خاریدن</td><td class="imp">بِخار</td><td class="form"><a href="#s-110">می‌خارید</a></td><td class="eq">خارش‌داشتن</td></tr>
+<tr id="v-111"><td class="n">۱۱۱</td><td class="inf">خاستن</td><td class="imp">بخیز</td><td class="form"><a href="#s-111">می‌خاست</a></td><td class="eq">بلندشدن، از جا برخاستن</td></tr>
+<tr id="v-112"><td class="n">۱۱۲</td><td class="inf">خاییدن</td><td class="imp">بخای</td><td class="form"><a href="#s-112">می‌خاییدند</a></td><td class="eq">جویدن</td></tr>
+<tr id="v-113"><td class="n">۱۱۳</td><td class="inf">خراشیدن</td><td class="imp">بخراش</td><td class="form"><a href="#s-113">می‌خراشیدند</a></td><td class="eq">خراش‌دادن</td></tr>
+<tr id="v-114"><td class="n">۱۱۴</td><td class="inf">خرامیدن</td><td class="imp">بخرام</td><td class="form"><a href="#s-114">می‌خرامید</a></td><td class="eq">با ناز قدم‌زدن</td></tr>
+<tr id="v-115"><td class="n">۱۱۵</td><td class="inf">خروشیدن</td><td class="imp">بخروش</td><td class="form"><a href="#s-115">خروشید</a></td><td class="eq">فریادکشیدن، غرش‌کردن</td></tr>
+<tr id="v-116"><td class="n">۱۱۶</td><td class="inf">خریدن</td><td class="imp">بخر</td><td class="form"><a href="#s-116">بخری</a></td><td class="eq">خریدکردن</td></tr>
+<tr id="v-117"><td class="n">۱۱۷</td><td class="inf">خزیدن</td><td class="imp">بخز</td><td class="form"><a href="#s-117">خزید</a></td><td class="eq">سینه‌خیزرفتن</td></tr>
+<tr id="v-118"><td class="n">۱۱۸</td><td class="inf">خستن</td><td class="imp">بِخَس</td><td class="form"><a href="#s-118">خست</a></td><td class="eq">زخمی‌کردن، مجروح‌کردن</td></tr>
+<tr id="v-119"><td class="n">۱۱۹</td><td class="inf">خشکیدن</td><td class="imp">بخشک</td><td class="form"><a href="#s-119">خشکید</a></td><td class="eq">خشک‌شدن</td></tr>
+<tr id="v-120"><td class="n">۱۲۰</td><td class="inf">خلیدن</td><td class="imp">بِخَل</td><td class="form"><a href="#s-120">خلید</a></td><td class="eq">(خار) فرورفتن</td></tr>
+<tr id="v-121"><td class="n">۱۲۱</td><td class="inf">خمیدن</td><td class="imp">بخم</td><td class="form"><a href="#s-121">خمید</a></td><td class="eq">خم‌شدن</td></tr>
+<tr id="v-122"><td class="n">۱۲۲</td><td class="inf">خوابیدن</td><td class="imp">بخواب</td><td class="form"><a href="#s-122">خوابید</a></td><td class="eq">به خواب‌رفتن، استراحت‌کردن</td></tr>
+<tr id="v-123"><td class="n">۱۲۳</td><td class="inf">خواستن</td><td class="imp">بخواه</td><td class="form"><a href="#s-123">می‌خواست</a></td><td class="eq">درخواست‌کردن، میل‌داشتن</td></tr>
+<tr id="v-124"><td class="n">۱۲۴</td><td class="inf">خواندن</td><td class="imp">بخوان</td><td class="form"><a href="#s-124">خواند</a></td><td class="eq">مطالعه‌کردن؛ صداکردن؛ آوازخواندن</td></tr>
+<tr id="v-125"><td class="n">۱۲۵</td><td class="inf">خوردن</td><td class="imp">بخور</td><td class="form"><a href="#s-125">می‌خورد</a></td><td class="eq">میل‌کردن، صرف‌کردن</td></tr>
+<tr id="v-126"><td class="n">۱۲۶</td><td class="inf">خوفیدن</td><td class="imp">بخوف</td><td class="form"><a href="#s-126">می‌خوفید</a></td><td class="eq">ترس‌داشتن</td></tr>
+<tr id="v-127"><td class="n">۱۲۷</td><td class="inf">خیسیدن</td><td class="imp">بخیس</td><td class="form"><a href="#s-127">خیسیده بود</a></td><td class="eq">خیس‌شدن</td></tr>
+<tr id="v-128"><td class="n">۱۲۸</td><td class="inf">دادن</td><td class="imp">بده</td><td class="form"><a href="#s-128">نمی‌داد</a></td><td class="eq">تحویل‌دادن، اعطاکردن</td></tr>
+<tr id="v-129"><td class="n">۱۲۹</td><td class="inf">داشتن</td><td class="imp">بدار</td><td class="form"><a href="#s-129">داشت</a></td><td class="eq">مالک‌بودن، دراختیارداشتن</td></tr>
+<tr id="v-130"><td class="n">۱۳۰</td><td class="inf">دانستن</td><td class="imp">بدان</td><td class="form"><a href="#s-130">می‌داند</a></td><td class="eq">اطلاع‌داشتن، آگاه‌بودن</td></tr>
+<tr id="v-131"><td class="n">۱۳۱</td><td class="inf">درخشیدن</td><td class="imp">بدرخش</td><td class="form"><a href="#s-131">می‌درخشید</a></td><td class="eq">برق‌زدن، نوردادن</td></tr>
+<tr id="v-132"><td class="n">۱۳۲</td><td class="inf">درودن</td><td class="imp">بدرو</td><td class="form"><a href="#s-132">می‌درودند</a></td><td class="eq">دروکردن</td></tr>
+<tr id="v-133"><td class="n">۱۳۳</td><td class="inf">دریدن</td><td class="imp">بِدَر</td><td class="form"><a href="#s-133">درید</a></td><td class="eq">پاره‌کردن</td></tr>
+<tr id="v-134"><td class="n">۱۳۴</td><td class="inf">دزدیدن</td><td class="imp">بدزد</td><td class="form"><a href="#s-134">دزدیدند</a></td><td class="eq">سرقت‌کردن</td></tr>
+<tr id="v-135"><td class="n">۱۳۵</td><td class="inf">دمیدن</td><td class="imp">بدم</td><td class="form"><a href="#s-135">دمید</a></td><td class="eq">(صبح) طلوع‌کردن؛ فوت‌کردن</td></tr>
+<tr id="v-136"><td class="n">۱۳۶</td><td class="inf">دوختن</td><td class="imp">بدوز</td><td class="form"><a href="#s-136">می‌دوخت</a></td><td class="eq">خیاطی‌کردن</td></tr>
+<tr id="v-137"><td class="n">۱۳۷</td><td class="inf">دوشیدن</td><td class="imp">بدوش</td><td class="form"><a href="#s-137">می‌دوشید</a></td><td class="eq">(شیر) گرفتن</td></tr>
+<tr id="v-138"><td class="n">۱۳۸</td><td class="inf">دویدن</td><td class="imp">بدو</td><td class="form"><a href="#s-138">دوید</a></td><td class="eq">با شتاب رفتن</td></tr>
+<tr id="v-139"><td class="n">۱۳۹</td><td class="inf">دیدن</td><td class="imp">ببین</td><td class="form"><a href="#s-139">می‌دید</a></td><td class="eq">مشاهده‌کردن</td></tr>
+<tr id="v-140"><td class="n">۱۴۰</td><td class="inf">ربودن</td><td class="imp">بربای</td><td class="form"><a href="#s-140">ربودند</a></td><td class="eq">قاپیدن، دزدیدن</td></tr>
+<tr id="v-141"><td class="n">۱۴۱</td><td class="inf">رخشیدن</td><td class="imp">برخش</td><td class="form"><a href="#s-141">می‌رخشیدند</a></td><td class="eq">برق زدن، درخشیدن</td></tr>
+<tr id="v-142"><td class="n">۱۴۲</td><td class="inf">رسیدن</td><td class="imp">برس</td><td class="form"><a href="#s-142">رسید</a></td><td class="eq">واردشدن؛ (میوه) رسیده‌شدن</td></tr>
+<tr id="v-143"><td class="n">۱۴۳</td><td class="inf">رَستن</td><td class="imp">بِرَه</td><td class="form"><a href="#s-143">رَستند</a></td><td class="eq">نجات‌پیدا‌کردن، خلاص‌شدن</td></tr>
+<tr id="v-144"><td class="n">۱۴۴</td><td class="inf">رُستن</td><td class="imp">بروی</td><td class="form"><a href="#s-144">می‌رُست</a></td><td class="eq">سبزشدن، رشدکردن</td></tr>
+<tr id="v-145"><td class="n">۱۴۵</td><td class="inf">رشتن</td><td class="imp">بریس</td><td class="form"><a href="#s-145">می‌رشت</a></td><td class="eq">ریسیدن، نخ‌ریسی‌کردن</td></tr>
+<tr id="v-146"><td class="n">۱۴۶</td><td class="inf">رَفتن</td><td class="imp">برو</td><td class="form"><a href="#s-146">رفتند</a></td><td class="eq">عزیمت‌کردن، تشریف‌بردن</td></tr>
+<tr id="v-147"><td class="n">۱۴۷</td><td class="inf">رُفتن و روفتن</td><td class="imp">بروب</td><td class="form"><a href="#s-147">روفتند</a></td><td class="eq">جاروکردن</td></tr>
+<tr id="v-148"><td class="n">۱۴۸</td><td class="inf">رقصیدن</td><td class="imp">برقص</td><td class="form"><a href="#s-148">می‌رقصیدند</a></td><td class="eq">رقص‌کردن</td></tr>
+<tr id="v-149"><td class="n">۱۴۹</td><td class="inf">رمیدن</td><td class="imp">بِرَم</td><td class="form"><a href="#s-149">رمیدند</a></td><td class="eq">(از ترس) فرارکردن</td></tr>
+<tr id="v-150"><td class="n">۱۵۰</td><td class="inf">رنجیدن</td><td class="imp">بِرَنج</td><td class="form"><a href="#s-150">رنجید</a></td><td class="eq">ناراحت‌شدن، دلخورشدن</td></tr>
+<tr id="v-151"><td class="n">۱۵۱</td><td class="inf">رندیدن</td><td class="imp">بِرَند</td><td class="form"><a href="#s-151">رندید</a></td><td class="eq">رنده‌کردن</td></tr>
+<tr id="v-152"><td class="n">۱۵۲</td><td class="inf">روییدن</td><td class="imp">بروی</td><td class="form"><a href="#s-152">رویید</a></td><td class="eq">سبزشدن، رشدکردن</td></tr>
+<tr id="v-153"><td class="n">۱۵۳</td><td class="inf">ریختن</td><td class="imp">بریز</td><td class="form"><a href="#s-153">می‌ریختند</a></td><td class="eq">سرازیرکردن؛ (دیوار) فروریختن</td></tr>
+<tr id="v-154"><td class="n">۱۵۴</td><td class="inf">ریدن</td><td class="imp">برین</td><td class="form"><a href="#s-154">رید</a></td><td class="eq">مدفوع‌کردن (عامیانه و رکیک)</td></tr>
+<tr id="v-155"><td class="n">۱۵۵</td><td class="inf">زاریدن</td><td class="imp">بزار</td><td class="form"><a href="#s-155">می‌زارید</a></td><td class="eq">زاری‌کردن</td></tr>
+<tr id="v-156"><td class="n">۱۵۶</td><td class="inf">زاییدن</td><td class="imp">بزای</td><td class="form"><a href="#s-156">زایید</a></td><td class="eq">به‌دنیاآوردن، وضع‌حمل‌کردن</td></tr>
+<tr id="v-157"><td class="n">۱۵۷</td><td class="inf">زدن</td><td class="imp">بزن</td><td class="form"><a href="#s-157">زد</a></td><td class="eq">ضربه‌زدن، کتک‌زدن</td></tr>
+<tr id="v-158"><td class="n">۱۵۸</td><td class="inf">زدودن</td><td class="imp">بزدای</td><td class="form"><a href="#s-158">زدودند</a></td><td class="eq">پاک‌کردن، تمیزکردن</td></tr>
+<tr id="v-159"><td class="n">۱۵۹</td><td class="inf">زیستن</td><td class="imp">بزی</td><td class="form"><a href="#s-159">می‌زیست</a></td><td class="eq">زندگی‌کردن</td></tr>
+<tr id="v-160"><td class="n">۱۶۰</td><td class="inf">ساختن</td><td class="imp">بساز</td><td class="form"><a href="#s-160">ساختند</a></td><td class="eq">درست‌کردن، بناکردن</td></tr>
+<tr id="v-161"><td class="n">۱۶۱</td><td class="inf">سپردن</td><td class="imp">بسپار</td><td class="form"><a href="#s-161">سپرد</a></td><td class="eq">تحویل‌دادن، امانت‌دادن</td></tr>
+<tr id="v-162"><td class="n">۱۶۲</td><td class="inf">سپوختن</td><td class="imp">بسپوز</td><td class="form"><a href="#s-162">سپوخت</a></td><td class="eq">فروکردن، تپاندن</td></tr>
+<tr id="v-163"><td class="n">۱۶۳</td><td class="inf">ستدن</td><td class="imp">بِستان</td><td class="form"><a href="#s-163">بستان</a></td><td class="eq">گرفتن، دریافت‌کردن</td></tr>
+<tr id="v-164"><td class="n">۱۶۴</td><td class="inf">ستردن</td><td class="imp">بِسُتُر</td><td class="form"><a href="#s-164">سترد</a></td><td class="eq">پاک‌کردن، محوکردن</td></tr>
+<tr id="v-165"><td class="n">۱۶۵</td><td class="inf">ستودن</td><td class="imp">بستای</td><td class="form"><a href="#s-165">می‌ستودند</a></td><td class="eq">تعریف‌کردن، تحسین‌کردن</td></tr>
+<tr id="v-166"><td class="n">۱۶۶</td><td class="inf">ستیزیدن</td><td class="imp">بستیز</td><td class="form"><a href="#s-166">ستیزید</a></td><td class="eq">مبارزه‌کردن، دعواکردن</td></tr>
+<tr id="v-167"><td class="n">۱۶۷</td><td class="inf">سرودن</td><td class="imp">بسرای</td><td class="form"><a href="#s-167">سرود</a></td><td class="eq">شعرگفتن</td></tr>
+<tr id="v-168"><td class="n">۱۶۸</td><td class="inf">سرشتن</td><td class="imp">بسرش</td><td class="form"><a href="#s-168">می‌سرشت</a></td><td class="eq">ورزدادن، خمیرکردن</td></tr>
+<tr id="v-169"><td class="n">۱۶۹</td><td class="inf">سُریدن</td><td class="imp">بِسُر</td><td class="form"><a href="#s-169">سُرید</a></td><td class="eq">سُرخوردن</td></tr>
+<tr id="v-170"><td class="n">۱۷۰</td><td class="inf">سزیدن</td><td class="imp">(مضارع: سزد)</td><td class="form"><a href="#s-170">سزد</a></td><td class="eq">سزاواربودن، لیاقت‌داشتن</td></tr>
+<tr id="v-171"><td class="n">۱۷۱</td><td class="inf">سُفتن</td><td class="imp">بسنب</td><td class="form"><a href="#s-171">سفته بود</a></td><td class="eq">سوراخ‌کردن (مروارید و مهره)</td></tr>
+<tr id="v-172"><td class="n">۱۷۲</td><td class="inf">سگالیدن</td><td class="imp">بسگال</td><td class="form"><a href="#s-172">سگالید</a></td><td class="eq">نقشه‌کشیدن، اندیشه‌کردن</td></tr>
+<tr id="v-173"><td class="n">۱۷۳</td><td class="inf">سنجیدن</td><td class="imp">بسنج</td><td class="form"><a href="#s-173">بسنج</a></td><td class="eq">ارزیابی‌کردن، وزن‌کردن</td></tr>
+<tr id="v-174"><td class="n">۱۷۴</td><td class="inf">سوختن</td><td class="imp">بسوز</td><td class="form"><a href="#s-174">سوخت</a></td><td class="eq">آتش‌گرفتن</td></tr>
+<tr id="v-175"><td class="n">۱۷۵</td><td class="inf">سودن</td><td class="imp">بسای</td><td class="form"><a href="#s-175">می‌سودند</a></td><td class="eq">آسیاب‌کردن، ساییدن؛ لمس‌کردن</td></tr>
+<tr id="v-176"><td class="n">۱۷۶</td><td class="inf">شاشیدن</td><td class="imp">بشاش</td><td class="form"><a href="#s-176">شاشید</a></td><td class="eq">ادرارکردن (عامیانه)</td></tr>
+<tr id="v-177"><td class="n">۱۷۷</td><td class="inf">شایستن</td><td class="imp">(مضارع: شاید)</td><td class="form"><a href="#s-177">نشاید</a></td><td class="eq">شایسته‌بودن، روابودن</td></tr>
+<tr id="v-178"><td class="n">۱۷۸</td><td class="inf">شتافتن</td><td class="imp">بشتاب</td><td class="form"><a href="#s-178">می‌شتافت</a></td><td class="eq">عجله‌کردن</td></tr>
+<tr id="v-179"><td class="n">۱۷۹</td><td class="inf">شدن</td><td class="imp">بشو</td><td class="form"><a href="#s-179">شده است</a></td><td class="eq">اتفاق‌افتادن</td></tr>
+<tr id="v-180"><td class="n">۱۸۰</td><td class="inf">شستن</td><td class="imp">بشوی</td><td class="form"><a href="#s-180">می‌شست</a></td><td class="eq">شستشودادن</td></tr>
+<tr id="v-181"><td class="n">۱۸۱</td><td class="inf">شکافتن</td><td class="imp">بشکاف</td><td class="form"><a href="#s-181">می‌شکافتند</a></td><td class="eq">شکاف‌دادن، چاک‌دادن</td></tr>
+<tr id="v-182"><td class="n">۱۸۲</td><td class="inf">شکستن</td><td class="imp">بشکن</td><td class="form"><a href="#s-182">شکستند</a></td><td class="eq">خردکردن</td></tr>
+<tr id="v-183"><td class="n">۱۸۳</td><td class="inf">شکفتن</td><td class="imp">بشکف</td><td class="form"><a href="#s-183">می‌شکفتند</a></td><td class="eq">(گل) بازشدن، شکوفاشدن</td></tr>
+<tr id="v-184"><td class="n">۱۸۴</td><td class="inf">شکیفتن</td><td class="imp">بشکیب</td><td class="form"><a href="#s-184">شکیفت</a></td><td class="eq">صبرکردن، تحمل‌کردن</td></tr>
+<tr id="v-185"><td class="n">۱۸۵</td><td class="inf">شگِفتن</td><td class="imp">بشِگِف</td><td class="form"><a href="#s-185">می‌شگفت</a></td><td class="eq">تعجب‌کردن</td></tr>
+<tr id="v-186"><td class="n">۱۸۶</td><td class="inf">شمردن</td><td class="imp">بشمار</td><td class="form"><a href="#s-186">می‌شمرد</a></td><td class="eq">شمارش‌کردن، حساب‌کردن</td></tr>
+<tr id="v-187"><td class="n">۱۸۷</td><td class="inf">شناختن</td><td class="imp">بشناس</td><td class="form"><a href="#s-187">بشناس</a></td><td class="eq">تشخیص‌دادن</td></tr>
+<tr id="v-188"><td class="n">۱۸۸</td><td class="inf">شنیدن</td><td class="imp">بشنو</td><td class="form"><a href="#s-188">شنیده‌ام</a></td><td class="eq">استماع‌کردن</td></tr>
+<tr id="v-189"><td class="n">۱۸۹</td><td class="inf">شوریدن</td><td class="imp">بشور</td><td class="form"><a href="#s-189">شوریدند</a></td><td class="eq">شورش‌کردن، طغیان‌کردن</td></tr>
+<tr id="v-190"><td class="n">۱۹۰</td><td class="inf">طلبیدن</td><td class="imp">بطلب</td><td class="form"><a href="#s-190">طلبید</a></td><td class="eq">درخواست‌کردن، احضارکردن</td></tr>
+<tr id="v-191"><td class="n">۱۹۱</td><td class="inf">طوفیدن</td><td class="imp">بطوف</td><td class="form"><a href="#s-191">طوفیدند</a></td><td class="eq">طواف‌کردن، دورزدن</td></tr>
+<tr id="v-192"><td class="n">۱۹۲</td><td class="inf">غارتیدن</td><td class="imp">بغارت</td><td class="form"><a href="#s-192">غارتیدند</a></td><td class="eq">غارت‌کردن</td></tr>
+<tr id="v-193"><td class="n">۱۹۳</td><td class="inf">غُریدن</td><td class="imp">بغر</td><td class="form"><a href="#s-193">غرید</a></td><td class="eq">غرش‌کردن</td></tr>
+<tr id="v-194"><td class="n">۱۹۴</td><td class="inf">غلطیدن</td><td class="imp">بغلط</td><td class="form"><a href="#s-194">غلطید</a></td><td class="eq">غلت‌زدن</td></tr>
+<tr id="v-195"><td class="n">۱۹۵</td><td class="inf">غُنودن</td><td class="imp">بغنو</td><td class="form"><a href="#s-195">غنود</a></td><td class="eq">چرت‌زدن</td></tr>
+<tr id="v-196"><td class="n">۱۹۶</td><td class="inf">فرستادن</td><td class="imp">بفرست</td><td class="form"><a href="#s-196">فرستاد</a></td><td class="eq">ارسال‌کردن</td></tr>
+<tr id="v-197"><td class="n">۱۹۷</td><td class="inf">فرسودن</td><td class="imp">بفرسای</td><td class="form"><a href="#s-197">فرسود</a></td><td class="eq">فرسوده‌شدن، کهنه‌شدن</td></tr>
+<tr id="v-198"><td class="n">۱۹۸</td><td class="inf">فرمودن</td><td class="imp">بفرمای</td><td class="form"><a href="#s-198">فرمود</a></td><td class="eq">دستوردادن؛ (با احترام) گفتن</td></tr>
+<tr id="v-199"><td class="n">۱۹۹</td><td class="inf">فروختن</td><td class="imp">بفروش</td><td class="form"><a href="#s-199">نمی‌فروخت</a></td><td class="eq">فروش‌کردن</td></tr>
+<tr id="v-200"><td class="n">۲۰۰</td><td class="inf">فریفتن</td><td class="imp">بفریب</td><td class="form"><a href="#s-200">فریفت</a></td><td class="eq">گول‌زدن، فریب‌دادن</td></tr>
+<tr id="v-201"><td class="n">۲۰۱</td><td class="inf">فشردن</td><td class="imp">بفشار</td><td class="form"><a href="#s-201">فشرد</a></td><td class="eq">فشاردادن</td></tr>
+<tr id="v-202"><td class="n">۲۰۲</td><td class="inf">فهمیدن</td><td class="imp">بفهم</td><td class="form"><a href="#s-202">نفهمید</a></td><td class="eq">درک‌کردن</td></tr>
+<tr id="v-203"><td class="n">۲۰۳</td><td class="inf">قاپیدن</td><td class="imp">بقاپ</td><td class="form"><a href="#s-203">قاپید</a></td><td class="eq">با شتاب ربودن، چنگ‌زدن</td></tr>
+<tr id="v-204"><td class="n">۲۰۴</td><td class="inf">قبولاندن</td><td class="imp">بقبولان</td><td class="form"><a href="#s-204">قبولاند</a></td><td class="eq">قانع‌کردن، به قبول وادارکردن</td></tr>
+<tr id="v-205"><td class="n">۲۰۵</td><td class="inf">کاستن</td><td class="imp">بکاه</td><td class="form"><a href="#s-205">بکاهی</a></td><td class="eq">کم‌کردن</td></tr>
+<tr id="v-206"><td class="n">۲۰۶</td><td class="inf">کاشتن</td><td class="imp">بکار</td><td class="form"><a href="#s-206">می‌کاشتند</a></td><td class="eq">کشت‌کردن</td></tr>
+<tr id="v-207"><td class="n">۲۰۷</td><td class="inf">کاویدن</td><td class="imp">بکاو</td><td class="form"><a href="#s-207">کاوید</a></td><td class="eq">کندوکاوکردن، بررسی‌کردن</td></tr>
+<tr id="v-208"><td class="n">۲۰۸</td><td class="inf">کردن</td><td class="imp">بِکُن</td><td class="form"><a href="#s-208">کرد</a></td><td class="eq">انجام‌دادن</td></tr>
+<tr id="v-209"><td class="n">۲۰۹</td><td class="inf">کشتن</td><td class="imp">بکش</td><td class="form"><a href="#s-209">می‌کشم</a></td><td class="eq">به‌قتل‌رساندن</td></tr>
+<tr id="v-210"><td class="n">۲۱۰</td><td class="inf">کشیدن</td><td class="imp">بکش</td><td class="form"><a href="#s-210">بکشی</a></td><td class="eq">بیرون‌آوردن، به سوی خود آوردن</td></tr>
+<tr id="v-211"><td class="n">۲۱۱</td><td class="inf">کَفتن</td><td class="imp">بکف</td><td class="form"><a href="#s-211">کفته بود</a></td><td class="eq">ترک‌برداشتن، شکاف‌خوردن</td></tr>
+<tr id="v-212"><td class="n">۲۱۲</td><td class="inf">کَفیدن</td><td class="imp">بکف</td><td class="form"><a href="#s-212">کفیده بودند</a></td><td class="eq">ترکیدن، از هم بازشدن</td></tr>
+<tr id="v-213"><td class="n">۲۱۳</td><td class="inf">کندن</td><td class="imp">بِکَن</td><td class="form"><a href="#s-213">کندند</a></td><td class="eq">حفرکردن</td></tr>
+<tr id="v-214"><td class="n">۲۱۴</td><td class="inf">کوچیدن</td><td class="imp">بکوچ</td><td class="form"><a href="#s-214">می‌کوچید</a></td><td class="eq">کوچ‌کردن، مهاجرت‌کردن</td></tr>
+<tr id="v-215"><td class="n">۲۱۵</td><td class="inf">کوشیدن</td><td class="imp">بکوش</td><td class="form"><a href="#s-215">کوشید</a></td><td class="eq">تلاش‌کردن</td></tr>
+<tr id="v-216"><td class="n">۲۱۶</td><td class="inf">کوفتن</td><td class="imp">بکوب</td><td class="form"><a href="#s-216">می‌کوفتند</a></td><td class="eq">کوبیدن، ضربه‌زدن</td></tr>
+<tr id="v-217"><td class="n">۲۱۷</td><td class="inf">گاییدن</td><td class="imp">بگای</td><td class="form"><a href="#s-217">گایید</a></td><td class="eq">(رکیک)؛ در قصه «بیچاره‌کردن، خراب‌کردن»</td></tr>
+<tr id="v-218"><td class="n">۲۱۸</td><td class="inf">گداختن</td><td class="imp">بگداز</td><td class="form"><a href="#s-218">گداختند</a></td><td class="eq">ذوب‌شدن، آب‌شدن</td></tr>
+<tr id="v-219"><td class="n">۲۱۹</td><td class="inf">گذاشتن</td><td class="imp">بگذار</td><td class="form"><a href="#s-219">نمی‌گذاشت</a></td><td class="eq">قراردادن؛ اجازه‌دادن</td></tr>
+<tr id="v-220"><td class="n">۲۲۰</td><td class="inf">گذشتن</td><td class="imp">بگذر</td><td class="form"><a href="#s-220">می‌گذشت</a></td><td class="eq">عبورکردن</td></tr>
+<tr id="v-221"><td class="n">۲۲۱</td><td class="inf">گرازیدن</td><td class="imp">بگراز</td><td class="form"><a href="#s-221">می‌گرازید</a></td><td class="eq">با غرور راه‌رفتن</td></tr>
+<tr id="v-222"><td class="n">۲۲۲</td><td class="inf">گراییدن</td><td class="imp">بگرای</td><td class="form"><a href="#s-222">می‌گرایید</a></td><td class="eq">متمایل‌شدن، علاقه پیداکردن</td></tr>
+<tr id="v-223"><td class="n">۲۲۳</td><td class="inf">گردیدن</td><td class="imp">بگرد</td><td class="form"><a href="#s-223">می‌گردید</a></td><td class="eq">دور زدن، گشت‌زدن</td></tr>
+<tr id="v-224"><td class="n">۲۲۴</td><td class="inf">گرفتن</td><td class="imp">بگیر</td><td class="form"><a href="#s-224">گرفت</a></td><td class="eq">در دست نگه‌داشتن</td></tr>
+<tr id="v-225"><td class="n">۲۲۵</td><td class="inf">گرویدن</td><td class="imp">بگرو</td><td class="form"><a href="#s-225">گرویدند</a></td><td class="eq">ایمان‌آوردن، معتقدشدن</td></tr>
+<tr id="v-226"><td class="n">۲۲۶</td><td class="inf">گریختن</td><td class="imp">بگریز</td><td class="form"><a href="#s-226">گریختند</a></td><td class="eq">فرارکردن</td></tr>
+<tr id="v-227"><td class="n">۲۲۷</td><td class="inf">گریستن</td><td class="imp">بگری</td><td class="form"><a href="#s-227">می‌گریست</a></td><td class="eq">گریه‌کردن</td></tr>
+<tr id="v-228"><td class="n">۲۲۸</td><td class="inf">گزاردن</td><td class="imp">بگزار</td><td class="form"><a href="#s-228">گزارد</a></td><td class="eq">اداکردن، به‌جاآوردن (پیغام، نماز)</td></tr>
+<tr id="v-229"><td class="n">۲۲۹</td><td class="inf">گَزیدن</td><td class="imp">بگَز</td><td class="form"><a href="#s-229">گَزید</a></td><td class="eq">نیش‌زدن، گازگرفتن</td></tr>
+<tr id="v-230"><td class="n">۲۳۰</td><td class="inf">گُزیدن</td><td class="imp">بگُزین</td><td class="form"><a href="#s-230">گُزید</a></td><td class="eq">انتخاب‌کردن</td></tr>
+<tr id="v-231"><td class="n">۲۳۱</td><td class="inf">گُساردن</td><td class="imp">بگسار</td><td class="form"><a href="#s-231">گساردند</a></td><td class="eq">(باده) نوشیدن، میگساری‌کردن</td></tr>
+<tr id="v-232"><td class="n">۲۳۲</td><td class="inf">گستردن</td><td class="imp">بگستر</td><td class="form"><a href="#s-232">گسترد</a></td><td class="eq">پهن‌کردن، گسترش‌دادن</td></tr>
+<tr id="v-233"><td class="n">۲۳۳</td><td class="inf">گسستن</td><td class="imp">بگسل</td><td class="form"><a href="#s-233">گسستند</a></td><td class="eq">پاره‌شدن، قطع‌شدن</td></tr>
+<tr id="v-234"><td class="n">۲۳۴</td><td class="inf">گشتن</td><td class="imp">بگرد</td><td class="form"><a href="#s-234">می‌گشتند</a></td><td class="eq">گردش‌کردن، پرسه‌زدن</td></tr>
+<tr id="v-235"><td class="n">۲۳۵</td><td class="inf">گشودن</td><td class="imp">بگشای</td><td class="form"><a href="#s-235">گشودند</a></td><td class="eq">بازکردن</td></tr>
+<tr id="v-236"><td class="n">۲۳۶</td><td class="inf">گفتن</td><td class="imp">بگو</td><td class="form"><a href="#s-236">می‌گفت</a></td><td class="eq">بیان‌کردن، اظهارکردن</td></tr>
+<tr id="v-237"><td class="n">۲۳۷</td><td class="inf">گماشتن</td><td class="imp">بگمار</td><td class="form"><a href="#s-237">گماشت</a></td><td class="eq">منصوب‌کردن، تعیین‌کردن</td></tr>
+<tr id="v-238"><td class="n">۲۳۸</td><td class="inf">گُنجیدن</td><td class="imp">بگنج</td><td class="form"><a href="#s-238">نمی‌گنجیدند</a></td><td class="eq">جاشدن</td></tr>
+<tr id="v-239"><td class="n">۲۳۹</td><td class="inf">گندیدن</td><td class="imp">بگند</td><td class="form"><a href="#s-239">می‌گندید</a></td><td class="eq">فاسدشدن، بو گرفتن</td></tr>
+<tr id="v-240"><td class="n">۲۴۰</td><td class="inf">گواریدن</td><td class="imp">(مضارع: می‌گوارد)</td><td class="form"><a href="#s-240">گوارید</a></td><td class="eq">گوارابودن، به دل نشستن</td></tr>
+<tr id="v-241"><td class="n">۲۴۱</td><td class="inf">گوزیدن</td><td class="imp">بگوز</td><td class="form"><a href="#s-241">می‌گوزید</a></td><td class="eq">باد درکردن (عامیانه)</td></tr>
+<tr id="v-242"><td class="n">۲۴۲</td><td class="inf">لرزیدن</td><td class="imp">بلرز</td><td class="form"><a href="#s-242">لرزید</a></td><td class="eq">لرزکردن</td></tr>
+<tr id="v-243"><td class="n">۲۴۳</td><td class="inf">لغزیدن</td><td class="imp">بلغز</td><td class="form"><a href="#s-243">لغزید</a></td><td class="eq">سُرخوردن، لیزخوردن</td></tr>
+<tr id="v-244"><td class="n">۲۴۴</td><td class="inf">لمیدن</td><td class="imp">بِلَم</td><td class="form"><a href="#s-244">می‌لمید</a></td><td class="eq">درازکشیدن، تکیه‌دادن</td></tr>
+<tr id="v-245"><td class="n">۲۴۵</td><td class="inf">لُندیدن</td><td class="imp">بِلُند</td><td class="form"><a href="#s-245">می‌لندید</a></td><td class="eq">غرغرکردن</td></tr>
+<tr id="v-246"><td class="n">۲۴۶</td><td class="inf">لنگیدن</td><td class="imp">بلنگ</td><td class="form"><a href="#s-246">می‌لنگید</a></td><td class="eq">لنگ‌زدن</td></tr>
+<tr id="v-247"><td class="n">۲۴۷</td><td class="inf">لهیدن</td><td class="imp">بِلِه</td><td class="form"><a href="#s-247">می‌لهیدند</a></td><td class="eq">له‌شدن</td></tr>
+<tr id="v-248"><td class="n">۲۴۸</td><td class="inf">لیسیدن</td><td class="imp">بلیس</td><td class="form"><a href="#s-248">می‌لیسید</a></td><td class="eq">زبان‌زدن</td></tr>
+<tr id="v-249"><td class="n">۲۴۹</td><td class="inf">ماسیدن</td><td class="imp">بماس</td><td class="form"><a href="#s-249">می‌ماسید</a></td><td class="eq">سفت‌شدن، دلمه‌بستن</td></tr>
+<tr id="v-250"><td class="n">۲۵۰</td><td class="inf">مالیدن</td><td class="imp">بمال</td><td class="form"><a href="#s-250">می‌مالید</a></td><td class="eq">ماساژدادن</td></tr>
+<tr id="v-251"><td class="n">۲۵۱</td><td class="inf">ماندن</td><td class="imp">بمان</td><td class="form"><a href="#s-251">ماندند</a></td><td class="eq">اقامت‌کردن، باقی‌ماندن</td></tr>
+<tr id="v-252"><td class="n">۲۵۲</td><td class="inf">مردن</td><td class="imp">بمیر</td><td class="form"><a href="#s-252">مُرد</a></td><td class="eq">فوت‌کردن</td></tr>
+<tr id="v-253"><td class="n">۲۵۳</td><td class="inf">مکیدن</td><td class="imp">بمک</td><td class="form"><a href="#s-253">می‌مکید</a></td><td class="eq">(پستان) شیر خوردن</td></tr>
+<tr id="v-254"><td class="n">۲۵۴</td><td class="inf">مولیدن</td><td class="imp">بمول</td><td class="form"><a href="#s-254">می‌مولید</a></td><td class="eq">معطل‌کردن، دست‌دست‌کردن</td></tr>
+<tr id="v-255"><td class="n">۲۵۵</td><td class="inf">موییدن</td><td class="imp">بموی</td><td class="form"><a href="#s-255">می‌مویید</a></td><td class="eq">مویه‌کردن، سوگواری‌کردن</td></tr>
+<tr id="v-256"><td class="n">۲۵۶</td><td class="inf">نازیدن</td><td class="imp">بناز</td><td class="form"><a href="#s-256">می‌نازید</a></td><td class="eq">افتخارکردن، فخرفروختن</td></tr>
+<tr id="v-257"><td class="n">۲۵۷</td><td class="inf">نالیدن</td><td class="imp">بنال</td><td class="form"><a href="#s-257">می‌نالید</a></td><td class="eq">ناله‌کردن</td></tr>
+<tr id="v-258"><td class="n">۲۵۸</td><td class="inf">نامیدن</td><td class="imp">بنام</td><td class="form"><a href="#s-258">می‌نامیدند</a></td><td class="eq">نام‌گذاشتن</td></tr>
+<tr id="v-259"><td class="n">۲۵۹</td><td class="inf">نشستن</td><td class="imp">بنشین</td><td class="form"><a href="#s-259">می‌نشست</a></td><td class="eq">جلوس‌کردن</td></tr>
+<tr id="v-260"><td class="n">۲۶۰</td><td class="inf">نکوهیدن</td><td class="imp">بنکوه</td><td class="form"><a href="#s-260">نکوهیدند</a></td><td class="eq">سرزنش‌کردن، ملامت‌کردن</td></tr>
+<tr id="v-261"><td class="n">۲۶۱</td><td class="inf">نگاشتن</td><td class="imp">بنگار</td><td class="form"><a href="#s-261">نگاشته بودند</a></td><td class="eq">نوشتن؛ نقاشی‌کردن</td></tr>
+<tr id="v-262"><td class="n">۲۶۲</td><td class="inf">نگریستن</td><td class="imp">بنگر</td><td class="form"><a href="#s-262">نگریست</a></td><td class="eq">نگاه‌کردن</td></tr>
+<tr id="v-263"><td class="n">۲۶۳</td><td class="inf">نمودن</td><td class="imp">بنمای</td><td class="form"><a href="#s-263">نمود</a></td><td class="eq">نشان‌دادن؛ به‌نظررسیدن</td></tr>
+<tr id="v-264"><td class="n">۲۶۴</td><td class="inf">نواختن</td><td class="imp">بنواز</td><td class="form"><a href="#s-264">نواخت</a></td><td class="eq">(ساز) زدن؛ نوازش‌کردن</td></tr>
+<tr id="v-265"><td class="n">۲۶۵</td><td class="inf">نَوردیدن</td><td class="imp">بنورد</td><td class="form"><a href="#s-265">نوردید</a></td><td class="eq">طی‌کردن</td></tr>
+<tr id="v-266"><td class="n">۲۶۶</td><td class="inf">نوشتن</td><td class="imp">بنویس</td><td class="form"><a href="#s-266">نوشت</a></td><td class="eq">تحریرکردن</td></tr>
+<tr id="v-267"><td class="n">۲۶۷</td><td class="inf">نوشیدن</td><td class="imp">بنوش</td><td class="form"><a href="#s-267">نوشید</a></td><td class="eq">میل‌کردن</td></tr>
+<tr id="v-268"><td class="n">۲۶۸</td><td class="inf">نهادن</td><td class="imp">بنه</td><td class="form"><a href="#s-268">نهاد</a></td><td class="eq">قراردادن</td></tr>
+<tr id="v-269"><td class="n">۲۶۹</td><td class="inf">نهفتن</td><td class="imp">بنهنب</td><td class="form"><a href="#s-269">نهفت</a></td><td class="eq">پنهان‌کردن، مخفی کردن</td></tr>
+<tr id="v-270"><td class="n">۲۷۰</td><td class="inf">نیوشیدن</td><td class="imp">بنیوش</td><td class="form"><a href="#s-270">نیوشید</a></td><td class="eq">گوش‌دادن</td></tr>
+<tr id="v-271"><td class="n">۲۷۱</td><td class="inf">ورزیدن</td><td class="imp">بورز</td><td class="form"><a href="#s-271">ورزید</a></td><td class="eq">تمرین‌کردن</td></tr>
+<tr id="v-272"><td class="n">۲۷۲</td><td class="inf">وزیدن</td><td class="imp">بوز</td><td class="form"><a href="#s-272">می‌وزید</a></td><td class="eq">(باد) آمدن</td></tr>
+<tr id="v-273"><td class="n">۲۷۳</td><td class="inf">هراسیدن</td><td class="imp">بهراس</td><td class="form"><a href="#s-273">می‌هراسند</a></td><td class="eq">وحشت‌کردن</td></tr>
+<tr id="v-274"><td class="n">۲۷۴</td><td class="inf">هشتن</td><td class="imp">بهل</td><td class="form"><a href="#s-274">هشت</a></td><td class="eq">رهاکردن، اجازه‌دادن</td></tr>
+<tr id="v-275"><td class="n">۲۷۵</td><td class="inf">یارستن</td><td class="imp">(مضارع: یارد)</td><td class="form"><a href="#s-275">نمی‌یارست</a></td><td class="eq">جرئت‌کردن</td></tr>
+<tr id="v-276"><td class="n">۲۷۶</td><td class="inf">یازیدن</td><td class="imp">بیاز</td><td class="form"><a href="#s-276">یازید</a></td><td class="eq">دست درازکردن</td></tr>
+<tr id="v-277"><td class="n">۲۷۷</td><td class="inf">یافتن</td><td class="imp">بیاب</td><td class="form"><a href="#s-277">می‌یافت</a></td><td class="eq">پیداکردن</td></tr>
+        </tbody>
+      </table>
+      <p class="empty" id="empty" hidden>فعلی با این واژه در جدول نیست. واژهٔ کوتاه‌تری بنویسید.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap wide">
+    <p>این قصه و جدولِ همراهش با پروانهٔ <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.fa">CC0 1.0</a> در قلمروِ همگانی است.</p>
+    <p>فهرستِ فعل‌ها از پیوستِ ۱ کتابِ «تاریخ زبان فارسی» نوشتهٔ پرویز ناتل خانلری است.</p>
+    <p>قلمِ این صفحه <a href="https://github.com/rastikerdar/sahel-font">ساحل</a> ساختهٔ صابر راستی‌کردار است، با پروانهٔ SIL OFL 1.1.</p>
+    <p><a href="https://github.com/shahrokh-bahtooei/dokhtar-e-asiaban">سرچشمهٔ این صفحه در گیت‌هاب</a></p>
+  </div>
+</footer>
+
+<div class="vcard" id="vcard" role="dialog" aria-modal="false" aria-labelledby="vc-inf" hidden>
+  <div class="inf" id="vc-inf"></div>
+  <dl>
+    <dt>امر</dt><dd id="vc-imp"></dd>
+    <dt>در قصه</dt><dd id="vc-form"></dd>
+  </dl>
+  <div class="eq"><span>به جای</span><b id="vc-eq"></b></div>
+  <div class="row"><a id="vc-row" href="#verbs">در جدول ببینید</a><button type="button" id="vc-x" aria-label="بستن">بستن</button></div>
+</div>
+
+<script>
+(function(){
+  var V = [{"n":1,"inf":"آراستن","imp":"بیارای","form":"آراستند","eq":"تزئین‌کردن، آرایش‌دادن"},{"n":2,"inf":"آرامیدن","imp":"بیارام","form":"نیارامید","eq":"آرام‌گرفتن"},{"n":3,"inf":"آزردن","imp":"بیازار","form":"می‌آزردند","eq":"آزاردادن، اذیت‌کردن"},{"n":4,"inf":"آزمودن","imp":"بیازمای","form":"بیازمایم","eq":"امتحان‌کردن، آزمایش‌کردن"},{"n":5,"inf":"آسودن","imp":"بیاسای","form":"نیاسود","eq":"استراحت‌کردن"},{"n":6,"inf":"آشامیدن","imp":"بیاشام","form":"می‌آشامید","eq":"(آب) نوشیدن، میل‌کردن"},{"n":7,"inf":"آشفتن","imp":"بیاشوب","form":"آشفت","eq":"آشفته‌شدن، به‌هم‌ریختن، عصبانی‌شدن"},{"n":8,"inf":"آغازیدن","imp":"بیاغاز","form":"آغازید","eq":"شروع‌کردن"},{"n":9,"inf":"آغشتن","imp":"بیاغار","form":"آغشت","eq":"آغشته‌کردن، آلوده‌کردن"},{"n":10,"inf":"آفریدن","imp":"بیافرین","form":"آفریده بود","eq":"خلق‌کردن"},{"n":11,"inf":"آگندن","imp":"بیاگن","form":"می‌آگند","eq":"پُرکردن"},{"n":12,"inf":"آلودن","imp":"بیالای","form":"آلود","eq":"آلوده‌کردن، کثیف‌کردن"},{"n":13,"inf":"آمدن","imp":"بیا","form":"می‌آمد","eq":"تشریف‌آوردن"},{"n":14,"inf":"آمرزیدن","imp":"بیامرز","form":"بیامرزدش","eq":"مغفرت‌کردن، گناه را بخشیدن"},{"n":15,"inf":"آموختن","imp":"بیاموز","form":"می‌آموخت","eq":"یادگرفتن، یاددادن، تعلیم‌دادن"},{"n":16,"inf":"آمیختن","imp":"بیامیز","form":"می‌آمیخت","eq":"مخلوط‌کردن"},{"n":17,"inf":"آوردن","imp":"بیاور","form":"بیاور","eq":"همراه‌آوردن، تحویل‌دادن"},{"n":18,"inf":"آویختن","imp":"بیاویز","form":"آویختند","eq":"آویزان‌کردن"},{"n":19,"inf":"آهیختن","imp":"بیاهنج","form":"آهیخت","eq":"(شمشیر) بیرون‌کشیدن"},{"n":20,"inf":"ارزیدن","imp":"(مضارع: می‌ارزد)","form":"می‌ارزد","eq":"ارزش‌داشتن، قیمت‌داشتن"},{"n":21,"inf":"افتادن","imp":"بیفت","form":"افتاد","eq":"زمین‌خوردن، سقوط‌کردن"},{"n":22,"inf":"افراشتن","imp":"بیفراز","form":"افراشته بودند","eq":"برپاکردن، بلندکردن"},{"n":23,"inf":"افروختن","imp":"بیفروز","form":"می‌افروخت","eq":"روشن‌کردن (آتش، چراغ)"},{"n":24,"inf":"افزودن","imp":"بیفزای","form":"می‌افزایی","eq":"اضافه‌کردن، زیادکردن"},{"n":25,"inf":"افسردن","imp":"بیفسر","form":"افسرد","eq":"افسرده‌شدن، یخ‌زدن"},{"n":26,"inf":"افشاندن","imp":"بیفشان","form":"می‌افشاندند","eq":"پخش‌کردن، پاشیدن (دانه)"},{"n":27,"inf":"افگندن","imp":"بیفگن","form":"افگند","eq":"پرتاب‌کردن"},{"n":28,"inf":"انباشتن","imp":"بینبار","form":"می‌انباشت","eq":"انبارکردن، روی هم جمع‌کردن"},{"n":29,"inf":"انجامیدن","imp":"بینجام","form":"انجامید","eq":"تمام‌شدن، به‌پایان‌رسیدن، منجرشدن"},{"n":30,"inf":"انداختن","imp":"بینداز","form":"انداخت","eq":"پرتاب‌کردن"},{"n":31,"inf":"اندوختن","imp":"بیندوز","form":"می‌اندوخت","eq":"پس‌اندازکردن، ذخیره‌کردن"},{"n":32,"inf":"اندودن","imp":"بیندای","form":"اندودند","eq":"اندودکردن، کاهگل‌کردن، رنگ‌زدن"},{"n":33,"inf":"اندیشیدن","imp":"بیندیش","form":"بیندیش","eq":"فکرکردن"},{"n":34,"inf":"انگاشتن","imp":"بینگار","form":"انگاشتند","eq":"فرض‌کردن، تصورکردن"},{"n":35,"inf":"انگیختن","imp":"بینگیز","form":"انگیخت","eq":"تحریک‌کردن"},{"n":36,"inf":"اوباشتن","imp":"بیوبار","form":"می‌اوباشت","eq":"قورت‌دادن"},{"n":37,"inf":"ایستادن","imp":"بایست","form":"می‌ایستاد","eq":"توقف‌کردن، سرپا ماندن"},{"n":38,"inf":"باختن","imp":"بباز","form":"باخت","eq":"شکست‌خوردن، ازدست‌دادن"},{"n":39,"inf":"باریدن","imp":"ببار","form":"می‌بارید","eq":"(باران، برف) آمدن"},{"n":40,"inf":"بافتن","imp":"بباف","form":"می‌بافت","eq":"بافتنی‌کردن، قالی‌بافی‌کردن"},{"n":41,"inf":"بالیدن","imp":"ببال","form":"می‌بالید","eq":"رشدکردن؛ افتخارکردن"},{"n":42,"inf":"بایستن","imp":"(مضارع: می‌باید)","form":"می‌بایست","eq":"لازم‌بودن، واجب‌بودن"},{"n":43,"inf":"بخشودن","imp":"ببخشای","form":"بخشود","eq":"عفوکردن، گذشت‌کردن"},{"n":44,"inf":"بخشیدن","imp":"ببخش","form":"بخشید","eq":"هدیه‌دادن؛ عفوکردن"},{"n":45,"inf":"برازیدن","imp":"(مضارع: می‌برازد)","form":"می‌برازید","eq":"برازنده‌بودن، شایسته‌بودن"},{"n":46,"inf":"بردن","imp":"بِبَر","form":"می‌برد","eq":"حمل‌کردن، با خود بردن"},{"n":47,"inf":"بریدن","imp":"بِبُر","form":"برید","eq":"قطع‌کردن"},{"n":48,"inf":"بستن","imp":"ببند","form":"بست","eq":"گره‌زدن؛ مسدودکردن"},{"n":49,"inf":"بِسودن","imp":"ببسای","form":"بسود","eq":"لمس‌کردن، دست‌زدن"},{"n":50,"inf":"بَسیجیدن","imp":"ببسیج","form":"بسیجید","eq":"آماده‌کردن، بسیج‌کردن"},{"n":51,"inf":"بلعیدن","imp":"ببلع","form":"می‌بلعد","eq":"قورت‌دادن"},{"n":52,"inf":"بودن","imp":"باش","form":"بود","eq":"وجودداشتن، قرارداشتن"},{"n":53,"inf":"بوسیدن","imp":"ببوس","form":"بوسید","eq":"ماچ‌کردن"},{"n":54,"inf":"بوییدن","imp":"ببوی","form":"بویید","eq":"بوکردن"},{"n":55,"inf":"بیختن","imp":"ببیز","form":"می‌بیخت","eq":"الک‌کردن"},{"n":56,"inf":"پاشیدن","imp":"بپاش","form":"پاشید","eq":"پخش‌کردن، اسپری‌کردن"},{"n":57,"inf":"پالودن","imp":"بپالای","form":"می‌پالودند","eq":"صاف‌کردن، تصفیه‌کردن"},{"n":58,"inf":"پختن","imp":"بپز","form":"می‌پخت","eq":"طبخ‌کردن"},{"n":59,"inf":"پذیرفتن","imp":"بپذیر","form":"نپذیرفت","eq":"قبول‌کردن"},{"n":60,"inf":"پراکندن","imp":"بپراکن","form":"می‌پراکند","eq":"پخش‌کردن، متفرق‌کردن"},{"n":61,"inf":"پرداختن","imp":"بپرداز","form":"پرداخت","eq":"پرداخت‌کردن؛ مشغول‌شدن"},{"n":62,"inf":"پرستیدن","imp":"بپرست","form":"می‌پرستیدند","eq":"عبادت‌کردن"},{"n":63,"inf":"پرسیدن","imp":"بپرس","form":"پرسید","eq":"سؤال‌کردن"},{"n":64,"inf":"پروردن","imp":"بپرور","form":"پرورده بود","eq":"پرورش‌دادن، تربیت‌کردن"},{"n":65,"inf":"پریدن","imp":"بپر","form":"پریدند","eq":"پروازکردن؛ پرش‌کردن"},{"n":66,"inf":"پژمردن","imp":"بپژمر","form":"پژمرده بودند","eq":"پژمرده‌شدن"},{"n":67,"inf":"پژوهیدن","imp":"بپژوه","form":"پژوهیده است","eq":"تحقیق‌کردن"},{"n":68,"inf":"پسندیدن","imp":"بپسند","form":"پسندید","eq":"خوش‌آمدن، دوست‌داشتن"},{"n":69,"inf":"پلاسیدن","imp":"بپلاس","form":"پلاسیده بودند","eq":"پلاسیده‌شدن، پژمرده‌شدن"},{"n":70,"inf":"پلکیدن","imp":"بپلک","form":"می‌پلکید","eq":"پرسه‌زدن، ول‌گشتن"},{"n":71,"inf":"پناهیدن","imp":"بپناه","form":"پناهیدند","eq":"پناه‌بردن"},{"n":72,"inf":"پنداشتن","imp":"بپندار","form":"می‌پنداشت","eq":"گمان‌کردن، خیال‌کردن"},{"n":73,"inf":"پوسیدن","imp":"بپوس","form":"پوسیده بود","eq":"پوسیده‌شدن، فاسدشدن"},{"n":74,"inf":"پوشیدن","imp":"بپوش","form":"بپوش","eq":"به‌تن‌کردن؛ پنهان‌کردن"},{"n":75,"inf":"پوییدن","imp":"بپوی","form":"می‌پویید","eq":"تکاپوکردن، دوندگی‌کردن"},{"n":76,"inf":"پیچیدن","imp":"بپیچ","form":"می‌پیچید","eq":"تاب‌دادن، دور چیزی گرفتن؛ (پا) رگ‌به‌رگ‌شدن"},{"n":77,"inf":"پیراستن","imp":"بپیرای","form":"پیراستند","eq":"هرس‌کردن، اصلاح‌کردن"},{"n":78,"inf":"پیمودن","imp":"بپیمای","form":"پیمود","eq":"طی‌کردن؛ اندازه‌گرفتن"},{"n":79,"inf":"پیوستن","imp":"بپیوند","form":"پیوست","eq":"ملحق‌شدن، وصل‌شدن"},{"n":80,"inf":"تاختن","imp":"بتاز","form":"تاختند","eq":"حمله‌کردن، یورش‌بردن"},{"n":81,"inf":"تافتن","imp":"بتاب","form":"می‌تافت","eq":"نوردادن، تابیدن؛ تاب‌دادن"},{"n":82,"inf":"تپیدن","imp":"بتپ","form":"می‌تپید","eq":"(دل) ضربان‌داشتن"},{"n":83,"inf":"تراشیدن","imp":"بتراش","form":"تراشیدند","eq":"اصلاح‌کردن (ریش)، صاف‌کردن (چوب)"},{"n":84,"inf":"تراویدن","imp":"بتراو","form":"می‌تراوید","eq":"نشت‌کردن، تراوش‌کردن"},{"n":85,"inf":"ترسیدن","imp":"بترس","form":"می‌ترسید","eq":"ترس‌داشتن، وحشت‌کردن"},{"n":86,"inf":"ترشیدن","imp":"بترش","form":"می‌ترشید","eq":"ترش‌شدن"},{"n":87,"inf":"ترکیدن","imp":"بترک","form":"ترکید","eq":"منفجرشدن، پاره‌شدن"},{"n":88,"inf":"تکاندن و تکانیدن","imp":"بتکان","form":"می‌تکاند","eq":"تکان‌دادن، گردگیری‌کردن"},{"n":89,"inf":"تنیدن","imp":"بِتَن","form":"می‌تنید","eq":"(تار) درست‌کردن"},{"n":90,"inf":"توانستن","imp":"(مضارع: می‌تواند)","form":"می‌توانست","eq":"قادربودن، توان‌داشتن"},{"n":91,"inf":"جَستن","imp":"بِجَه","form":"جَست","eq":"پرش‌کردن"},{"n":92,"inf":"جُستن","imp":"بجوی","form":"جُست","eq":"جستجوکردن، دنبال‌گشتن"},{"n":93,"inf":"جنبیدن","imp":"بجنب","form":"می‌جنبید","eq":"حرکت‌کردن، تکان‌خوردن؛ عجله‌کردن"},{"n":94,"inf":"جنگیدن","imp":"بجنگ","form":"جنگیدند","eq":"جنگ‌کردن، نبردکردن"},{"n":95,"inf":"جوشیدن","imp":"بجوش","form":"می‌جوشید","eq":"جوش‌آمدن؛ (چشمه) بیرون‌زدن"},{"n":96,"inf":"جویدن","imp":"بِجُو","form":"جَوید","eq":"در دهان نرم‌کردن"},{"n":97,"inf":"جهیدن","imp":"بِجَه","form":"جهید","eq":"پرش‌کردن"},{"n":98,"inf":"چاپیدن","imp":"بچاپ","form":"بچاپد","eq":"چپاول‌کردن، غارت‌کردن"},{"n":99,"inf":"چاییدن","imp":"بچای","form":"چایید","eq":"سرماخوردن"},{"n":100,"inf":"چپیدن","imp":"بچپ","form":"چپیدند","eq":"در جای تنگ فرورفتن"},{"n":101,"inf":"چربیدن","imp":"بچرب","form":"چربید","eq":"غلبه‌کردن، سنگینی‌کردن"},{"n":102,"inf":"چرخیدن","imp":"بچرخ","form":"می‌چرخید","eq":"دورزدن"},{"n":103,"inf":"چریدن","imp":"بچر","form":"بچرند","eq":"علف‌خوردن"},{"n":104,"inf":"چسبیدن","imp":"بچسب","form":"چسبید","eq":"محکم‌گرفتن، جدانشدن"},{"n":105,"inf":"چشیدن","imp":"بچش","form":"چشید","eq":"مزه‌کردن"},{"n":106,"inf":"چکیدن","imp":"بچک","form":"چکید","eq":"چکه‌کردن"},{"n":107,"inf":"چلاندن و چلانیدن","imp":"بچلان","form":"چلاند","eq":"آب‌گرفتن، فشاردادن"},{"n":108,"inf":"چمیدن","imp":"بچم","form":"می‌چمیدند","eq":"با ناز راه‌رفتن"},{"n":109,"inf":"چیدن","imp":"بچین","form":"می‌چیدند","eq":"(میوه) کندن؛ مرتب‌کردن"},{"n":110,"inf":"خاریدن","imp":"بِخار","form":"می‌خارید","eq":"خارش‌داشتن"},{"n":111,"inf":"خاستن","imp":"بخیز","form":"می‌خاست","eq":"بلندشدن، از جا برخاستن"},{"n":112,"inf":"خاییدن","imp":"بخای","form":"می‌خاییدند","eq":"جویدن"},{"n":113,"inf":"خراشیدن","imp":"بخراش","form":"می‌خراشیدند","eq":"خراش‌دادن"},{"n":114,"inf":"خرامیدن","imp":"بخرام","form":"می‌خرامید","eq":"با ناز قدم‌زدن"},{"n":115,"inf":"خروشیدن","imp":"بخروش","form":"خروشید","eq":"فریادکشیدن، غرش‌کردن"},{"n":116,"inf":"خریدن","imp":"بخر","form":"بخری","eq":"خریدکردن"},{"n":117,"inf":"خزیدن","imp":"بخز","form":"خزید","eq":"سینه‌خیزرفتن"},{"n":118,"inf":"خستن","imp":"بِخَس","form":"خست","eq":"زخمی‌کردن، مجروح‌کردن"},{"n":119,"inf":"خشکیدن","imp":"بخشک","form":"خشکید","eq":"خشک‌شدن"},{"n":120,"inf":"خلیدن","imp":"بِخَل","form":"خلید","eq":"(خار) فرورفتن"},{"n":121,"inf":"خمیدن","imp":"بخم","form":"خمید","eq":"خم‌شدن"},{"n":122,"inf":"خوابیدن","imp":"بخواب","form":"خوابید","eq":"به خواب‌رفتن، استراحت‌کردن"},{"n":123,"inf":"خواستن","imp":"بخواه","form":"می‌خواست","eq":"درخواست‌کردن، میل‌داشتن"},{"n":124,"inf":"خواندن","imp":"بخوان","form":"خواند","eq":"مطالعه‌کردن؛ صداکردن؛ آوازخواندن"},{"n":125,"inf":"خوردن","imp":"بخور","form":"می‌خورد","eq":"میل‌کردن، صرف‌کردن"},{"n":126,"inf":"خوفیدن","imp":"بخوف","form":"می‌خوفید","eq":"ترس‌داشتن"},{"n":127,"inf":"خیسیدن","imp":"بخیس","form":"خیسیده بود","eq":"خیس‌شدن"},{"n":128,"inf":"دادن","imp":"بده","form":"نمی‌داد","eq":"تحویل‌دادن، اعطاکردن"},{"n":129,"inf":"داشتن","imp":"بدار","form":"داشت","eq":"مالک‌بودن، دراختیارداشتن"},{"n":130,"inf":"دانستن","imp":"بدان","form":"می‌داند","eq":"اطلاع‌داشتن، آگاه‌بودن"},{"n":131,"inf":"درخشیدن","imp":"بدرخش","form":"می‌درخشید","eq":"برق‌زدن، نوردادن"},{"n":132,"inf":"درودن","imp":"بدرو","form":"می‌درودند","eq":"دروکردن"},{"n":133,"inf":"دریدن","imp":"بِدَر","form":"درید","eq":"پاره‌کردن"},{"n":134,"inf":"دزدیدن","imp":"بدزد","form":"دزدیدند","eq":"سرقت‌کردن"},{"n":135,"inf":"دمیدن","imp":"بدم","form":"دمید","eq":"(صبح) طلوع‌کردن؛ فوت‌کردن"},{"n":136,"inf":"دوختن","imp":"بدوز","form":"می‌دوخت","eq":"خیاطی‌کردن"},{"n":137,"inf":"دوشیدن","imp":"بدوش","form":"می‌دوشید","eq":"(شیر) گرفتن"},{"n":138,"inf":"دویدن","imp":"بدو","form":"دوید","eq":"با شتاب رفتن"},{"n":139,"inf":"دیدن","imp":"ببین","form":"می‌دید","eq":"مشاهده‌کردن"},{"n":140,"inf":"ربودن","imp":"بربای","form":"ربودند","eq":"قاپیدن، دزدیدن"},{"n":141,"inf":"رخشیدن","imp":"برخش","form":"می‌رخشیدند","eq":"برق زدن، درخشیدن"},{"n":142,"inf":"رسیدن","imp":"برس","form":"رسید","eq":"واردشدن؛ (میوه) رسیده‌شدن"},{"n":143,"inf":"رَستن","imp":"بِرَه","form":"رَستند","eq":"نجات‌پیدا‌کردن، خلاص‌شدن"},{"n":144,"inf":"رُستن","imp":"بروی","form":"می‌رُست","eq":"سبزشدن، رشدکردن"},{"n":145,"inf":"رشتن","imp":"بریس","form":"می‌رشت","eq":"ریسیدن، نخ‌ریسی‌کردن"},{"n":146,"inf":"رَفتن","imp":"برو","form":"رفتند","eq":"عزیمت‌کردن، تشریف‌بردن"},{"n":147,"inf":"رُفتن و روفتن","imp":"بروب","form":"روفتند","eq":"جاروکردن"},{"n":148,"inf":"رقصیدن","imp":"برقص","form":"می‌رقصیدند","eq":"رقص‌کردن"},{"n":149,"inf":"رمیدن","imp":"بِرَم","form":"رمیدند","eq":"(از ترس) فرارکردن"},{"n":150,"inf":"رنجیدن","imp":"بِرَنج","form":"رنجید","eq":"ناراحت‌شدن، دلخورشدن"},{"n":151,"inf":"رندیدن","imp":"بِرَند","form":"رندید","eq":"رنده‌کردن"},{"n":152,"inf":"روییدن","imp":"بروی","form":"رویید","eq":"سبزشدن، رشدکردن"},{"n":153,"inf":"ریختن","imp":"بریز","form":"می‌ریختند","eq":"سرازیرکردن؛ (دیوار) فروریختن"},{"n":154,"inf":"ریدن","imp":"برین","form":"رید","eq":"مدفوع‌کردن (عامیانه و رکیک)"},{"n":155,"inf":"زاریدن","imp":"بزار","form":"می‌زارید","eq":"زاری‌کردن"},{"n":156,"inf":"زاییدن","imp":"بزای","form":"زایید","eq":"به‌دنیاآوردن، وضع‌حمل‌کردن"},{"n":157,"inf":"زدن","imp":"بزن","form":"زد","eq":"ضربه‌زدن، کتک‌زدن"},{"n":158,"inf":"زدودن","imp":"بزدای","form":"زدودند","eq":"پاک‌کردن، تمیزکردن"},{"n":159,"inf":"زیستن","imp":"بزی","form":"می‌زیست","eq":"زندگی‌کردن"},{"n":160,"inf":"ساختن","imp":"بساز","form":"ساختند","eq":"درست‌کردن، بناکردن"},{"n":161,"inf":"سپردن","imp":"بسپار","form":"سپرد","eq":"تحویل‌دادن، امانت‌دادن"},{"n":162,"inf":"سپوختن","imp":"بسپوز","form":"سپوخت","eq":"فروکردن، تپاندن"},{"n":163,"inf":"ستدن","imp":"بِستان","form":"بستان","eq":"گرفتن، دریافت‌کردن"},{"n":164,"inf":"ستردن","imp":"بِسُتُر","form":"سترد","eq":"پاک‌کردن، محوکردن"},{"n":165,"inf":"ستودن","imp":"بستای","form":"می‌ستودند","eq":"تعریف‌کردن، تحسین‌کردن"},{"n":166,"inf":"ستیزیدن","imp":"بستیز","form":"ستیزید","eq":"مبارزه‌کردن، دعواکردن"},{"n":167,"inf":"سرودن","imp":"بسرای","form":"سرود","eq":"شعرگفتن"},{"n":168,"inf":"سرشتن","imp":"بسرش","form":"می‌سرشت","eq":"ورزدادن، خمیرکردن"},{"n":169,"inf":"سُریدن","imp":"بِسُر","form":"سُرید","eq":"سُرخوردن"},{"n":170,"inf":"سزیدن","imp":"(مضارع: سزد)","form":"سزد","eq":"سزاواربودن، لیاقت‌داشتن"},{"n":171,"inf":"سُفتن","imp":"بسنب","form":"سفته بود","eq":"سوراخ‌کردن (مروارید و مهره)"},{"n":172,"inf":"سگالیدن","imp":"بسگال","form":"سگالید","eq":"نقشه‌کشیدن، اندیشه‌کردن"},{"n":173,"inf":"سنجیدن","imp":"بسنج","form":"بسنج","eq":"ارزیابی‌کردن، وزن‌کردن"},{"n":174,"inf":"سوختن","imp":"بسوز","form":"سوخت","eq":"آتش‌گرفتن"},{"n":175,"inf":"سودن","imp":"بسای","form":"می‌سودند","eq":"آسیاب‌کردن، ساییدن؛ لمس‌کردن"},{"n":176,"inf":"شاشیدن","imp":"بشاش","form":"شاشید","eq":"ادرارکردن (عامیانه)"},{"n":177,"inf":"شایستن","imp":"(مضارع: شاید)","form":"نشاید","eq":"شایسته‌بودن، روابودن"},{"n":178,"inf":"شتافتن","imp":"بشتاب","form":"می‌شتافت","eq":"عجله‌کردن"},{"n":179,"inf":"شدن","imp":"بشو","form":"شده است","eq":"اتفاق‌افتادن"},{"n":180,"inf":"شستن","imp":"بشوی","form":"می‌شست","eq":"شستشودادن"},{"n":181,"inf":"شکافتن","imp":"بشکاف","form":"می‌شکافتند","eq":"شکاف‌دادن، چاک‌دادن"},{"n":182,"inf":"شکستن","imp":"بشکن","form":"شکستند","eq":"خردکردن"},{"n":183,"inf":"شکفتن","imp":"بشکف","form":"می‌شکفتند","eq":"(گل) بازشدن، شکوفاشدن"},{"n":184,"inf":"شکیفتن","imp":"بشکیب","form":"شکیفت","eq":"صبرکردن، تحمل‌کردن"},{"n":185,"inf":"شگِفتن","imp":"بشِگِف","form":"می‌شگفت","eq":"تعجب‌کردن"},{"n":186,"inf":"شمردن","imp":"بشمار","form":"می‌شمرد","eq":"شمارش‌کردن، حساب‌کردن"},{"n":187,"inf":"شناختن","imp":"بشناس","form":"بشناس","eq":"تشخیص‌دادن"},{"n":188,"inf":"شنیدن","imp":"بشنو","form":"شنیده‌ام","eq":"استماع‌کردن"},{"n":189,"inf":"شوریدن","imp":"بشور","form":"شوریدند","eq":"شورش‌کردن، طغیان‌کردن"},{"n":190,"inf":"طلبیدن","imp":"بطلب","form":"طلبید","eq":"درخواست‌کردن، احضارکردن"},{"n":191,"inf":"طوفیدن","imp":"بطوف","form":"طوفیدند","eq":"طواف‌کردن، دورزدن"},{"n":192,"inf":"غارتیدن","imp":"بغارت","form":"غارتیدند","eq":"غارت‌کردن"},{"n":193,"inf":"غُریدن","imp":"بغر","form":"غرید","eq":"غرش‌کردن"},{"n":194,"inf":"غلطیدن","imp":"بغلط","form":"غلطید","eq":"غلت‌زدن"},{"n":195,"inf":"غُنودن","imp":"بغنو","form":"غنود","eq":"چرت‌زدن"},{"n":196,"inf":"فرستادن","imp":"بفرست","form":"فرستاد","eq":"ارسال‌کردن"},{"n":197,"inf":"فرسودن","imp":"بفرسای","form":"فرسود","eq":"فرسوده‌شدن، کهنه‌شدن"},{"n":198,"inf":"فرمودن","imp":"بفرمای","form":"فرمود","eq":"دستوردادن؛ (با احترام) گفتن"},{"n":199,"inf":"فروختن","imp":"بفروش","form":"نمی‌فروخت","eq":"فروش‌کردن"},{"n":200,"inf":"فریفتن","imp":"بفریب","form":"فریفت","eq":"گول‌زدن، فریب‌دادن"},{"n":201,"inf":"فشردن","imp":"بفشار","form":"فشرد","eq":"فشاردادن"},{"n":202,"inf":"فهمیدن","imp":"بفهم","form":"نفهمید","eq":"درک‌کردن"},{"n":203,"inf":"قاپیدن","imp":"بقاپ","form":"قاپید","eq":"با شتاب ربودن، چنگ‌زدن"},{"n":204,"inf":"قبولاندن","imp":"بقبولان","form":"قبولاند","eq":"قانع‌کردن، به قبول وادارکردن"},{"n":205,"inf":"کاستن","imp":"بکاه","form":"بکاهی","eq":"کم‌کردن"},{"n":206,"inf":"کاشتن","imp":"بکار","form":"می‌کاشتند","eq":"کشت‌کردن"},{"n":207,"inf":"کاویدن","imp":"بکاو","form":"کاوید","eq":"کندوکاوکردن، بررسی‌کردن"},{"n":208,"inf":"کردن","imp":"بِکُن","form":"کرد","eq":"انجام‌دادن"},{"n":209,"inf":"کشتن","imp":"بکش","form":"می‌کشم","eq":"به‌قتل‌رساندن"},{"n":210,"inf":"کشیدن","imp":"بکش","form":"بکشی","eq":"بیرون‌آوردن، به سوی خود آوردن"},{"n":211,"inf":"کَفتن","imp":"بکف","form":"کفته بود","eq":"ترک‌برداشتن، شکاف‌خوردن"},{"n":212,"inf":"کَفیدن","imp":"بکف","form":"کفیده بودند","eq":"ترکیدن، از هم بازشدن"},{"n":213,"inf":"کندن","imp":"بِکَن","form":"کندند","eq":"حفرکردن"},{"n":214,"inf":"کوچیدن","imp":"بکوچ","form":"می‌کوچید","eq":"کوچ‌کردن، مهاجرت‌کردن"},{"n":215,"inf":"کوشیدن","imp":"بکوش","form":"کوشید","eq":"تلاش‌کردن"},{"n":216,"inf":"کوفتن","imp":"بکوب","form":"می‌کوفتند","eq":"کوبیدن، ضربه‌زدن"},{"n":217,"inf":"گاییدن","imp":"بگای","form":"گایید","eq":"(رکیک)؛ در قصه «بیچاره‌کردن، خراب‌کردن»"},{"n":218,"inf":"گداختن","imp":"بگداز","form":"گداختند","eq":"ذوب‌شدن، آب‌شدن"},{"n":219,"inf":"گذاشتن","imp":"بگذار","form":"نمی‌گذاشت","eq":"قراردادن؛ اجازه‌دادن"},{"n":220,"inf":"گذشتن","imp":"بگذر","form":"می‌گذشت","eq":"عبورکردن"},{"n":221,"inf":"گرازیدن","imp":"بگراز","form":"می‌گرازید","eq":"با غرور راه‌رفتن"},{"n":222,"inf":"گراییدن","imp":"بگرای","form":"می‌گرایید","eq":"متمایل‌شدن، علاقه پیداکردن"},{"n":223,"inf":"گردیدن","imp":"بگرد","form":"می‌گردید","eq":"دور زدن، گشت‌زدن"},{"n":224,"inf":"گرفتن","imp":"بگیر","form":"گرفت","eq":"در دست نگه‌داشتن"},{"n":225,"inf":"گرویدن","imp":"بگرو","form":"گرویدند","eq":"ایمان‌آوردن، معتقدشدن"},{"n":226,"inf":"گریختن","imp":"بگریز","form":"گریختند","eq":"فرارکردن"},{"n":227,"inf":"گریستن","imp":"بگری","form":"می‌گریست","eq":"گریه‌کردن"},{"n":228,"inf":"گزاردن","imp":"بگزار","form":"گزارد","eq":"اداکردن، به‌جاآوردن (پیغام، نماز)"},{"n":229,"inf":"گَزیدن","imp":"بگَز","form":"گَزید","eq":"نیش‌زدن، گازگرفتن"},{"n":230,"inf":"گُزیدن","imp":"بگُزین","form":"گُزید","eq":"انتخاب‌کردن"},{"n":231,"inf":"گُساردن","imp":"بگسار","form":"گساردند","eq":"(باده) نوشیدن، میگساری‌کردن"},{"n":232,"inf":"گستردن","imp":"بگستر","form":"گسترد","eq":"پهن‌کردن، گسترش‌دادن"},{"n":233,"inf":"گسستن","imp":"بگسل","form":"گسستند","eq":"پاره‌شدن، قطع‌شدن"},{"n":234,"inf":"گشتن","imp":"بگرد","form":"می‌گشتند","eq":"گردش‌کردن، پرسه‌زدن"},{"n":235,"inf":"گشودن","imp":"بگشای","form":"گشودند","eq":"بازکردن"},{"n":236,"inf":"گفتن","imp":"بگو","form":"می‌گفت","eq":"بیان‌کردن، اظهارکردن"},{"n":237,"inf":"گماشتن","imp":"بگمار","form":"گماشت","eq":"منصوب‌کردن، تعیین‌کردن"},{"n":238,"inf":"گُنجیدن","imp":"بگنج","form":"نمی‌گنجیدند","eq":"جاشدن"},{"n":239,"inf":"گندیدن","imp":"بگند","form":"می‌گندید","eq":"فاسدشدن، بو گرفتن"},{"n":240,"inf":"گواریدن","imp":"(مضارع: می‌گوارد)","form":"گوارید","eq":"گوارابودن، به دل نشستن"},{"n":241,"inf":"گوزیدن","imp":"بگوز","form":"می‌گوزید","eq":"باد درکردن (عامیانه)"},{"n":242,"inf":"لرزیدن","imp":"بلرز","form":"لرزید","eq":"لرزکردن"},{"n":243,"inf":"لغزیدن","imp":"بلغز","form":"لغزید","eq":"سُرخوردن، لیزخوردن"},{"n":244,"inf":"لمیدن","imp":"بِلَم","form":"می‌لمید","eq":"درازکشیدن، تکیه‌دادن"},{"n":245,"inf":"لُندیدن","imp":"بِلُند","form":"می‌لندید","eq":"غرغرکردن"},{"n":246,"inf":"لنگیدن","imp":"بلنگ","form":"می‌لنگید","eq":"لنگ‌زدن"},{"n":247,"inf":"لهیدن","imp":"بِلِه","form":"می‌لهیدند","eq":"له‌شدن"},{"n":248,"inf":"لیسیدن","imp":"بلیس","form":"می‌لیسید","eq":"زبان‌زدن"},{"n":249,"inf":"ماسیدن","imp":"بماس","form":"می‌ماسید","eq":"سفت‌شدن، دلمه‌بستن"},{"n":250,"inf":"مالیدن","imp":"بمال","form":"می‌مالید","eq":"ماساژدادن"},{"n":251,"inf":"ماندن","imp":"بمان","form":"ماندند","eq":"اقامت‌کردن، باقی‌ماندن"},{"n":252,"inf":"مردن","imp":"بمیر","form":"مُرد","eq":"فوت‌کردن"},{"n":253,"inf":"مکیدن","imp":"بمک","form":"می‌مکید","eq":"(پستان) شیر خوردن"},{"n":254,"inf":"مولیدن","imp":"بمول","form":"می‌مولید","eq":"معطل‌کردن، دست‌دست‌کردن"},{"n":255,"inf":"موییدن","imp":"بموی","form":"می‌مویید","eq":"مویه‌کردن، سوگواری‌کردن"},{"n":256,"inf":"نازیدن","imp":"بناز","form":"می‌نازید","eq":"افتخارکردن، فخرفروختن"},{"n":257,"inf":"نالیدن","imp":"بنال","form":"می‌نالید","eq":"ناله‌کردن"},{"n":258,"inf":"نامیدن","imp":"بنام","form":"می‌نامیدند","eq":"نام‌گذاشتن"},{"n":259,"inf":"نشستن","imp":"بنشین","form":"می‌نشست","eq":"جلوس‌کردن"},{"n":260,"inf":"نکوهیدن","imp":"بنکوه","form":"نکوهیدند","eq":"سرزنش‌کردن، ملامت‌کردن"},{"n":261,"inf":"نگاشتن","imp":"بنگار","form":"نگاشته بودند","eq":"نوشتن؛ نقاشی‌کردن"},{"n":262,"inf":"نگریستن","imp":"بنگر","form":"نگریست","eq":"نگاه‌کردن"},{"n":263,"inf":"نمودن","imp":"بنمای","form":"نمود","eq":"نشان‌دادن؛ به‌نظررسیدن"},{"n":264,"inf":"نواختن","imp":"بنواز","form":"نواخت","eq":"(ساز) زدن؛ نوازش‌کردن"},{"n":265,"inf":"نَوردیدن","imp":"بنورد","form":"نوردید","eq":"طی‌کردن"},{"n":266,"inf":"نوشتن","imp":"بنویس","form":"نوشت","eq":"تحریرکردن"},{"n":267,"inf":"نوشیدن","imp":"بنوش","form":"نوشید","eq":"میل‌کردن"},{"n":268,"inf":"نهادن","imp":"بنه","form":"نهاد","eq":"قراردادن"},{"n":269,"inf":"نهفتن","imp":"بنهنب","form":"نهفت","eq":"پنهان‌کردن، مخفی کردن"},{"n":270,"inf":"نیوشیدن","imp":"بنیوش","form":"نیوشید","eq":"گوش‌دادن"},{"n":271,"inf":"ورزیدن","imp":"بورز","form":"ورزید","eq":"تمرین‌کردن"},{"n":272,"inf":"وزیدن","imp":"بوز","form":"می‌وزید","eq":"(باد) آمدن"},{"n":273,"inf":"هراسیدن","imp":"بهراس","form":"می‌هراسند","eq":"وحشت‌کردن"},{"n":274,"inf":"هشتن","imp":"بهل","form":"هشت","eq":"رهاکردن، اجازه‌دادن"},{"n":275,"inf":"یارستن","imp":"(مضارع: یارد)","form":"نمی‌یارست","eq":"جرئت‌کردن"},{"n":276,"inf":"یازیدن","imp":"بیاز","form":"یازید","eq":"دست درازکردن"},{"n":277,"inf":"یافتن","imp":"بیاب","form":"می‌یافت","eq":"پیداکردن"}];
+  var by = {}; V.forEach(function(v){ by[v.n] = v; });
+  var card = document.getElementById('vcard'), open = null;
+  function $(id){ return document.getElementById(id); }
+
+  function show(a){
+    var v = by[a.dataset.n]; if(!v) return;
+    $('vc-inf').textContent = v.inf; $('vc-imp').textContent = v.imp;
+    $('vc-form').textContent = v.form; $('vc-eq').textContent = v.eq;
+    $('vc-row').href = '#v-' + v.n;
+    if(open) open.setAttribute('aria-expanded','false');
+    open = a; a.setAttribute('aria-expanded','true');
+    card.hidden = false;
+    if(getComputedStyle(card).position === 'absolute'){
+      var r = a.getBoundingClientRect(), w = card.offsetWidth;
+      var left = r.right - w + window.scrollX;               /* align card's right edge to the word (RTL) */
+      left = Math.max(window.scrollX + 12, Math.min(left, window.scrollX + document.documentElement.clientWidth - w - 12));
+      var top = r.bottom + window.scrollY + 8;
+      if(r.bottom + card.offsetHeight + 16 > window.innerHeight) top = r.top + window.scrollY - card.offsetHeight - 8;
+      card.style.left = left + 'px'; card.style.top = top + 'px';
+    }
+  }
+  function hide(){ card.hidden = true; if(open){ open.setAttribute('aria-expanded','false'); open = null; } }
+
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a.v');
+    if(a){ e.preventDefault(); if(open === a) hide(); else show(a); return; }
+    if(e.target.closest('#vc-row')){ var n = open && open.dataset.n; hide(); if(n){ history.replaceState(null,'','#v-'+n); } return; }
+    if(!e.target.closest('#vcard')) hide();
+  });
+  $('vc-x').addEventListener('click', function(){ var a = open; hide(); if(a) a.focus(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && open){ var a = open; hide(); a.focus(); } });
+  window.addEventListener('resize', hide);
+
+  /* from a table row back to the story: flash the verb */
+  function flashFromHash(){
+    var m = location.hash.match(/^#s-(\d+)$/); if(!m) return;
+    var a = document.getElementById('s-' + m[1]); if(!a) return;
+    a.classList.remove('flash'); void a.offsetWidth; a.classList.add('flash');
+  }
+  window.addEventListener('hashchange', flashFromHash); flashFromHash();
+
+  /* table search */
+  var fa = '۰۱۲۳۴۵۶۷۸۹';
+  function faNum(n){ return String(n).replace(/\d/g, function(d){ return fa[d]; }); }
+  function norm(s){ return s.replace(/[‌ً-ْ\s]/g,'').replace(/ي/g,'ی').replace(/ك/g,'ک').replace(/[أإآ]/g,'ا'); }
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#tb tr'));
+  var keys = rows.map(function(tr){ return norm(tr.textContent); });
+  $('q').addEventListener('input', function(){
+    var q = norm(this.value), shown = 0;
+    rows.forEach(function(tr, i){ var ok = !q || keys[i].indexOf(q) > -1; tr.hidden = !ok; if(ok) shown++; });
+    $('count').textContent = faNum(shown) + ' فعل';
+    $('empty').hidden = shown > 0;
+  });
+
+  /* one moment on load: the simple verbs light up in the hero texture */
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var field = document.querySelector('.field');
+  if(field){
+    var words = field.textContent.trim().split(/\s+/);
+    field.innerHTML = words.map(function(w){ return '<span>' + w + '</span>'; }).join(' ');
+    var spans = field.querySelectorAll('span'), i = 0;
+    if(!reduce){
+      (function tick(){
+        if(i >= 40) return;
+        var s = spans[Math.floor(Math.random() * spans.length)]; s.classList.add('lit');
+        setTimeout(function(){ s.classList.remove('lit'); }, 2600);
+        i++; setTimeout(tick, 260);
+      })();
+    }
+  }
+})();
+</script>
+</body>
+</html>
