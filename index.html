@@ -73,20 +73,33 @@ h2{font-weight:900;font-size:2rem;line-height:1.4;margin:0 0 1.25rem}
 .note p:last-child{border-inline-start:4px solid var(--saffron);padding-inline-start:1rem;font-size:1rem;color:var(--stone)}
 .note strong{color:var(--saffron)}
 
+.story-grid{display:grid;grid-template-columns:minmax(0,1fr) min(36rem,100%) minmax(0,1fr);padding-inline:1rem}
+.story-grid > .story{grid-column:2;padding-inline:0}
+.toc-box{grid-column:1;grid-row:1}
 .toc{list-style:none;padding:0;margin:0 0 1rem;display:flex;flex-wrap:wrap;gap:.25rem 1.1rem;font-size:.95rem;color:var(--stone)}
 .toc a{text-decoration:none}
 .toc a:hover{color:var(--ink)}
 .toc .num{color:var(--pom);font-weight:700}
+.toc-box{display:none}
+@media (min-width:1100px){
+  .story-grid > .story .toc{display:none}
+  .toc-box{display:block;justify-self:end;width:12rem;margin-inline-end:3rem;padding-top:9.9rem}
+  .toc-box .toc{position:sticky;top:2rem;flex-direction:column;gap:0;border-inline-start:2px solid var(--rule)}
+  .toc-box .toc a{display:flex;gap:.6rem;padding:.3rem .9rem .3rem 0;margin-inline-start:-2px;border-inline-start:2px solid transparent;line-height:1.6}
+  .toc-box .toc a[aria-current="true"]{color:var(--ink);font-weight:700;border-inline-start-color:var(--pom)}
+  .toc-box .toc .num{min-width:1rem}
+  .toc-box .toc li.to-table{margin-top:.8rem;padding-top:.8rem;border-top:1px dashed var(--rule)}
+}
 
 .story p{margin:0 0 1.15rem;text-align:start}
 .chapter{display:flex;align-items:baseline;gap:.9rem;margin:3rem 0 1rem;font-weight:700;font-size:1.5rem;line-height:1.4;scroll-margin-top:1rem}
 .chapter .num{font-weight:900;font-size:3rem;line-height:1;color:var(--pom);min-width:2.2rem}
 .story .chapter:first-of-type{margin-top:1rem}
 
-a.v{color:inherit;text-decoration:none;font-weight:700;background:linear-gradient(var(--wash),var(--wash)) bottom/100% 38% no-repeat;border-bottom:2px solid var(--saffron);padding-inline:.08em;scroll-margin-top:40vh;cursor:pointer}
-a.v:hover,a.v[aria-expanded="true"]{background-size:100% 100%}
+a.v{color:inherit;text-decoration:none;font-weight:700;scroll-margin-top:40vh;cursor:pointer;border-radius:3px;transition:color .15s}
+a.v:hover,a.v[aria-expanded="true"]{color:var(--saffron)}
 a.v.flash{animation:flash 1.6s ease}
-@keyframes flash{0%,40%{background-color:var(--saffron);color:var(--flour)}100%{background-color:transparent}}
+@keyframes flash{0%,50%{color:var(--saffron)}100%{color:inherit}}
 
 /* ---------- verb card ---------- */
 .vcard{position:absolute;z-index:20;width:min(19rem,calc(100vw - 2rem));background:var(--card);color:var(--ink);border:1px solid var(--rule);border-top:4px solid var(--saffron);border-radius:10px;box-shadow:0 12px 32px rgba(20,25,40,.18);padding:.85rem 1rem 1rem;font-size:1rem;line-height:1.8}
@@ -124,7 +137,7 @@ tr[hidden]{display:none}
 footer{margin-top:4rem;padding-block:2.5rem 3rem;border-top:1px solid var(--rule);color:var(--stone);font-size:.95rem;line-height:1.9}
 footer p{margin:.3rem 0}
 @media (max-width:560px){body{font-size:1.06rem}.chapter .num{font-size:2.4rem}}
-@media print{.hero{background:none;color:#000}.words,.hero nav,.tools,.vcard{display:none}.hero .sub{color:#000}a.v{background:none;border:0}}
+@media print{.hero{background:none;color:#000}.words,.hero nav,.tools,.vcard{display:none}.hero .sub{color:#000}a.v{color:inherit}}
 </style>
 </head>
 <body>
@@ -161,6 +174,8 @@ footer p{margin:.3rem 0}
 <p>پروانه: این قصه و جدولِ همراهش با پروانهٔ <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> در قلمروِ همگانی است: هرکس می‌تواند آن را بی‌آنکه دستوری بطلبد، بپراکند، بفروشد، بیاراید یا بپیراید و بایسته نیست نامی از سازنده بیاید.</p>
   </section>
 
+  <div class="story-grid">
+  <nav class="toc-box" aria-label="بخش‌های قصه"><ul class="toc"><li><a href="#ch-1"><span class="num">۱</span> سپیدار</a></li><li><a href="#ch-2"><span class="num">۲</span> خانِ آزمند</a></li><li><a href="#ch-3"><span class="num">۳</span> شبِ تاراج</a></li><li><a href="#ch-4"><span class="num">۴</span> غار</a></li><li><a href="#ch-5"><span class="num">۵</span> راه</a></li><li><a href="#ch-6"><span class="num">۶</span> مامِ زرین</a></li><li><a href="#ch-7"><span class="num">۷</span> نیرنگ</a></li><li><a href="#ch-8"><span class="num">۸</span> نامه</a></li><li><a href="#ch-9"><span class="num">۹</span> بهار</a></li><li class="to-table"><a href="#verbs">جدولِ فعل‌ها</a></li></ul></nav>
   <section class="wrap story" id="story">
     <h2>قصه</h2>
     <ul class="toc"><li><a href="#ch-1"><span class="num">۱</span> سپیدار</a></li><li><a href="#ch-2"><span class="num">۲</span> خانِ آزمند</a></li><li><a href="#ch-3"><span class="num">۳</span> شبِ تاراج</a></li><li><a href="#ch-4"><span class="num">۴</span> غار</a></li><li><a href="#ch-5"><span class="num">۵</span> راه</a></li><li><a href="#ch-6"><span class="num">۶</span> مامِ زرین</a></li><li><a href="#ch-7"><span class="num">۷</span> نیرنگ</a></li><li><a href="#ch-8"><span class="num">۸</span> نامه</a></li><li><a href="#ch-9"><span class="num">۹</span> بهار</a></li></ul>
@@ -221,6 +236,7 @@ footer p{margin:.3rem 0}
 <p>شیرین با جامه‌ای که مادربزرگ برایش دوخته بود، در میانِ مردم <a class="v" id="s-114" href="#v-114" data-n="114">می‌خرامید</a> و تاجی از گلِ کوهی بر سرش <a class="v" id="s-45" href="#v-45" data-n="45">می‌برازید</a>. داراب برایش شعری <a class="v" id="s-167" href="#v-167" data-n="167">سرود</a> و گردنبندی از مرواریدهای رود به او <a class="v" id="s-44" href="#v-44" data-n="44">بخشید</a>؛ مرواریدها را خودش یک‌به‌یک <a class="v" id="s-171" href="#v-171" data-n="171">سُفته بود</a>. پیرمردان گفتند: «شیرین را <a class="v" id="s-170" href="#v-170" data-n="170">سزد</a> که بانوی سپیدار باشد.» و بابا یحیی به دخترش می‌بالید.</p>
 <p>پاییزِ آن سال، بابا یحیی شبی آرام در خواب مُرد. مردمِ ده بر او موییدند و شیرین گریست. مادربزرگ گفت: «خدا <a class="v" id="s-14" href="#v-14" data-n="14">بیامرزدش</a>.» شیرین اشک‌هایش را <a class="v" id="s-164" href="#v-164" data-n="164">سترد</a> و دانه‌هایی را که پدرش برای سالِ دیگر اندوخته بود، در زمین افشاند. بهارِ دیگر، از آن دانه‌ها گندم رُست.</p>
   </section>
+  </div>
 
   <section class="wrap wide" id="verbs">
     <h2>جدولِ فعل‌ها</h2>
@@ -572,6 +588,21 @@ footer p{margin:.3rem 0}
   $('vc-x').addEventListener('click', function(){ var a = open; hide(); if(a) a.focus(); });
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && open){ var a = open; hide(); a.focus(); } });
   window.addEventListener('resize', hide);
+
+  /* side list: mark the chapter being read */
+  var side = document.querySelectorAll('.toc-box a[href^="#ch-"]');
+  if(side.length && 'IntersectionObserver' in window){
+    var heads = Array.prototype.map.call(side, function(a){ return document.querySelector(a.getAttribute('href')); });
+    function mark(){
+      var cur = 0;
+      heads.forEach(function(h, k){ if(h.getBoundingClientRect().top < window.innerHeight * 0.35) cur = k; });
+      side.forEach(function(a, k){ if(k === cur) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current'); });
+    }
+    var io = new IntersectionObserver(mark, {rootMargin:'0px 0px -60% 0px'});
+    heads.forEach(function(h){ io.observe(h); });
+    window.addEventListener('scroll', function(){ requestAnimationFrame(mark); }, {passive:true});
+    mark();
+  }
 
   /* from a table row back to the story: flash the verb */
   function flashFromHash(){
