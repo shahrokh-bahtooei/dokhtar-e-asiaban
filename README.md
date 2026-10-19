@@ -23,6 +23,8 @@
 
 قلمِ [ساحل](https://github.com/rastikerdar/sahel-font) ساختهٔ صابر راستی‌کردار است و پروانهٔ خودش را دارد: [SIL Open Font License 1.1](assets/fonts/OFL.txt).
 
+نمادهای PDF و Word از [Bootstrap Icons](https://icons.getbootstrap.com/)اند، با پروانهٔ [MIT](assets/icons/bootstrap-icons-LICENSE.txt).
+
 فهرستِ فعل‌ها را از پیوستِ ۱ جلدِ دومِ «تاریخ زبان فارسی»، نوشتهٔ پرویز ناتل خانلری، گرفته‌ایم.
 
 **واژه‌های کلیدی:** پرویز ناتل خانلری و محمدرضا باطنی (باطنی‌زاده) و افعال سادهٔ متداول
