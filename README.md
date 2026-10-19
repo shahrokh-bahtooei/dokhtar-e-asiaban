@@ -16,6 +16,7 @@
 | [`story.md`](story.md) | متنِ کاملِ قصه و جدول به Markdown |
 | [`data/verbs.csv`](data/verbs.csv) و [`data/verbs.json`](data/verbs.json) | جدولِ ۲۷۷ فعل برای برنامه‌ها و کارت‌های آموزشی |
 | [`downloads/`](downloads/) | نسخهٔ PDF و Word |
+| [`sources/`](sources/) | برگ‌های [پیوستِ ۱ خانلری](sources/khanlari-afal-e-sade-ye-motadavel.pdf) و [جستارِ باطنی](sources/bateni-farsi-zabani-aghim.pdf)، به PDF |
 
 ## پروانه
 
@@ -25,7 +26,9 @@
 
 نمادهای PDF و Word از [Bootstrap Icons](https://icons.getbootstrap.com/)اند، با پروانهٔ [MIT](assets/icons/bootstrap-icons-LICENSE.txt).
 
-فهرستِ فعل‌ها را از پیوستِ ۱ جلدِ دومِ «تاریخ زبان فارسی»، نوشتهٔ پرویز ناتل خانلری، گرفته‌ایم.
+فهرستِ فعل‌ها را از [پیوستِ ۱ جلدِ دومِ «تاریخ زبان فارسی»](sources/khanlari-afal-e-sade-ye-motadavel.pdf)، نوشتهٔ پرویز ناتل خانلری، گرفته‌ایم.
+
+دو سندِ پوشهٔ `sources/`، یعنی برگ‌های پیوستِ خانلری و جستارِ «فارسی زبانی عقیم؟» از محمدرضا باطنی (آدینه، شمارهٔ ۳۳، فروردینِ ۱۳۶۸)، زیرِ CC0 نیستند. آن‌ها را تنها برای آسانیِ خواننده در ریپو نهاده‌ایم و حقشان از آنِ نویسندگان و ناشرانشان است.
 
 **واژه‌های کلیدی:** پرویز ناتل خانلری و محمدرضا باطنی (باطنی‌زاده) و افعال سادهٔ متداول
 
