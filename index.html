@@ -45,15 +45,20 @@ a{color:inherit}
 .wrap{max-width:36rem;margin-inline:auto;padding-inline:1rem}
 .wide{max-width:60rem}
 
-/* ---------- hero: the list itself is the texture ---------- */
-.hero{position:relative;overflow:hidden;background:var(--field);color:#F4F5F0;isolation:isolate}
-.field{position:absolute;inset:-1rem;z-index:-1;color:var(--field-ink);font-size:1.05rem;line-height:2.1;word-spacing:.6em;text-align:justify;padding:1rem;user-select:none;
-  -webkit-mask-image:linear-gradient(to bottom,#000 0,#000 55%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0,#000 55%,transparent 100%)}
-.field span.lit{color:#D9A21B;transition:color 1.2s ease}
-.hero-in{max-width:60rem;margin-inline:auto;padding:clamp(4rem,12vw,8.5rem) 1rem clamp(3rem,8vw,5.5rem)}
-.hero h1{margin:0;font-weight:900;font-size:clamp(3.1rem,11vw,7rem);line-height:1.5;letter-spacing:0;text-shadow:0 0 28px var(--field),0 0 8px var(--field)}
-.hero .sub{margin:.35em 0 0;text-shadow:0 0 18px var(--field);font-weight:700;font-size:clamp(1.2rem,3.4vw,1.75rem);color:#D9A21B;line-height:1.5}
-.hero .by{margin:1.5rem 0 0;text-shadow:0 0 14px var(--field),0 0 4px var(--field);max-width:34rem;color:#B9BECB;font-size:1rem;line-height:1.9}
+/* ---------- hero: the list itself is the texture, set around the title ---------- */
+.hero{background:var(--field);color:#F4F5F0}
+.hero-in{max-width:72rem;margin-inline:auto;padding:clamp(2rem,5vw,3.5rem) 1rem clamp(2rem,5vw,3.5rem);
+  color:var(--field-ink);font-size:.95rem;line-height:1.95;word-spacing:.5em;text-align:justify}
+.hero-in::after{content:"";display:block;clear:both}
+.words{user-select:none}
+.words .w{transition:color 1.2s ease}
+.words .w.lit{color:#D9A21B}
+.title-block{float:right;width:min(38rem,100%);margin:.4rem 0 1.4rem 2.5rem;text-align:right;word-spacing:normal;color:#F4F5F0}
+.hero h1{margin:0;font-weight:900;font-size:clamp(3.1rem,11vw,7rem);line-height:1.5;letter-spacing:0}
+.hero .sub{margin:.35em 0 0;font-weight:700;font-size:clamp(1.2rem,3.4vw,1.75rem);color:#D9A21B;line-height:1.5}
+.hero .by{margin:1.5rem 0 0;max-width:34rem;color:#B9BECB;font-size:1rem;line-height:1.9}
+@media (max-width:900px){.title-block{float:none;width:auto;margin:1rem 0 1.4rem}.hero-in{font-size:.8rem;line-height:1.85;word-spacing:.35em}}
+@media (max-width:480px){.hero-in{font-size:.72rem}}
 .hero nav{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.6rem}
 .hero nav a{display:inline-block;text-decoration:none;padding:.45rem 1.1rem;border-radius:999px;border:1.5px solid #4A5675;color:#F4F5F0;font-size:1rem;line-height:1.6;background:rgba(15,19,29,.55)}
 .hero nav a.main{background:#D9A21B;border-color:#D9A21B;color:#1F2638;font-weight:700}
@@ -119,14 +124,15 @@ tr[hidden]{display:none}
 footer{margin-top:4rem;padding-block:2.5rem 3rem;border-top:1px solid var(--rule);color:var(--stone);font-size:.95rem;line-height:1.9}
 footer p{margin:.3rem 0}
 @media (max-width:560px){body{font-size:1.06rem}.chapter .num{font-size:2.4rem}}
-@media print{.hero{background:none;color:#000}.field,.hero nav,.tools,.vcard{display:none}.hero .sub{color:#000}a.v{background:none;border:0}}
+@media print{.hero{background:none;color:#000}.words,.hero nav,.tools,.vcard{display:none}.hero .sub{color:#000}a.v{background:none;border:0}}
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <div class="field" aria-hidden="true">آراستن آرامیدن آزردن آزمودن آسودن آشامیدن آشفتن آغازیدن آغشتن آفریدن آگندن آلودن آمدن آمرزیدن آموختن آمیختن آوردن آویختن آهیختن ارزیدن افتادن افراشتن افروختن افزودن افسردن افشاندن افگندن انباشتن انجامیدن انداختن اندوختن اندودن اندیشیدن انگاشتن انگیختن اوباشتن ایستادن باختن باریدن بافتن بالیدن بایستن بخشودن بخشیدن برازیدن بردن بریدن بستن بِسودن بَسیجیدن بلعیدن بودن بوسیدن بوییدن بیختن پاشیدن پالودن پختن پذیرفتن پراکندن پرداختن پرستیدن پرسیدن پروردن پریدن پژمردن پژوهیدن پسندیدن پلاسیدن پلکیدن پناهیدن پنداشتن پوسیدن پوشیدن پوییدن پیچیدن پیراستن پیمودن پیوستن تاختن تافتن تپیدن تراشیدن تراویدن ترسیدن ترشیدن ترکیدن تکاندن و تکانیدن تنیدن توانستن جَستن جُستن جنبیدن جنگیدن جوشیدن جویدن جهیدن چاپیدن چاییدن چپیدن چربیدن چرخیدن چریدن چسبیدن چشیدن چکیدن چلاندن و چلانیدن چمیدن چیدن خاریدن خاستن خاییدن خراشیدن خرامیدن خروشیدن خریدن خزیدن خستن خشکیدن خلیدن خمیدن خوابیدن خواستن خواندن خوردن خوفیدن خیسیدن دادن داشتن دانستن درخشیدن درودن دریدن دزدیدن دمیدن دوختن دوشیدن دویدن دیدن ربودن رخشیدن رسیدن رَستن رُستن رشتن رَفتن رُفتن و روفتن رقصیدن رمیدن رنجیدن رندیدن روییدن ریختن ریدن زاریدن زاییدن زدن زدودن زیستن ساختن سپردن سپوختن ستدن ستردن ستودن ستیزیدن سرودن سرشتن سُریدن سزیدن سُفتن سگالیدن سنجیدن سوختن سودن شاشیدن شایستن شتافتن شدن شستن شکافتن شکستن شکفتن شکیفتن شگِفتن شمردن شناختن شنیدن شوریدن طلبیدن طوفیدن غارتیدن غُریدن غلطیدن غُنودن فرستادن فرسودن فرمودن فروختن فریفتن فشردن فهمیدن قاپیدن قبولاندن کاستن کاشتن کاویدن کردن کشتن کشیدن کَفتن کَفیدن کندن کوچیدن کوشیدن کوفتن گاییدن گداختن گذاشتن گذشتن گرازیدن گراییدن گردیدن گرفتن گرویدن گریختن گریستن گزاردن گَزیدن گُزیدن گُساردن گستردن گسستن گشتن گشودن گفتن گماشتن گُنجیدن گندیدن گواریدن گوزیدن لرزیدن لغزیدن لمیدن لُندیدن لنگیدن لهیدن لیسیدن ماسیدن مالیدن ماندن مردن مکیدن مولیدن موییدن نازیدن نالیدن نامیدن نشستن نکوهیدن نگاشتن نگریستن نمودن نواختن نَوردیدن نوشتن نوشیدن نهادن نهفتن نیوشیدن ورزیدن وزیدن هراسیدن هشتن یارستن یازیدن یافتن</div>
   <div class="hero-in">
+    <span class="words" aria-hidden="true"><span class="w">آراستن</span> <span class="w">آرامیدن</span> <span class="w">آزردن</span> <span class="w">آزمودن</span> <span class="w">آسودن</span> <span class="w">آشامیدن</span> <span class="w">آشفتن</span> <span class="w">آغازیدن</span> <span class="w">آغشتن</span> <span class="w">آفریدن</span> <span class="w">آگندن</span> <span class="w">آلودن</span> <span class="w">آمدن</span> <span class="w">آمرزیدن</span> <span class="w">آموختن</span> <span class="w">آمیختن</span> <span class="w">آوردن</span> <span class="w">آویختن</span> <span class="w">آهیختن</span> <span class="w">ارزیدن</span> <span class="w">افتادن</span> <span class="w">افراشتن</span> <span class="w">افروختن</span> <span class="w">افزودن</span> </span>
+    <div class="title-block">
     <h1>دخترِ آسیابان</h1>
     <p class="sub">قصه‌ای با فعل‌های سادهٔ فارسی</p>
     <p class="by">نوشتهٔ هوشوارهٔ کلاد (Claude Opus 5.5) با کوششِ بیشینه، بر پایهٔ فهرستِ افعالِ سادهٔ متداول از پرویز ناتل خانلری، ۲۶مهر۱۴۰۵</p>
@@ -136,6 +142,8 @@ footer p{margin:.3rem 0}
       <a href="downloads/dokhtar-e-asiaban.pdf">PDF</a>
       <a href="downloads/dokhtar-e-asiaban.docx">Word</a>
     </nav>
+    </div>
+    <span class="words" aria-hidden="true"> <span class="w">افسردن</span> <span class="w">افشاندن</span> <span class="w">افگندن</span> <span class="w">انباشتن</span> <span class="w">انجامیدن</span> <span class="w">انداختن</span> <span class="w">اندوختن</span> <span class="w">اندودن</span> <span class="w">اندیشیدن</span> <span class="w">انگاشتن</span> <span class="w">انگیختن</span> <span class="w">اوباشتن</span> <span class="w">ایستادن</span> <span class="w">باختن</span> <span class="w">باریدن</span> <span class="w">بافتن</span> <span class="w">بالیدن</span> <span class="w">بایستن</span> <span class="w">بخشودن</span> <span class="w">بخشیدن</span> <span class="w">برازیدن</span> <span class="w">بردن</span> <span class="w">بریدن</span> <span class="w">بستن</span> <span class="w">بِسودن</span> <span class="w">بَسیجیدن</span> <span class="w">بلعیدن</span> <span class="w">بودن</span> <span class="w">بوسیدن</span> <span class="w">بوییدن</span> <span class="w">بیختن</span> <span class="w">پاشیدن</span> <span class="w">پالودن</span> <span class="w">پختن</span> <span class="w">پذیرفتن</span> <span class="w">پراکندن</span> <span class="w">پرداختن</span> <span class="w">پرستیدن</span> <span class="w">پرسیدن</span> <span class="w">پروردن</span> <span class="w">پریدن</span> <span class="w">پژمردن</span> <span class="w">پژوهیدن</span> <span class="w">پسندیدن</span> <span class="w">پلاسیدن</span> <span class="w">پلکیدن</span> <span class="w">پناهیدن</span> <span class="w">پنداشتن</span> <span class="w">پوسیدن</span> <span class="w">پوشیدن</span> <span class="w">پوییدن</span> <span class="w">پیچیدن</span> <span class="w">پیراستن</span> <span class="w">پیمودن</span> <span class="w">پیوستن</span> <span class="w">تاختن</span> <span class="w">تافتن</span> <span class="w">تپیدن</span> <span class="w">تراشیدن</span> <span class="w">تراویدن</span> <span class="w">ترسیدن</span> <span class="w">ترشیدن</span> <span class="w">ترکیدن</span> <span class="w">تکاندن و تکانیدن</span> <span class="w">تنیدن</span> <span class="w">توانستن</span> <span class="w">جَستن</span> <span class="w">جُستن</span> <span class="w">جنبیدن</span> <span class="w">جنگیدن</span> <span class="w">جوشیدن</span> <span class="w">جویدن</span> <span class="w">جهیدن</span> <span class="w">چاپیدن</span> <span class="w">چاییدن</span> <span class="w">چپیدن</span> <span class="w">چربیدن</span> <span class="w">چرخیدن</span> <span class="w">چریدن</span> <span class="w">چسبیدن</span> <span class="w">چشیدن</span> <span class="w">چکیدن</span> <span class="w">چلاندن و چلانیدن</span> <span class="w">چمیدن</span> <span class="w">چیدن</span> <span class="w">خاریدن</span> <span class="w">خاستن</span> <span class="w">خاییدن</span> <span class="w">خراشیدن</span> <span class="w">خرامیدن</span> <span class="w">خروشیدن</span> <span class="w">خریدن</span> <span class="w">خزیدن</span> <span class="w">خستن</span> <span class="w">خشکیدن</span> <span class="w">خلیدن</span> <span class="w">خمیدن</span> <span class="w">خوابیدن</span> <span class="w">خواستن</span> <span class="w">خواندن</span> <span class="w">خوردن</span> <span class="w">خوفیدن</span> <span class="w">خیسیدن</span> <span class="w">دادن</span> <span class="w">داشتن</span> <span class="w">دانستن</span> <span class="w">درخشیدن</span> <span class="w">درودن</span> <span class="w">دریدن</span> <span class="w">دزدیدن</span> <span class="w">دمیدن</span> <span class="w">دوختن</span> <span class="w">دوشیدن</span> <span class="w">دویدن</span> <span class="w">دیدن</span> <span class="w">ربودن</span> <span class="w">رخشیدن</span> <span class="w">رسیدن</span> <span class="w">رَستن</span> <span class="w">رُستن</span> <span class="w">رشتن</span> <span class="w">رَفتن</span> <span class="w">رُفتن و روفتن</span> <span class="w">رقصیدن</span> <span class="w">رمیدن</span> <span class="w">رنجیدن</span> <span class="w">رندیدن</span> <span class="w">روییدن</span> <span class="w">ریختن</span> <span class="w">زاریدن</span> <span class="w">زاییدن</span> <span class="w">زدن</span> <span class="w">زدودن</span> <span class="w">زیستن</span> <span class="w">ساختن</span> <span class="w">سپردن</span> <span class="w">سپوختن</span> <span class="w">ستدن</span> <span class="w">ستردن</span> <span class="w">ستودن</span> <span class="w">ستیزیدن</span> <span class="w">سرودن</span> <span class="w">سرشتن</span> <span class="w">سُریدن</span> <span class="w">سزیدن</span> <span class="w">سُفتن</span> <span class="w">سگالیدن</span> <span class="w">سنجیدن</span> <span class="w">سوختن</span> <span class="w">سودن</span> <span class="w">شایستن</span> <span class="w">شتافتن</span> <span class="w">شدن</span> <span class="w">شستن</span> <span class="w">شکافتن</span> <span class="w">شکستن</span> <span class="w">شکفتن</span> <span class="w">شکیفتن</span> <span class="w">شگِفتن</span> <span class="w">شمردن</span> <span class="w">شناختن</span> <span class="w">شنیدن</span> <span class="w">شوریدن</span> <span class="w">طلبیدن</span> <span class="w">طوفیدن</span> <span class="w">غارتیدن</span> <span class="w">غُریدن</span> <span class="w">غلطیدن</span> <span class="w">غُنودن</span> <span class="w">فرستادن</span> <span class="w">فرسودن</span> <span class="w">فرمودن</span> <span class="w">فروختن</span> <span class="w">فریفتن</span> <span class="w">فشردن</span> <span class="w">فهمیدن</span> <span class="w">قاپیدن</span> <span class="w">قبولاندن</span> <span class="w">کاستن</span> <span class="w">کاشتن</span> <span class="w">کاویدن</span> <span class="w">کردن</span> <span class="w">کشتن</span> <span class="w">کشیدن</span> <span class="w">کَفتن</span> <span class="w">کَفیدن</span> <span class="w">کندن</span> <span class="w">کوچیدن</span> <span class="w">کوشیدن</span> <span class="w">کوفتن</span> <span class="w">گداختن</span> <span class="w">گذاشتن</span> <span class="w">گذشتن</span> <span class="w">گرازیدن</span> <span class="w">گراییدن</span> <span class="w">گردیدن</span> <span class="w">گرفتن</span> <span class="w">گرویدن</span> <span class="w">گریختن</span> <span class="w">گریستن</span> <span class="w">گزاردن</span> <span class="w">گَزیدن</span> <span class="w">گُزیدن</span> <span class="w">گُساردن</span> <span class="w">گستردن</span> <span class="w">گسستن</span> <span class="w">گشتن</span> <span class="w">گشودن</span> <span class="w">گفتن</span> <span class="w">گماشتن</span> <span class="w">گُنجیدن</span> <span class="w">گندیدن</span> <span class="w">گواریدن</span> <span class="w">لرزیدن</span> <span class="w">لغزیدن</span> <span class="w">لمیدن</span> <span class="w">لُندیدن</span> <span class="w">لنگیدن</span> <span class="w">لهیدن</span> <span class="w">لیسیدن</span> <span class="w">ماسیدن</span> <span class="w">مالیدن</span> <span class="w">ماندن</span> <span class="w">مردن</span> <span class="w">مکیدن</span> <span class="w">مولیدن</span> <span class="w">موییدن</span> <span class="w">نازیدن</span> <span class="w">نالیدن</span> <span class="w">نامیدن</span> <span class="w">نشستن</span> <span class="w">نکوهیدن</span> <span class="w">نگاشتن</span> <span class="w">نگریستن</span> <span class="w">نمودن</span> <span class="w">نواختن</span> <span class="w">نَوردیدن</span> <span class="w">نوشتن</span> <span class="w">نوشیدن</span> <span class="w">نهادن</span> <span class="w">نهفتن</span> <span class="w">نیوشیدن</span> <span class="w">ورزیدن</span> <span class="w">وزیدن</span> <span class="w">هراسیدن</span> <span class="w">هشتن</span> <span class="w">یارستن</span> <span class="w">یازیدن</span> <span class="w">یافتن</span></span>
   </div>
 </header>
 
@@ -588,19 +596,14 @@ footer p{margin:.3rem 0}
 
   /* one moment on load: the simple verbs light up in the hero texture */
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var field = document.querySelector('.field');
-  if(field){
-    var words = field.textContent.trim().split(/\s+/);
-    field.innerHTML = words.map(function(w){ return '<span>' + w + '</span>'; }).join(' ');
-    var spans = field.querySelectorAll('span'), i = 0;
-    if(!reduce){
-      (function tick(){
-        if(i >= 40) return;
-        var s = spans[Math.floor(Math.random() * spans.length)]; s.classList.add('lit');
-        setTimeout(function(){ s.classList.remove('lit'); }, 2600);
-        i++; setTimeout(tick, 260);
-      })();
-    }
+  var spans = document.querySelectorAll('.words .w'), i = 0;
+  if(spans.length && !reduce){
+    (function tick(){
+      if(i >= 40) return;
+      var w = spans[Math.floor(Math.random() * spans.length)]; w.classList.add('lit');
+      setTimeout(function(){ w.classList.remove('lit'); }, 2600);
+      i++; setTimeout(tick, 260);
+    })();
   }
 })();
 </script>
