@@ -59,7 +59,7 @@ a{color:inherit}
 .hero .sub{margin:.35em 0 0;font-weight:700;font-size:clamp(1.2rem,3.4vw,1.75rem);color:#D9A21B;line-height:1.5}
 .hero .by{margin:1.5rem 0 0;max-width:34rem;color:#B9BECB;font-size:1rem;line-height:1.9}
 @media (max-width:900px){.hero-in{font-size:.8rem;line-height:1.85;word-spacing:.35em}}
-@media (max-width:480px){.hero-in{font-size:.72rem}}
+@media (max-width:480px){.hero-in{font-size:.72rem}.hero nav{padding-bottom:9px}.title-block{padding-bottom:calc(1rem - 9px)}}
 .hero nav{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.6rem}
 .hero nav a{display:inline-block;text-decoration:none;padding:.45rem 1.1rem;border-radius:999px;border:1.5px solid #4A5675;color:#F4F5F0;font-size:1rem;line-height:1.6;background:rgba(15,19,29,.55)}
 .hero nav a.main{background:#D9A21B;border-color:#D9A21B;color:#1F2638;font-weight:700}
@@ -635,7 +635,8 @@ footer p{margin:.3rem 0}
     var R = tb.getBoundingClientRect(), W = R.width, H = R.height, rects = [];
     function add(rs){ for(var k = 0; k < rs.length; k++){ var q = rs[k]; if(q.width > 0 && q.height > 0) rects.push({l:q.left - R.left, t:q.top - R.top, b:q.bottom - R.top}); } }
     tb.querySelectorAll('h1, .sub, .by').forEach(function(el){ var rg = document.createRange(); rg.selectNodeContents(el); add(rg.getClientRects()); });
-    tb.querySelectorAll('nav a').forEach(function(a){ add([a.getBoundingClientRect()]); });
+    var below = parseFloat(getComputedStyle(tb.querySelector('nav')).paddingBottom) ? 2 : 0;   /* narrow screens: a few more pixels under the buttons */
+    tb.querySelectorAll('nav a').forEach(function(a){ var q = a.getBoundingClientRect(); add([{left:q.left, top:q.top, bottom:q.bottom + below, width:q.width, height:q.height}]); });
     rects.sort(function(a, b){ return a.t - b.t; });
     var bands = [];
     rects.forEach(function(q){
@@ -670,7 +671,9 @@ footer p{margin:.3rem 0}
       });
       var rg = document.createRange(); rg.selectNodeContents(tb.querySelector('.by'));
       Array.prototype.forEach.call(rg.getClientRects(), box);
-      tb.querySelectorAll('nav a').forEach(function(a){ box(a.getBoundingClientRect()); });
+      var below = parseFloat(getComputedStyle(tb.querySelector('nav')).paddingBottom) ? 2 : 0, nb = 0;   /* narrow screens: a few more pixels under the buttons */
+      tb.querySelectorAll('nav a').forEach(function(a){ var q = a.getBoundingClientRect(); g.fillRect(q.left - R.left, q.top - R.top, q.width, q.height + below); nb = Math.max(nb, q.bottom - R.top); });
+      if(below) g.fillRect(0, nb, W, below);
       tb.style.shapeOutside = 'url(' + c.toDataURL('image/png') + ')';
       tb.classList.add('glyphs');
       window.__heroShape = c;
