@@ -17,7 +17,7 @@
 | [`data/verbs.csv`](data/verbs.csv) و [`data/verbs.json`](data/verbs.json) | جدولِ ۲۷۷ فعل برای برنامه‌ها و کارت‌های آموزشی |
 | [`downloads/`](downloads/) | نسخهٔ PDF و Word |
 | [`tools/make-iranic.py`](tools/make-iranic.py) | برنامهٔ ساختِ ساحلِ ایرانیک از روی ساحل |
-| [`sources/`](sources/) | برگ‌های [پیوستِ ۱ خانلری](sources/khanlari-afal-e-sade-ye-motadavel.pdf) و [جستارِ باطنی](sources/bateni-farsi-zabani-aghim.pdf) به PDF |
+| [`sources/`](sources/) | برگ‌های [پیوستِ ۱ خانلری](sources/khanlari-afal-e-sade-ye-motadavel.pdf) و جستارهای [باطنی](sources/bateni-farsi-zabani-aghim.pdf) و [شهبازی](sources/shahbazi-afal-e-tabdili.pdf) و [راسخ‌مهند](sources/rasekh-mahand-chera-farsi-fel-e-sade-nemisazad.pdf) به PDF |
 
 ## پروانه
 
@@ -31,7 +31,12 @@
 
 فهرستِ فعل‌ها را از [پیوستِ ۱ جلدِ دومِ *تاریخ زبان فارسی*](sources/khanlari-afal-e-sade-ye-motadavel.pdf)، نوشتهٔ پرویز ناتل خانلری، گرفته‌ایم.
 
-دو سندِ پوشهٔ `sources/` با پروانهٔ CC0 1.0 نیست: برگ‌های پیوستِ خانلری و جستارِ «فارسی زبانی عقیم؟» از محمدرضا باطنی در *آدینه*، ش۳۳، فروردین۱۳۶۸. این دو را تنها برای آسانیِ خواننده در ریپو نهاده‌ایم و حقشان از آنِ نویسندگان و ناشرانشان است.
+چهار سندِ پوشهٔ `sources/` با پروانهٔ CC0 1.0 نیست. این‌ها را تنها برای آسانیِ خواننده در ریپو نهاده‌ایم و حقشان از آنِ نویسندگان و ناشرانشان است:
+
+- [برگ‌های پیوستِ ۱ جلدِ دومِ *تاریخ زبان فارسی*](sources/khanlari-afal-e-sade-ye-motadavel.pdf) از پرویز ناتل خانلری؛
+- [«فارسی زبانی عقیم؟»](sources/bateni-farsi-zabani-aghim.pdf) از محمدرضا باطنی، *آدینه*، ش۳۳، فروردین۱۳۶۸؛
+- [«ضرورت‌های ساخت و کاربرد افعال تبدیلی در زبان فارسی»](sources/shahbazi-afal-e-tabdili.pdf) از اصغر شهبازی، *دستور*، ویژه‌نامهٔ *نامهٔ فرهنگستان*، دورهٔ ۲۲، ش۳، پاییز۱۴۰۲؛
+- [«چرا زبان فارسی فعل ساده نمی‌سازد؟»](sources/rasekh-mahand-chera-farsi-fel-e-sade-nemisazad.pdf) از محمد راسخ‌مهند، *پژوهش‌های زبان‌شناسی تطبیقی*، س۱۵، ش۲۹، بهار و تابستان۱۴۰۴.
 
 **واژه‌های کلیدی:** پرویز ناتل خانلری، محمدرضا باطنی (باطنی‌زاده)، اصغر شهبازی، محمد راسخ‌مهند و افعال سادهٔ متداول
 
