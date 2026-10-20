@@ -18,6 +18,9 @@
 @font-face{font-family:Sahel;src:url(assets/fonts/Sahel.woff2) format("woff2");font-weight:400;font-display:block}
 @font-face{font-family:Sahel;src:url(assets/fonts/Sahel-Bold.woff2) format("woff2");font-weight:700;font-display:block}
 @font-face{font-family:Sahel;src:url(assets/fonts/Sahel-Black.woff2) format("woff2");font-weight:900;font-display:block}
+/* Sahel Iranic: Sahel slanted 12° to the left (tools/make-iranic.py), for the italic of book and journal names;
+   same advance widths as Sahel, so the swap never moves the text */
+@font-face{font-family:Sahel;src:url(assets/fonts/Sahel-Iranic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
 
 :root{
   --flour:#F4F5F0;      /* page: flour on the miller's table */
@@ -576,7 +579,7 @@ footer p{margin:.3rem 0}
     <p>این قصه و جدولِ همراهش با پروانهٔ <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.fa">کریِیتیو کامنزِ زیرو، ویراستِ یکم (CC0 1.0)</a> در قلمروِ همگانی است.</p>
     <p>فهرستِ فعل‌ها را از <a href="sources/khanlari-afal-e-sade-ye-motadavel.pdf">پیوستِ ۱ جلدِ دومِ <cite>تاریخ زبان فارسی</cite></a>، نوشتهٔ پرویز ناتل خانلری، گرفته‌ایم.</p>
     <p>برگ‌های این پیوست و <a href="sources/bateni-farsi-zabani-aghim.pdf">جستارِ باطنی</a> را تنها برای آسانیِ خواننده در ریپو نهاده‌ایم. این دو با پروانهٔ CC0 1.0 نیست و حقشان از آنِ دارندگانشان است.</p>
-    <p>قلمِ این صفحه <a href="https://github.com/rastikerdar/sahel-font">ساحل</a> ساختهٔ صابر راستی‌کردار است، با پروانهٔ SIL OFL 1.1.</p>
+    <p>قلمِ این صفحه <a href="https://github.com/rastikerdar/sahel-font">ساحل</a> ساختهٔ صابر راستی‌کردار است، با پروانهٔ SIL OFL 1.1. نامِ کتاب و مجله با <a href="assets/fonts/Sahel-Iranic.ttf">ساحلِ ایرانیک</a> آمده است: همان ساحل، ۱۲ درجه کج به چپ، با همان پروانه.</p>
     <p><a href="https://github.com/shahrokh-bahtooei/dokhtar-e-asiaban">سرچشمهٔ این صفحه در گیت‌هاب</a></p>
   </div>
 </footer>

@@ -16,6 +16,7 @@
 | [`story.md`](story.md) | متنِ کاملِ قصه و جدول به Markdown |
 | [`data/verbs.csv`](data/verbs.csv) و [`data/verbs.json`](data/verbs.json) | جدولِ ۲۷۷ فعل برای برنامه‌ها و کارت‌های آموزشی |
 | [`downloads/`](downloads/) | نسخهٔ PDF و Word |
+| [`tools/make-iranic.py`](tools/make-iranic.py) | برنامهٔ ساختِ ساحلِ ایرانیک از روی ساحل |
 | [`sources/`](sources/) | برگ‌های [پیوستِ ۱ خانلری](sources/khanlari-afal-e-sade-ye-motadavel.pdf) و [جستارِ باطنی](sources/bateni-farsi-zabani-aghim.pdf) به PDF |
 
 ## پروانه
@@ -23,6 +24,8 @@
 قصه و جدول و دیگر نوشته‌های این ریپو با پروانهٔ [کریِیتیو کامنزِ زیرو، ویراستِ یکم (CC0 1.0)](https://creativecommons.org/publicdomain/zero/1.0/deed.fa) در قلمروِ همگانی است: هرکس می‌تواند آن‌ها را بی‌آنکه دستوری بطلبد، بپراکند، بفروشد، بیاراید یا بپیراید.
 
 قلمِ [ساحل](https://github.com/rastikerdar/sahel-font) ساختهٔ صابر راستی‌کردار است و پروانهٔ خودش را دارد: [SIL Open Font License 1.1](assets/fonts/OFL.txt).
+
+قلمِ [ساحلِ ایرانیک](assets/fonts/Sahel-Iranic.ttf) را برای نامِ کتاب‌ها و مجله‌ها از روی ساحل ساخته‌ایم: هر حرفِ ساحل در آن ۱۲ درجه به چپ کج است و پروانه‌اش همان SIL Open Font License 1.1 است. برنامهٔ ساختش در [`tools/make-iranic.py`](tools/make-iranic.py) است.
 
 نمادهای PDF و Word از [Bootstrap Icons](https://icons.getbootstrap.com/) است، با پروانهٔ [MIT](assets/icons/bootstrap-icons-LICENSE.txt).
 

@@ -1,5 +1,9 @@
 Copyright (c) 2016, Saber Rastikerdar (saber.rastikerdar@gmail.com),
 
+Sahel Iranic (Sahel-Iranic.ttf, Sahel-Iranic.woff2) is a Modified Version of Sahel:
+every outline is slanted 12 degrees to the left (tools/make-iranic.py).
+It is released under this same license.
+
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
 http://scripts.sil.org/OFL
